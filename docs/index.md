@@ -49,7 +49,7 @@ If you want to keep this behavior but hide the button when _you_ embed it (for e
 | --------------- | ------------ | ----------- |
 | steamappid      | `none`       | By default videos will not have a steam app ID attached. Attach your own to enable **Get this on Steam** |
 
-### Disable Call-To-Action
+### Hide Call-To-Action
 By default the embedded player will include a **Donate** button if the clip poster has enabled it, or a **Get this on Steam** button if you are appending the `steamappid`. If you don't want to show either, you can disable it with the following query parameter:
 
 | Query Parameter | Default      | Description |
