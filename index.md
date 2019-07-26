@@ -43,17 +43,17 @@ You can enable the **Get this on Steam** button by passing in a `steamappid` que
 ```
 Then every time someone copies the embed code from this embed or the share URL, it would also include your Steam app ID so that when they share it, the **Get this on Steam** button persists.
 
+#### Hide Steam Call-To-Action
 If you want to keep this behavior but hide the button when _you_ embed it (for example, on your Steam app page), you can continue appending `steamappid` but also add `&cta=0`. This will _hide_ the **Get this on Steam** call-to-action in _your_ embed, but it will keep the Steam app ID attached for anyone who copies the embed or share URL.
 
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | steamappid      | `none`       | By default videos will not have a steam app ID attached. Attach your own to enable **Get this on Steam** |
+| cta             | `1`          | By default videos will show call-to-actions when embedded. This includes Donate buttons and **Get this on Steam** buttons. Set this to `0` to hide all call-to-actions. |
 
-### Hide Call-To-Action
+### Hide Donate Call-To-Action
 By default the embedded player will include a **Donate** button if the clip poster has enabled it, or a **Get this on Steam** button if you are appending the `steamappid`. If you don't want to show either, you can disable it with the following query parameter:
 
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
-| cta             | `1`          | By default videos will show call-to-actions when embedded. This includes Donate buttons and **Get this on Steam** buttons. Set this to `0` to hide all call-to-actions. |
-
-**Note:** You can hide the call-to-action and still attach a `steamappid` to make any shares _from the embed_ include the **Get this on Steam** button.
+| donate          | `1`          | By default videos will show **Donate** call-to-actions when embedded (unless `steamappid` is specified). Set this to `0` to hide **Donate** call-to-actions. |
