@@ -10,6 +10,24 @@ You can generate an API key instantly without approval at [this link](https://de
 | rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
 | limit + offset           | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event |
 
+## Reading out content objects
+Every content objects has the fields found below. These will allow you to customize the medal content to the needs of your users. 
+
+```
+{
+"contentObjects":[
+  {
+    "rawFileUrl":"http://files.medal.tv/237536/720p-4900670.mp4", // note: you need special access for this one
+    "contentTitle":"Tuk tuk attack! ",
+    "contentViews":5048,
+    "contentLikes":28,
+    "categoryId":41,
+    "directClipUrl":"https://medal.tv/clip/4900670/DIEHX35oWn6Vidhb",
+    "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4900670/3XTFZkZ5nkXN4tME' frameborder='0' allow='autoplay' allowfullscreen></iframe>"
+  }
+}
+```
+
 ## Search Clips
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
 
