@@ -1,23 +1,26 @@
 # medal-developers
 Documentation for Medal Developers 
 
-#Use cases
+# Use cases
 * Customizable Embedded Player
 * Hashtag Search
 * Trending Clips
 * Game Information
 
-#Generating an API key
+# Generating an API key
 Every request expects an `API-Key` header with your API key. You can generate a key here: https://developers-v1.medal.tv/generate_key
 
 
-#Trending Clips
+# Trending Clips
 GET `https://developers-v1.medal.tv/trending` If you'd like to get the top trending clips on the platform
+
 GET `https://developers-v1.medal.tv/trending?categoryId=62` If you'd like to get Fornite clips
+
 GET `https://developers-v1.medal.tv/trending?categoryId=10&autoplay=1&steamAppId=252950` If you'd like to get Rocket League clips that autoplay with "Get This Game on Steam"
+
 GET `https://developers-v1.medal.tv/trending?categoryId=10&autoplay=1&showCallToAction=0&showUser=0` If you'd like to get rocket league clips without any user or game information
 
-#Data for specific games
+# Data for specific games
 If you are requesting data for a specific game, you'll want to find the `categoryId` for the game you need. The easiest way is to use this tool to search for your category: https://jsoneditoronline.org/?url=https%3A%2F%2Fdevelopers-v1.medal.tv%2Fcategories
 
 When you request API endpoints, you can filter down the results to the game you need by appending ?categoryId=76 (example for roblox)
