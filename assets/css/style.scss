@@ -8,7 +8,7 @@ $section-headings-color: #fff;
 $header-bg-color: #202125;
 $code-text-color: #686d6f;
 $code-bg-color: #282a2b;
-$border-color: ##1b1c1d;
+$border-color: #1b1c1d;
   
 @import "{{ site.theme }}";
 
@@ -20,6 +20,10 @@ body {
   line-height: 1.5;
   color: $body-text-color;
   background-color: $body-color;
+}
+
+.highlight {
+  background: transparent;
 }
 
 #skip-to-content {
@@ -257,6 +261,7 @@ a {
     line-height: 1.45;
     border-radius: 5px;
     -webkit-overflow-scrolling: touch;
+    border: none;
   }
 
   pre code,
