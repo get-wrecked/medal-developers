@@ -1,9 +1,10 @@
 ---
 ---
 
-$body-color: #222327;
+$body-color: #202125;
 $body-text-color: #b6b6b6;
 $section-headings-color: #ffbf51;
+$header-bg-color: #202125;
   
 @import "{{ site.theme }}";
 
@@ -92,7 +93,8 @@ a {
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  background-image: url(https://medal.tv/assets/img/gameBackground.jpg);
+  background-size: 100%;
 
   @include large {
     padding: 5rem 6rem;
@@ -200,6 +202,7 @@ a {
 
   p {
     margin-bottom: 1em;
+    font-size: 15px;
   }
 
   code {
