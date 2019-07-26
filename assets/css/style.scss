@@ -8,8 +8,8 @@ $body-link-color: #ffbf51;
 $section-headings-color: #fff;
 $header-bg-color: #202125;
 $code-text-color: #686d6f;
-$code-bg-color: #282a2b;
-$table-header-bg-color: #282a2b;
+$code-bg-color: #212223;
+$table-header-bg-color: #1e2021;
 $border-color: #1b1c1d;
   
 @import "{{ site.theme }}";
@@ -323,7 +323,7 @@ a {
       border: 1px solid $border-color;
       background-color: $table-header-bg-color;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     td {
