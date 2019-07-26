@@ -13,6 +13,12 @@ You can generate an API key instantly without approval at [this link](https://de
 ## Search Clips
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
 
+### Example request
+```
+curl "https://developers.medal.tv/v1/search?text=#marshmello&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
+### Customize your request
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | text            | `none` | Customize this field to your needs |
