@@ -8,6 +8,7 @@ $section-headings-color: #fff;
 $header-bg-color: #202125;
 $code-text-color: #686d6f;
 $code-bg-color: #282a2b;
+$table-header-bg-color: #282a2b;
 $border-color: #1b1c1d;
   
 @import "{{ site.theme }}";
@@ -309,13 +310,16 @@ a {
     word-break: normal;
     word-break: keep-all; // For Firefox to horizontally scroll wider tables.
     -webkit-overflow-scrolling: touch;
-
+    font-size: 15px;
+    
     th {
       font-weight: bold;
       color: #fff;
+      padding: 0.5rem 1rem;
+      border: 1px solid $border-color;
+      background-color: $table-header-bg-color;
     }
 
-    th,
     td {
       padding: 0.5rem 1rem;
       border: 1px solid $border-color;
