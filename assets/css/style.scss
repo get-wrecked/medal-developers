@@ -261,7 +261,7 @@ a {
     line-height: 1.45;
     border-radius: 5px;
     -webkit-overflow-scrolling: touch;
-    border: none;
+    border: 1px solid $border-color;
   }
 
   pre code,
@@ -312,12 +312,14 @@ a {
 
     th {
       font-weight: bold;
+      color: #fff;
     }
 
     th,
     td {
       padding: 0.5rem 1rem;
-      border: 1px solid $table-border-color;
+      border: 1px solid $border-color;
+      background-color: $code-bg-color;
     }
   }
 
