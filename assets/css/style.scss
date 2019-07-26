@@ -11,6 +11,7 @@ $code-text-color: #686d6f;
 $code-bg-color: #282a2b;
 $table-header-bg-color: #1e2021;
 $border-color: #1b1c1d;
+$highlighter-rouge-bg-color: #1e2021;
   
 @import "{{ site.theme }}";
 
@@ -260,7 +261,7 @@ a {
   }
 
   .highlighter-rouge {
-    background-color: #000;
+    background-color: $highlighter-rouge-bg-color;
   }
 
   .highlight pre,
