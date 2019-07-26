@@ -32,7 +32,7 @@ Here is a breakdown of the query parameters for controlling playback behavior:
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | autoplay        | `1` | By default videos will autoplay when embedded. Set this to `0` to disable autoplay. |
-| muted           | `1` | By default videos will be muted when embedded. Set this to `0` to play videos with sound by default. **Note:** Autoplay with sound does not work in modern browsers. For autoplay to work you have to set muted to `1` (`true`) |
+| muted           | `1` | By default videos will be muted when embedded. Set this to `0` to play videos with sound by default.  **Note:** Autoplay with sound does not work in modern browsers. For autoplay to work you have to set muted to `1` |
 | loop            | `1` | By default videos will loop playback when embedded. Set this to `0` to disable looping. |
 
 ### Enable "Get this on Steam"
