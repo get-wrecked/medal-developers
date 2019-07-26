@@ -3,7 +3,7 @@
 
 $body-color: #202125;
 $body-text-color: #b6b6b6;
-$section-headings-color: #ffbf51;
+$section-headings-color: #fff;
 $header-bg-color: #202125;
   
 @import "{{ site.theme }}";
@@ -196,8 +196,6 @@ a {
     margin-bottom: 1rem;
     font-weight: normal;
     color: $section-headings-color;
-    font-weight: bold;
-    text-transform: uppercase;
   }
 
   p {
