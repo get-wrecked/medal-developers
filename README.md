@@ -35,7 +35,7 @@ CS:GO: 14
 Rainbox Sig Siege: 43
 ```
 
-#Special Permissions
+# Special Permissions
 
 If you need special permissions, please use the instructions below
 
