@@ -261,11 +261,6 @@ a {
     }
   }
 
-  .highlighter-rouge {
-    background-color: $highlighter-rouge-bg-color;
-    border: 1px solid $highlighter-rouge-border-color;
-  }
-
   .highlight pre,
   pre {
     padding: 0.8rem;
@@ -339,6 +334,11 @@ a {
       border: 1px solid $border-color;
       background-color: $code-bg-color;
       font-size: 14px;
+
+      .highlighter-rouge {
+        background-color: $highlighter-rouge-bg-color;
+        border: 1px solid $highlighter-rouge-border-color;
+      }
     }
   }
 
