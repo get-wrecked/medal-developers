@@ -7,7 +7,7 @@ You can generate an API key instantly without approval at [this link](https://de
 
 | Special Acesss | Default      | Description |
 | --------------- | ------------ | ----------- |
-| rawFileUrl            | `none` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
+| rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
 | limit + offset           | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event |
 
 ## Search Clips
