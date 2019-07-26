@@ -1,10 +1,10 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 $body-color: #27282b;
 $body-text-color: #b6b6b6
+  
+@import "{{ site.theme }}";
 
 body {
   padding: 0;
