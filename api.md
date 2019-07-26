@@ -1,8 +1,23 @@
-# Medal Embedded Player
+# Medal API
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
-## Browse Clips
-You can browse the latest and greatest clips over at [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
+## Generate an API Key
+You can generate an API key instantly without approval at [this link](https://developers.medal.tv/v1/generate_key). If you want more customized access, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
+)
+
+| Special Acesss | Default      | Description |
+| --------------- | ------------ | ----------- |
+| rawFileUrl            | `none` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
+| limit + offset           | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event |
+
+## Search Clips
+Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
+
+| Query Parameter | Default      | Description |
+| --------------- | ------------ | ----------- |
+| text            | `none` | Customize this field to your needs |
+| limit           | `10` | Limit how many videos the search returns |
+| offset          | `0` | Specify how much you want to offset the search by |
 
 ## Copy Embed Code
 Once you find the clip you want to embed, open the link in your browser (for example: [https://medal.tv/clips/4954893](https://medal.tv/clips/4954893)) and open the share screen to copy the embed code:
