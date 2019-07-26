@@ -8,7 +8,7 @@ You can generate an API key instantly without approval at [this link](https://de
 | Special Acesss | Default      | Description |
 | --------------- | ------------ | ----------- |
 | rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
-| Content Limits (`limit` and `offset)          | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
+| Content Limits (`limit` and `offset`)          | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
 
 ## Reading out content objects
 Every content objects has the fields found below. These will allow you to customize the medal content to the needs of your users. 
