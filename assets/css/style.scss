@@ -8,7 +8,7 @@ $body-link-color: #ffbf51;
 $section-headings-color: #fff;
 $header-bg-color: #202125;
 $code-text-color: #686d6f;
-$code-bg-color: #212223;
+$code-bg-color: #282a2b;
 $table-header-bg-color: #1e2021;
 $border-color: #1b1c1d;
   
@@ -225,6 +225,10 @@ a {
     background-color: $code-bg-color;
     border-radius: 5px;
     white-space : pre-wrap !important;
+    
+    .highlighter-rouge {
+      background-color: #000;
+    }
   }
 
   pre {
