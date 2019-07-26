@@ -13,6 +13,7 @@ $table-header-bg-color: #1e2021;
 $border-color: #1b1c1d;
 $highlighter-rouge-bg-color: #1e2021;
 $highlighter-rouge-border-color: #161819;
+$hr-border-color: hsla(0,0%,100%,.55);
   
 @import "{{ site.theme }}";
 
@@ -396,5 +397,5 @@ a {
 }
 
 .site-footer-credits {
-  color: $blockquote-text-color;
+  color: $body-text-color;
 }
