@@ -1,8 +1,9 @@
 ---
 ---
 
-$body-color: #27282b;
-$body-text-color: #b6b6b6
+$body-color: #222327;
+$body-text-color: #b6b6b6;
+$section-headings-color: #ffbf51;
   
 @import "{{ site.theme }}";
 
@@ -193,6 +194,9 @@ a {
     margin-bottom: 1rem;
     font-weight: normal;
     color: $section-headings-color;
+    font-weight: bold;
+    font-family: Rajdhani, "Liberation Mono";
+    text-transform: uppercase;
   }
 
   p {
