@@ -225,10 +225,6 @@ a {
     background-color: $code-bg-color;
     border-radius: 5px;
     white-space : pre-wrap !important;
-    
-    .highlighter-rouge {
-      background-color: #000;
-    }
   }
 
   pre {
@@ -261,6 +257,10 @@ a {
       margin-bottom: 0;
       word-break: normal;
     }
+  }
+
+  .highlighter-rouge {
+    background-color: #000;
   }
 
   .highlight pre,
