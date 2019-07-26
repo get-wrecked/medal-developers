@@ -8,6 +8,7 @@ $section-headings-color: #fff;
 $header-bg-color: #202125;
 $code-text-color: #686d6f;
 $code-bg-color: #282a2b;
+$border-color: ##1b1c1d;
   
 @import "{{ site.theme }}";
 
@@ -212,7 +213,8 @@ a {
     font-size: 0.9rem;
     color: $code-text-color;
     background-color: $code-bg-color;
-    border-radius: 0.3rem;
+    border-radius: 5px;
+    white-space : pre-wrap !important;
   }
 
   pre {
@@ -224,7 +226,7 @@ a {
     word-wrap: normal;
     background-color: $code-bg-color;
     border: solid 1px $border-color;
-    border-radius: 0.3rem;
+    border-radius: 5px;
 
     > code {
       padding: 0;
@@ -253,7 +255,7 @@ a {
     overflow: auto;
     font-size: 0.9rem;
     line-height: 1.45;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     -webkit-overflow-scrolling: touch;
   }
 
