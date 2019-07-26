@@ -5,7 +5,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
 You can browse the latest and greatest clips over at [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
 
 ## Copy Embed Code
-Once you find the clip you want to embed, open the link in your browser (for example: https://medal.tv/clips/4954893) and open the share screen to copy the embed code:
+Once you find the clip you want to embed, open the link in your browser (for example: [https://medal.tv/clips/4954893](https://medal.tv/clips/4954893)) and open the share screen to copy the embed code:
 
 ![Example 1](https://i.imgur.com/X1vmypU.png)
 ![Example 2](https://i.imgur.com/s7njaTr.png)
