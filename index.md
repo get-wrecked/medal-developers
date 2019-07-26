@@ -36,7 +36,7 @@ Here is a breakdown of the query parameters for controlling playback behavior:
 | loop            | `1` | By default videos will loop playback when embedded. Set this to `0` to disable looping. |
 
 ### Enable "Get this on Steam"
-![Get this on Steam](https://i.imgur.com/ZfUc7hP.png)
+<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpjHcSsho?steamappid=252950" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 You can enable the **Get this on Steam** button by passing in a `steamappid` query parameter with your Steam game's app ID. For example, this would display a button that links out to Rocket League on Steam, like in the image above:
 ```
 <iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o?steamappid=252950" frameborder="0" allow="autoplay" allowfullscreen></iframe>
