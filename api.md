@@ -46,7 +46,9 @@ curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&steamappid
 | autoplay          | `0` | Specify whether whe iframes returned contain the autoplay tag |
 | loop          | `0` | Specify whether whe iframes returned loop content |
 | muted          | `0` | Specify whether whe iframes returned should auto-play sound |
-
+| width          | `640` | The height of the returned clip player |
+| height          | `360` | The width of the returned clip player |
+| customClass          | `medal-clip contentId-$contentId` | Whether we should return a custom class identifier for your medal clip iframe. By default we add a class called `medal-clip` and an id called `contentId-$contentId`|
 
 ## Search Clips
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
