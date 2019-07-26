@@ -10,6 +10,8 @@ $header-bg-color: #202125;
 $code-text-color: #686d6f;
 $code-bg-color: #282a2b;
 $table-header-bg-color: #1e2021;
+$table-row-even-bg-color: #2e3136;
+$table-row-odd-bg-color: #282a2b;
 $border-color: #1b1c1d;
 $highlighter-rouge-bg-color: #1e2021;
 $highlighter-rouge-border-color: #161819;
@@ -332,6 +334,13 @@ a {
       background-color: $table-header-bg-color;
       text-transform: uppercase;
       font-size: 13px;
+    }
+    
+    tr:nth-child(even) {
+      background: $table-row-even-bg-color;
+    }
+    tr:nth-child(odd) {
+      background: $table-row-odd-bg-color;
     }
 
     td {
