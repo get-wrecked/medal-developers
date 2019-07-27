@@ -101,7 +101,7 @@ Will return
          "videoLengthSeconds":14,
          "createdTimestamp":1563668946000,
          "directClipUrl":"https://medal.tv/clip/5037877/W98gfTlhKN7bw2DG",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5037877/sFfcDeWAI9n0B8Yy?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>",
+         "embedIframeCode":"<iframe width='640' height='360' src='https://medal.tv/clip/5037877/sFfcDeWAI9n0B8Yy?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>",
          "credits":"Credits to Galkon (https://medal.tv/users/12597)"
       }
    ]
@@ -109,7 +109,7 @@ Will return
 ```
 
 
-Which renders
+Where `embedIframeCode` renders
 
 <iframe width='640' height='360' src='https://medal.tv/clip/5037877/Z13fByKFf7c39DyC?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>
 
@@ -148,14 +148,14 @@ Will return
          "videoLengthSeconds":15,
          "createdTimestamp":1561834937000,
          "directClipUrl":"https://medal.tv/clip/4706138/sOT1gOwEOR7AfKqu",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4706138/SbUsIwbU7yO9eUws?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>",
+         "embedIframeCode":"<iframe width='640' height='360' src='https://medal.tv/clip/4706138/SbUsIwbU7yO9eUws?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>",
          "credits":"Credits to obesebutcute2 (https://medal.tv/users/1666318)"
       }
    ]
 }
 ```
 
-Which renders this:
+Where `embedIframeCode` renders this:
 <iframe width='640' height='360' src='https://medal.tv/clip/4706138/91Siz6s5zfNDpL8I?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>
  
 #### example custom search
@@ -178,14 +178,14 @@ Will return
          "videoLengthSeconds":15,
          "createdTimestamp":1550037169000,
          "directClipUrl":"https://medal.tv/clip/3471744/2PaSuhVQX5OWKPnO",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/3471744/vcMONks6G5T412oH?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>",
+         "embedIframeCode":"<iframe width='640' height='360' src='https://medal.tv/clip/3471744/vcMONks6G5T412oH?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>",
          "credits":"Credits to Hakugei (https://medal.tv/users/233543)"
       }
    ]
 }
 ```
 
-Which renders this:
+Where `embedIframeCode` renders this:
 
 <iframe width='640' height='360' src='https://medal.tv/clip/3471744/2t1BOdBl3EqNplo3?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>
 
@@ -232,14 +232,14 @@ Will return
          "videoLengthSeconds":15,
          "createdTimestamp":1550037169000,
          "directClipUrl":"https://medal.tv/clip/3471744/yqlkQaRYC0rUS9uu",
-         "embedIframeUrl":"<iframe width='400' height='200' src='https://medal.tv/clip/3471744/Zq6XKzjAbsSTelec?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-3471744'></iframe>",
+         "embedIframeCode":"<iframe width='400' height='200' src='https://medal.tv/clip/3471744/Zq6XKzjAbsSTelec?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-3471744'></iframe>",
          "credits":"Credits to Hakugei (https://medal.tv/users/233543"
       }
    ]
 }
 ```
 
-Which renders this:
+Where `embedIframeCode` renders this:
 <iframe width='400' height='200' src='https://medal.tv/clip/3471744/UJggTzBkwJyibL84?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-3471744'></iframe>
 
 
