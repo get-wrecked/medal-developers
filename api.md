@@ -153,7 +153,7 @@ Which renders this:
 Add the following parameters if you want to customize your responses for using custom links or iframes per our [iframe documentation](https://docs.medal.tv)
 
 #### Example customized response
-This returns the top flip reset clip on the platform with the `Get this on Steam` button with iframes that are 200 in width and height with an offset of 100
+This returns the top flip reset clip on the platform with the `Get this on Steam` button with iframes that are 400 in width and 200 in height with an offset of 100
 
 ```bash
 curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&offset=100&steamappid=252950&cta=0&height=200&width=400" -X GET -H "API-Key: YOUR_API_KEY"
