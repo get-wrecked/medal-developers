@@ -82,7 +82,25 @@ Will return
 #### /v1/search - Example highly-customized search
 This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
 ```
-curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
+Will return
+
+```json
+{
+   "contentObjects":[
+      {
+         "rawFileUrl":"not_authorized",
+         "contentTitle":"flip reset",
+         "contentViews":6,
+         "contentLikes":0,
+         "categoryId":10,
+         "directClipUrl":"https://medal.tv/clip/3471744/RwqVR0mSkS0zlnbb",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/3471744/2t1BOdBl3EqNplo3?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>"
+      }
+   ]
+}
 ```
 
 
