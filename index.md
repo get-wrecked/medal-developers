@@ -11,7 +11,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
      * [Hide Donate Call-To-Action](#hide-donate-call-to-action)
 
 ## Browse Clips
-You can browse the latest and greatest clips over at [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
+You can browse the latest and greatest clips over at [medal.tv](https://medal.tv), or you can use our [developers API](https://docs.medal.tv/api) to automate the process. If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
 
 ## Copy Embed Code
 Once you find the clip you want to embed, open the link in your browser (for example: [https://medal.tv/clips/4954893](https://medal.tv/clips/4954893)) and open the share screen to copy the embed code:
