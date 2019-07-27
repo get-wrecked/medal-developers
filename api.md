@@ -9,7 +9,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Special Access](#special-access-options)
 
 
-## Generate an API Key
+# Generate an API Key
 
 
 **Generate a key at [this link](https://developers.medal.tv/v1/generate_key)**
@@ -18,7 +18,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
 If you want more customized access, such as to raw file URLs for your tournaments, or increased limits, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
 )
 
-## /v1/trending - Trending Clips By Game
+# /v1/trending - Trending Clips By Game
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
 If you want to look for a specific game, you can use the search bar below:
@@ -61,7 +61,7 @@ Which renders this:
 | offset         | `0` | How many objects to skip. `limit` + `offset` can not exceed 1000 by default. |
 
 
-## /v1/search - Search Clips on Medal 
+# /v1/search - Search Clips on Medal 
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). 
 
 #### /v1/search - Example hashtag search
@@ -130,7 +130,7 @@ Which renders this:
 | limit           | `10` | Limit how many videos the search returns |
 | offset          | `0` | Specify how much you want to offset the search by |
 
-## Reading out content objects
+# Reading out content objects
 Every content objects has the fields found below. These will allow you to customize the medal content to the needs of your users. 
 
 ### Default Response on every endpoint
@@ -154,7 +154,7 @@ Which renders this:
 <iframe width='640' height='360' src='https://medal.tv/clip/4900670/3XTFZkZ5nkXN4tME' frameborder='0' allow='autoplay' allowfullscreen></iframe>
 
 
-## /v1/categories
+# /v1/categories - Games List
 Returns a full list of all the categories on Medal. However, we recommend you use [this link](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) to search for a game if you'd like to find a categoryId
 
 ```bash
