@@ -2,9 +2,9 @@
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
   * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
+  * [Newest Clips (From a user or game) ](#v1latest_clips---latest-clips-from-a-user) (/v1/trending)
   * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
   * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
-  * [Newest Clips (From a user or game) ](#v1latest_clips---latest-clips-from-a-user) (/v1/trending)
   * [Categories (Games)](#v1categories---games-list) (/v1/categories)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
   * [Special Access](#special-access-options)
