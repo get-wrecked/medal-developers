@@ -5,6 +5,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Trending Clips](#v1trending---trending-clips-by-game)
   * [Search Clips](#v1search---search-clips-on-medal)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
+  * [Special Access](#special-access-options)
 
 
 ## Generate an API Key
@@ -13,13 +14,8 @@ Want to embed your clips on your website? Are you a game developer who wants to 
 **Generate a key at [this link](https://developers.medal.tv/v1/generate_key)**
 
 
-If you want more customized access, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
+If you want more customized access, such as to raw file URLs for your tournaments, or increased limits, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
 )
-
-| Special Acesss | Default      | Description |
-| --------------- | ------------ | ----------- |
-| rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
-| Content Limits (`limit` and `offset`)          | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
 
 ## /v1/trending - Trending Clips By Game
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
@@ -178,4 +174,15 @@ Will return
 | width          | `640` | The height of the returned clip player |
 | height          | `360` | The width of the returned clip player |
 | customStyleClass          | `medal-clip contentId-$contentId` | Whether we should return a custom class identifier for your medal clip iframe. By default we add a class called `medal-clip` and an id called `contentId-$contentId`|
+
+## Special Acecess Options
+
+If you want more customized access, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
+)
+
+| Special Acesss | Default      | Description |
+| --------------- | ------------ | ----------- |
+| rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
+| Content Limits (`limit` and `offset`)          | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
+
 
