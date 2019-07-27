@@ -2,8 +2,8 @@
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
   * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
-  * [Newest Clips (From a user or game) ](#v1latest_clips---latest-clips-from-a-user-or-game) (/v1/latest_clips)
   * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
+  * [Newest Clips (From a user or game) ](#v1latest_clips---latest-clips-from-a-user-or-game) (/v1/latest_clips)
   * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
   * [Categories (Games)](#v1categories---games-list) (/v1/categories)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
@@ -21,6 +21,49 @@ Every response object contains a `credits` field. Please make sure to use this w
 
 If you want more customized access, such as to raw file URLs for your tournaments, or increased limits, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
 )
+
+# /v1/trending - Trending Clips By Game
+Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
+
+If you want to look for a specific game, you can use the search bar below:
+
+This example request produces the top fortnite clip on Medal today.
+
+```bash
+curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
+```
+Will return
+
+```json
+{
+   "contentObjects":[
+      {
+         "rawFileUrl":"not_authorized",
+         "contentTitle":"Testing fortnite w/keyboard, damn is hard lol",
+         "contentViews":1836,
+         "contentLikes":10,
+         "categoryId":62,
+         "videoLengthSeconds":10,
+         "createdTimestamp":1563233109000,
+         "directClipUrl":"https://medal.tv/clip/4954089/5xAyYcy7Spquc7Jz",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4954089/UUzr8lZ41i8pPVC4?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>",
+         "credits":"Credits to ODarwed (https://medal.tv/users/452854)"
+      }
+   ]
+}
+```
+
+Which renders this:
+
+<iframe width='640' height='360' src='https://medal.tv/clip/4954089/GabuV1ET3hIHZFh3?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>
+
+#### parameters
+
+| Query Parameter | Default      | Description |
+| --------------- | ------------ | ----------- |
+| categoryId            | `none` | Filter by game. Not sure what `categoryId` to look for? Just search for your game [here](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories)  |
+| limit         | `10` | How many objects to return. By default you have access to 1000 objects per query. |
+| offset         | `0` | How many objects to skip. `limit` + `offset` can not exceed 1000 by default. |
 
 
 # v1/latest_clips - Latest clips from a user or game
@@ -79,49 +122,6 @@ Which renders
 | limit         | `10` | How many objects to return. By default you have access to 1000 objects per query. |
 | offset         | `0` | How many objects to skip. `limit` + `offset` can not exceed 1000 by default. |
 
-
-# /v1/trending - Trending Clips By Game
-Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
-
-If you want to look for a specific game, you can use the search bar below:
-
-This example request produces the top fortnite clip on Medal today.
-
-```bash
-curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
-```
-Will return
-
-```json
-{
-   "contentObjects":[
-      {
-         "rawFileUrl":"not_authorized",
-         "contentTitle":"Testing fortnite w/keyboard, damn is hard lol",
-         "contentViews":1836,
-         "contentLikes":10,
-         "categoryId":62,
-         "videoLengthSeconds":10,
-         "createdTimestamp":1563233109000,
-         "directClipUrl":"https://medal.tv/clip/4954089/5xAyYcy7Spquc7Jz",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4954089/UUzr8lZ41i8pPVC4?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>",
-         "credits":"Credits to ODarwed (https://medal.tv/users/452854)"
-      }
-   ]
-}
-```
-
-Which renders this:
-
-<iframe width='640' height='360' src='https://medal.tv/clip/4954089/GabuV1ET3hIHZFh3?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>
-
-#### parameters
-
-| Query Parameter | Default      | Description |
-| --------------- | ------------ | ----------- |
-| categoryId            | `none` | Filter by game. Not sure what `categoryId` to look for? Just search for your game [here](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories)  |
-| limit         | `10` | How many objects to return. By default you have access to 1000 objects per query. |
-| offset         | `0` | How many objects to skip. `limit` + `offset` can not exceed 1000 by default. |
 
 
 # /v1/search - Search Clips on Medal 
