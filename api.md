@@ -18,6 +18,8 @@ Every response object contains a `credits` field. Please make sure to use this w
 
 # Generate an API Key
 
+In order to make requests, you need to add the API Key in a `Authorization` header. 
+
 ## Generate an API Key for public use
 
 If you are building a frontend-only application, such as our office feed, you'll want to generate an API key for public use. You are fine to expose these to users, as their rate limits will be on a per-IP basis.  
