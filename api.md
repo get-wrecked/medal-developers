@@ -3,7 +3,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
 
   * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
   * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
-  * [Newest Clips (From a user or game) ](#v1latest_clips---latest-clips-from-a-user-or-game) (/v1/latest_clips)
+  * [Newest Clips (From a user or game) ](#v1latest---latest-clips-from-a-user-or-game) (/v1/latest)
   * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
   * [Categories (Games)](#v1categories---games-list) (/v1/categories)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
@@ -66,13 +66,13 @@ Which renders this:
 | offset         | `0` | How many objects to skip. `limit` + `offset` can not exceed 1000 by default. |
 
 
-# v1/latest_clips - Latest clips from a user or game
+# v1/latest - Latest clips from a user or game
 Do you want to feature your 2 latest Medal clips on your personal website? Or on a fansite? This is how you do that! You can also use this endpoint to find the latest clips in a game, for example if you want to set up a dope in-office real-time feed of what your users are clipping. 
 
 Notice how the URL contains `categoryId=10`, `limit=2` and `userId=12597`? Those variables allow you to narrow your search! If you wanted to get all the latest clips for Rocket League, for example, you would leave out `userId=12597`.
 
 ```bash
-curl "https://developers.medal.tv/v1/latest_clips?userId=12597&categoryId=10&limit=2" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/latest?userId=12597&categoryId=10&limit=2" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
 Will return
