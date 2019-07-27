@@ -21,7 +21,8 @@ Are you a game developer, or developing a game-related site and want to show cli
 
 #### /v1/trending - Example Trending Clips request
 This example request produces the top fortnite clip on Medal today.
-```
+
+```bash
 curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 Will return
@@ -56,7 +57,8 @@ Did you organize a tournament where everybody submitted Medal clips with a hasht
 
 #### /v1/search - Example hashtag search
 This produces all the results of the #flamingo Medal competition
-```
+
+```bash
 curl "https://developers.medal.tv/v1/search?text=%23flamingo&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
@@ -137,7 +139,8 @@ Add the following parameters if you want to customize your responses for using c
 
 #### Example customized response
 This returns the top flip reset clip on the platform with the `Get this on Steam` button with iframes that are 200 in width and height
-```
+
+```bash
 curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&steamappid=252950&cta=0&height=200&width=200" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
