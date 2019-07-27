@@ -24,6 +24,10 @@ This example request produces the top fortnite clip on Medal today.
 ```
 curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
 ```
+Will return
+```
+{"contentObjects":[{"rawFileUrl":"not_authorized","contentTitle":"Testing fortnite w/keyboard, damn is hard lol","contentViews":1803,"contentLikes":10,"categoryId":62,"directClipUrl":"https://medal.tv/clip/4954089/BOvWuWtpfVsWL30d","embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4954089/GabuV1ET3hIHZFh3?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>"}]}
+```
 
 #### /v1/trending - Parameters
 
