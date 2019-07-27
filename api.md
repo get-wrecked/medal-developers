@@ -153,10 +153,10 @@ Which renders this:
 Add the following parameters if you want to customize your responses for using custom links or iframes per our [iframe documentation](https://docs.medal.tv)
 
 #### Example customized response
-This returns the top flip reset clip on the platform with the `Get this on Steam` button with iframes that are 200 in width and height
+This returns the top flip reset clip on the platform with the `Get this on Steam` button with iframes that are 200 in width and height with an offset of 100
 
 ```bash
-curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&steamappid=252950&cta=0&height=200&width=200" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&offset=100&steamappid=252950&cta=0&height=200&width=400" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
 Will return
@@ -166,19 +166,19 @@ Will return
    "contentObjects":[
       {
          "rawFileUrl":"not_authorized",
-         "contentTitle":"Not a triple flip reset but a normal flip reset.",
-         "contentViews":48,
-         "contentLikes":8,
+         "contentTitle":"flip reset",
+         "contentViews":7,
+         "contentLikes":0,
          "categoryId":10,
-         "directClipUrl":"https://medal.tv/clip/2833151/Dadd0yPAXjLFvyQ2",
-         "embedIframeUrl":"<iframe width='200' height='200' src='https://medal.tv/clip/2833151/GwNiDxFY3IXUNLpz?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-2833151'></iframe>"
+         "directClipUrl":"https://medal.tv/clip/3471744/oo81C99Z99AJp1ny",
+         "embedIframeUrl":"<iframe width='400' height='200' src='https://medal.tv/clip/3471744/UJggTzBkwJyibL84?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-3471744'></iframe>"
       }
    ]
 }
 ```
 
 Which renders this:
-<iframe width='200' height='200' src='https://medal.tv/clip/2833151/GwNiDxFY3IXUNLpz?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-2833151'></iframe>
+<iframe width='400' height='200' src='https://medal.tv/clip/3471744/UJggTzBkwJyibL84?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-3471744'></iframe>
 
 
 | Query Parameter | Default      | Description |
