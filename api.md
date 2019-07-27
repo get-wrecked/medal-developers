@@ -33,7 +33,7 @@ If you want to look for a specific game, you can use the search bar below:
 This example request produces the top fortnite clip on Medal today.
 
 ```bash
-curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "Authorization: YOUR_API_KEY"
 ```
 Will return
 
@@ -75,7 +75,7 @@ Do you want to feature your 2 latest Medal clips on your personal website? Or on
 Notice how the URL contains `categoryId=10`, `limit=2` and `userId=12597`? Those variables allow you to narrow your search! If you wanted to get all the latest clips for Rocket League, for example, you would leave out `userId=12597`.
 
 ```bash
-curl "https://developers.medal.tv/v1/latest?userId=12597&categoryId=10&limit=2" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/latest?userId=12597&categoryId=10&limit=2" -X GET -H "Authorization: YOUR_API_KEY"
 ```
 
 Will return
@@ -133,7 +133,7 @@ Did you organize a tournament where everybody submitted Medal clips with a hasht
 This produces all the results of the #flamingo Medal competition
 
 ```bash
-curl "https://developers.medal.tv/v1/search?text=%23flamingo&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/search?text=%23flamingo&limit=1" -X GET -H "Authorization: YOUR_API_KEY"
 ```
 
 Will return
@@ -164,7 +164,7 @@ Where `embedIframeCode` renders this:
 #### example custom search
 This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
 ```
-curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100&limit=1" -X GET -H "Authorization: YOUR_API_KEY"
 ```
 
 Will return
@@ -205,7 +205,7 @@ Where `embedIframeCode` renders this:
 Returns a full list of all the categories on Medal. However, we recommend you use [this link](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) to search for a game if you'd like to find a categoryId
 
 ```bash
-curl "https://developers.medal.tv/v1/categories" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/categories" -X GET -H "Authorization: YOUR_API_KEY"
 ```
 
 # Reading out content objects
@@ -218,7 +218,7 @@ Add the following parameters if you want to customize your responses for using c
 This returns the top flip reset clip on the platform with the `Get this on Steam` button with iframes that are 400 in width and 200 in height with an offset of 100
 
 ```bash
-curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&offset=100&steamappid=252950&cta=0&height=200&width=400" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&offset=100&steamappid=252950&cta=0&height=200&width=400" -X GET -H "Authorization: YOUR_API_KEY"
 ```
 
 Will return
