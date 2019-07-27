@@ -1,9 +1,9 @@
 # Medal API
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
-  * (/v1/generate_key) [Generate API Key](#generate-an-api-key)
-  * (/v1/trending) [Trending Clips ](#v1trending---trending-clips-by-game)
-  *  (/v1/search) [Search Clips](#v1search---search-clips-on-medal)
+  * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
+  * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
+  * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
   * [Special Access](#special-access-options)
 
