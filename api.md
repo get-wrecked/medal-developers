@@ -141,6 +141,25 @@ This returns the top flip reset clip on the platform with the `Get this on Steam
 curl "https://developers.medal.tv/v1/search?text=flip%20reset&limit=1&steamappid=252950&cta=0&height=200&width=200" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
+Will return
+
+```json
+{
+   "contentObjects":[
+      {
+         "rawFileUrl":"not_authorized",
+         "contentTitle":"Not a triple flip reset but a normal flip reset.",
+         "contentViews":48,
+         "contentLikes":8,
+         "categoryId":10,
+         "directClipUrl":"https://medal.tv/clip/2833151/Dadd0yPAXjLFvyQ2",
+         "embedIframeUrl":"<iframe width='200' height='200' src='https://medal.tv/clip/2833151/GwNiDxFY3IXUNLpz?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-2833151'></iframe>"
+      }
+   ]
+}
+```
+
+
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | steamappid            | `none` | adds `steamappid` to every link and iframe returned, so users viewing and sharing the clip can get the game on steam |
