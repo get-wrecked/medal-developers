@@ -1,9 +1,6 @@
 # Medal Embedded Player
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
-Table of Contents
-=================
-
   * [Browse Clips](#browse-clips)
   * [Copy Embed Code](#copy-embed-code)
   * [Advanced Embed Options](#advanced-embed-options)
