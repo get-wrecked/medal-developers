@@ -13,13 +13,13 @@ You can generate an API key instantly without approval at [this link](https://de
 ## /v1/trending - Trending Clips 
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
-### /v1/trending - Example Trending Clips request
+#### /v1/trending - Example Trending Clips request
 This example request produces the top 10 fortnite clips on Medal today.
 ```
 curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=10" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
-### /v1/trending - Parameters
+#### /v1/trending - Parameters
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | categoryId      | `none` | This allows you to filter down by specific game ids. Not sure what category ID to look for? Just search for your game [here](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) |
@@ -29,13 +29,13 @@ curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=10" -X GET -H 
 ## /v1/search - Search Clips
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). 
 
-### /v1/search - Example request
+#### /v1/search - Example request
 This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
 ```
 curl "https://developers.medal.tv/v1/search?text=flip reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
-### /v1/search - Parameters
+#### /v1/search - Parameters
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | text            | `none` | Customize this field to your needs |
