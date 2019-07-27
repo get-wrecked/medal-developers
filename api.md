@@ -21,8 +21,6 @@ If you want more customized access, such as to raw file URLs for your tournament
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
 If you want to look for a specific game, you can use the search bar below:
-<iframe width='640' height='360' src='https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories' frameborder='0' allowfullscreen></iframe>
-
 
 
 #### /v1/trending - Example Trending Clips request
