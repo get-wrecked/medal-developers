@@ -130,6 +130,13 @@ Which renders this:
 | limit           | `10` | Limit how many videos the search returns |
 | offset          | `0` | Specify how much you want to offset the search by |
 
+# /v1/categories - Games List
+Returns a full list of all the categories on Medal. However, we recommend you use [this link](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) to search for a game if you'd like to find a categoryId
+
+```bash
+curl "https://developers.medal.tv/v1/categories" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
 # Reading out content objects
 Every content objects has the fields found below. These will allow you to customize the medal content to the needs of your users. 
 
@@ -153,13 +160,6 @@ Every content objects has the fields found below. These will allow you to custom
 Which renders this:
 <iframe width='640' height='360' src='https://medal.tv/clip/4900670/3XTFZkZ5nkXN4tME' frameborder='0' allow='autoplay' allowfullscreen></iframe>
 
-
-# /v1/categories - Games List
-Returns a full list of all the categories on Medal. However, we recommend you use [this link](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) to search for a game if you'd like to find a categoryId
-
-```bash
-curl "https://developers.medal.tv/v1/categories" -X GET -H "API-Key: YOUR_API_KEY"
-```
 
 ## Customize your response on every endpoint
 Add the following parameters if you want to customize your responses for using custom links or iframes per our [iframe documentation](https://docs.medal.tv)
