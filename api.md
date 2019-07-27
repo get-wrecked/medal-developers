@@ -2,9 +2,9 @@
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
   * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
-  * [Latest User Clips ](#v1latest_clips---latest-clips-from-a-user) (/v1/trending)
   * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
   * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
+  * [Newest Clips (From a user or game) ](#v1latest_clips---latest-clips-from-a-user) (/v1/trending)
   * [Categories (Games)](#v1categories---games-list) (/v1/categories)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
   * [Special Access](#special-access-options)
@@ -20,8 +20,8 @@ If you want more customized access, such as to raw file URLs for your tournament
 )
 
 
-# v1/latest_clips - Latest clips from a user
-Do you want to feature your 2 latest Medal clips on your personal website? Or on a fansite? This is how you do that!
+# v1/latest_clips - Latest clips from a user or game
+Do you want to feature your 2 latest Medal clips on your personal website? Or on a fansite? This is how you do that! You can also use this endpoint to find the latest clips in a game, for example if you want to set up a dope in-office real-time feed of what your users are clipping. 
 
 Notice how the URL contains `categoryId=10`, `limit=2` and `userId=12597`? Those variables allow you to narrow your search!
 
