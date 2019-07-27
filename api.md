@@ -18,13 +18,53 @@ Want to embed your clips on your website? Are you a game developer who wants to 
 If you want more customized access, such as to raw file URLs for your tournaments, or increased limits, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
 )
 
+
+# v1/latest_clips - Latest clips from a user
+Do you want to feature your 2 latest Medal clips on your personal website? Or on a fansite? This is how you do that!
+
+Notice how the URL contains `categoryId=10`, `limit=2` and `userId=12597`? Those variables allow you to narrow your search!
+
+```bash
+curl "https://developers.medal.tv/v1/latest_clips?userId=12597&categoryId=10&limit=2" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
+Will return
+
+```json
+{
+   "contentObjects":[
+      {
+         "rawFileUrl":"not_authorized",
+         "contentTitle":"that winning team name...",
+         "contentViews":47,
+         "contentLikes":1,
+         "categoryId":10,
+         "directClipUrl":"https://medal.tv/clip/5042841/27XFWxK09DcmODfq",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5042841/Q0A9Koz61sscgPkW?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5042841'></iframe>"
+      },
+      {
+         "rawFileUrl":"not_authorized",
+         "contentTitle":"lmao so close",
+         "contentViews":34,
+         "contentLikes":4,
+         "categoryId":10,
+         "directClipUrl":"https://medal.tv/clip/5037877/JjuO0dZjw6YdqP3O",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5037877/Z13fByKFf7c39DyC?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>"
+      }
+   ]
+}
+```
+
+
+Which renders
+
+<iframe width='640' height='360' src='https://medal.tv/clip/5037877/Z13fByKFf7c39DyC?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>
+
 # /v1/trending - Trending Clips By Game
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
 If you want to look for a specific game, you can use the search bar below:
 
-
-#### /v1/trending - Example Trending Clips request
 This example request produces the top fortnite clip on Medal today.
 
 ```bash
@@ -64,7 +104,6 @@ Which renders this:
 # /v1/search - Search Clips on Medal 
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). 
 
-#### /v1/search - Example hashtag search
 This produces all the results of the #flamingo Medal competition
 
 ```bash
