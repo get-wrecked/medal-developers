@@ -44,6 +44,10 @@ Will return
 }
 ```
 
+Which renders this:
+
+<iframe width='640' height='360' src='https://medal.tv/clip/4954089/GabuV1ET3hIHZFh3?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>
+
 #### /v1/trending - Parameters
 
 | Query Parameter | Default      | Description |
@@ -82,6 +86,9 @@ Will return
 }
 ```
 
+Which renders this:
+<iframe width='640' height='360' src='https://medal.tv/clip/4706138/91Siz6s5zfNDpL8I?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>
+ 
 #### /v1/search - Example highly-customized search
 This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
 ```
@@ -105,6 +112,10 @@ Will return
    ]
 }
 ```
+
+Which renders this:
+
+<iframe width='640' height='360' src='https://medal.tv/clip/3471744/2t1BOdBl3EqNplo3?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>
 
 
 #### /v1/search - Parameters
@@ -135,6 +146,9 @@ Every content objects has the fields found below. These will allow you to custom
 }
 ```
 
+Which renders this:
+<iframe width='640' height='360' src='https://medal.tv/clip/4900670/3XTFZkZ5nkXN4tME' frameborder='0' allow='autoplay' allowfullscreen></iframe>
+
 ### Customize your response on every endpoint
 Add the following parameters if you want to customize your responses for using custom links or iframes per our [iframe documentation](https://docs.medal.tv)
 
@@ -162,6 +176,9 @@ Will return
    ]
 }
 ```
+
+Which renders this:
+<iframe width='200' height='200' src='https://medal.tv/clip/2833151/GwNiDxFY3IXUNLpz?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-2833151'></iframe>
 
 
 | Query Parameter | Default      | Description |
