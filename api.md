@@ -16,8 +16,9 @@ Want to embed your clips on your website? Are you a game developer who wants to 
 # Credits
 Every response object contains a `credits` field. Please make sure to use this wherever you serve the content, and link back to their user profile. 
 
+# Generate an API Key
 
-# Generate an API Key for public use
+## Generate an API Key for public use
 
 If you are building a frontend-only application, such as our office feed, you'll want to generate an API key for public use. You are fine to expose these to users, as their rate limits will be on a per-IP basis.  
 
@@ -26,11 +27,11 @@ If you are building a frontend-only application, such as our office feed, you'll
 Public use API keys can not be granted special privileges.
 
 
-# Generate an API Key for private use
+## Generate an API Key for private use
 
 Keys for private use can be whitelisted for special privileges. You typically deploy these in backend applications, and make sure your users don't see them. The rate limits for these keys are on a per-key basis, which means you can not deploy them in front-end applications
 
-**Generate a key at [this link](https://developers.medal.tv/v1/generate_private_key)**
+**Generate a private-use key at [this link](https://developers.medal.tv/v1/generate_private_key)**
 
 
 If you want more customized access, such as to raw file URLs for your tournaments, or increased limits, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
