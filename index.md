@@ -1,5 +1,8 @@
-# Medal Documentation
+# Embedded Player Documentation
 
-  * [Embedded Player Docs: I want to embed Medal clips I watch](/player)
-  * [Developer API Docs: I'm a developer and want to integrate with Medal](/api)
+  * [Click here for documentation on the Embedded Player](/player)
+  
+# Medal REST API Documentation
+ 
+  * [Click here for documentation on the Medal REST API](/api)
 
