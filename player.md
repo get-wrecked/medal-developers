@@ -30,7 +30,7 @@ The default embed behavior is to autoplay muted, loop when the video ends, and t
 ```
 
 ### Control Playback Behavior
-<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o?autoplay=0&muted=0&loop=0" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o?autoplay=0&muted=0&loop=0" frameborder="0" allow="autoplay" allowfullscreen style="width: 100%;height:468px;min-height: 360px;"></iframe>
 
 You can append query parameters to the `src` url in the iframe code to control playback behavior. For example:
 ```html
@@ -51,7 +51,7 @@ Here is a breakdown of the query parameters for controlling playback behavior:
 
 You can enable the **Get this on Steam** button by passing in a `steamappid` query parameter with your Steam game's app ID. For example, this would display a button that links out to Rocket League on Steam, like in the embed above:
 ```html
-<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpjHcSsho?autoplay=0&steamappid=252950" frameborder="0" allow="autoplay" allowfullscreen style="width: 100%;height:468px;min-height: 360px;"></iframe>
+<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpjHcSsho?autoplay=0&steamappid=252950" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 ```
 Then every time someone copies the embed code from this embed or the share URL, it would also include your Steam app ID so that when they share it, the **Get this on Steam** button persists.
 
@@ -62,7 +62,7 @@ If you want to keep the share behavior described above, but hide the button when
 
 For example, this would hide the **Get this on Steam** button but still attach the `steamappid` to share actions, like in the embed above:
 ```html
-<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpjHcSsho?autoplay=0&steamappid=252950&cta=0" frameborder="0" allow="autoplay" allowfullscreen style="width: 100%;height:468px;min-height: 360px;"></iframe>
+<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpjHcSsho?autoplay=0&steamappid=252950&cta=0" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 ```
 
 | Query Parameter | Default      | Description |
