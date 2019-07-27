@@ -10,6 +10,9 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Special Access](#special-access-options)
 
 
+# Credits
+Every response object contains a `credits` field. Please make sure to use this wherever you serve the content, and link back to their user profile. 
+
 # Generate an API Key
 
 
@@ -40,17 +43,23 @@ Will return
          "contentViews":47,
          "contentLikes":1,
          "categoryId":10,
-         "directClipUrl":"https://medal.tv/clip/5042841/27XFWxK09DcmODfq",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5042841/Q0A9Koz61sscgPkW?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5042841'></iframe>"
+         "videoLengthSeconds":15,
+         "createdTimestamp":1563692235000,
+         "directClipUrl":"https://medal.tv/clip/5042841/LV0xUt2QyowNBQXL",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5042841/Z6XRiXu8BKwSrDYW?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5042841'></iframe>",
+         "credits":"Credits to Galkon (https://medal.tv/users/12597"
       },
       {
          "rawFileUrl":"not_authorized",
          "contentTitle":"lmao so close",
-         "contentViews":34,
+         "contentViews":42,
          "contentLikes":4,
          "categoryId":10,
-         "directClipUrl":"https://medal.tv/clip/5037877/JjuO0dZjw6YdqP3O",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5037877/Z13fByKFf7c39DyC?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>"
+         "videoLengthSeconds":14,
+         "createdTimestamp":1563668946000,
+         "directClipUrl":"https://medal.tv/clip/5037877/W98gfTlhKN7bw2DG",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5037877/sFfcDeWAI9n0B8Yy?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>",
+         "credits":"Credits to Galkon (https://medal.tv/users/12597"
       }
    ]
 }
@@ -89,11 +98,14 @@ Will return
       {
          "rawFileUrl":"not_authorized",
          "contentTitle":"Testing fortnite w/keyboard, damn is hard lol",
-         "contentViews":1803,
+         "contentViews":1836,
          "contentLikes":10,
          "categoryId":62,
-         "directClipUrl":"https://medal.tv/clip/4954089/BOvWuWtpfVsWL30d",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4954089/GabuV1ET3hIHZFh3?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>"
+         "videoLengthSeconds":10,
+         "createdTimestamp":1563233109000,
+         "directClipUrl":"https://medal.tv/clip/4954089/5xAyYcy7Spquc7Jz",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4954089/UUzr8lZ41i8pPVC4?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>",
+         "credits":"Credits to ODarwed (https://medal.tv/users/452854)"
       }
    ]
 }
@@ -130,11 +142,14 @@ Will return
       {
          "rawFileUrl":"not_authorized",
          "contentTitle":"#Flamingo #FLAMINGO #flamingo love u flamingo  roblox username bobdoopiscol ",
-         "contentViews":359,
+         "contentViews":367,
          "contentLikes":6,
          "categoryId":76,
-         "directClipUrl":"https://medal.tv/clip/4706138/wVTGxyLk6MlIuUDu",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4706138/91Siz6s5zfNDpL8I?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>"
+         "videoLengthSeconds":15,
+         "createdTimestamp":1561834937000,
+         "directClipUrl":"https://medal.tv/clip/4706138/sOT1gOwEOR7AfKqu",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4706138/SbUsIwbU7yO9eUws?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>",
+         "credits":"Credits to obesebutcute2 (https://medal.tv/users/1666318)"
       }
    ]
 }
@@ -157,11 +172,14 @@ Will return
       {
          "rawFileUrl":"not_authorized",
          "contentTitle":"flip reset",
-         "contentViews":6,
+         "contentViews":20,
          "contentLikes":0,
          "categoryId":10,
-         "directClipUrl":"https://medal.tv/clip/3471744/RwqVR0mSkS0zlnbb",
-         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/3471744/2t1BOdBl3EqNplo3?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>"
+         "videoLengthSeconds":15,
+         "createdTimestamp":1550037169000,
+         "directClipUrl":"https://medal.tv/clip/3471744/2PaSuhVQX5OWKPnO",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/3471744/vcMONks6G5T412oH?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>",
+         "credits":"Credits to Hakugei (https://medal.tv/users/233543)"
       }
    ]
 }
@@ -190,27 +208,6 @@ curl "https://developers.medal.tv/v1/categories" -X GET -H "API-Key: YOUR_API_KE
 # Reading out content objects
 Every content objects has the fields found below. These will allow you to customize the medal content to the needs of your users. 
 
-### Default Response on every endpoint
-
-```
-{
-"contentObjects":[
-  {
-    "rawFileUrl":"http://files.medal.tv/237536/720p-4900670.mp4", // note: you need special access for this one
-    "contentTitle":"Tuk tuk attack! ",
-    "contentViews":5048,
-    "contentLikes":28,
-    "categoryId":41,
-    "directClipUrl":"https://medal.tv/clip/4900670/DIEHX35oWn6Vidhb",
-    "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4900670/3XTFZkZ5nkXN4tME' frameborder='0' allow='autoplay' allowfullscreen></iframe>"
-  }
-}
-```
-
-Which renders this:
-<iframe width='640' height='360' src='https://medal.tv/clip/4900670/3XTFZkZ5nkXN4tME' frameborder='0' allow='autoplay' allowfullscreen></iframe>
-
-
 ## Customize your response on every endpoint
 Add the following parameters if you want to customize your responses for using custom links or iframes per our [iframe documentation](https://docs.medal.tv)
 
@@ -229,11 +226,14 @@ Will return
       {
          "rawFileUrl":"not_authorized",
          "contentTitle":"flip reset",
-         "contentViews":7,
+         "contentViews":20,
          "contentLikes":0,
          "categoryId":10,
-         "directClipUrl":"https://medal.tv/clip/3471744/oo81C99Z99AJp1ny",
-         "embedIframeUrl":"<iframe width='400' height='200' src='https://medal.tv/clip/3471744/UJggTzBkwJyibL84?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-3471744'></iframe>"
+         "videoLengthSeconds":15,
+         "createdTimestamp":1550037169000,
+         "directClipUrl":"https://medal.tv/clip/3471744/yqlkQaRYC0rUS9uu",
+         "embedIframeUrl":"<iframe width='400' height='200' src='https://medal.tv/clip/3471744/Zq6XKzjAbsSTelec?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-3471744'></iframe>",
+         "credits":"Credits to Hakugei (https://medal.tv/users/233543"
       }
    ]
 }
