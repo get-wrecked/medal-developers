@@ -29,9 +29,10 @@ curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "
 
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
-| categoryId      | `none` | This allows you to filter down by specific game ids. Not sure what category ID to look for? Just search for your game [here](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) |
-| limit           | `10` | Limit how many videos the trending request returns |
-| offset          | `0` | Specify how much you want to offset the trending results by |
+| categoryId            | `none` | Filter by game. Not sure what `categoryId` to look for? Just search for your game [here](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories)  |
+| limit         | `10` | How many objects to return. By default you have access to 1000 objects per query. |
+| offset         | `0` | How many objects to skip. `limit` + `offset` can not exceed 1000 by default. |
+
 
 ## /v1/search - Search Clips on Medal 
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). 
