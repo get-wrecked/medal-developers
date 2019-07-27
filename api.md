@@ -4,7 +4,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
   * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
   * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
-  * [Categories (Games)](#categories) (/v1/categories)
+  * [Categories (Games)](#v1categories---games-list) (/v1/categories)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
   * [Special Access](#special-access-options)
 
