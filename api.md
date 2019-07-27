@@ -26,6 +26,7 @@ curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "
 ```
 
 #### /v1/trending - Parameters
+
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | categoryId      | `none` | This allows you to filter down by specific game ids. Not sure what category ID to look for? Just search for your game [here](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) |
@@ -48,6 +49,7 @@ curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&
 ```
 
 #### /v1/search - Parameters
+
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
 | text            | `none` | Customize this field to your needs. Make sure to use URI encoding if your search term contains hashtags or spaces (%20 for spaces, %23 for hashtags) |
