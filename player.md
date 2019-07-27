@@ -24,7 +24,9 @@ Once you find the clip you want to embed, open the link in your browser (for exa
 If you are looking to control video playback behavior or add a **Get this on Steam** button, you've come to the right place.
 
 ### Default Embed Behavior
-The default embed behavior is to autoplay muted, loop when the video ends, and to show all call-to-actions on the player. Here is an example of a default embed:
+<iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o" frameborder="0" allow="autoplay" allowfullscreen style="width: 100%;height:468px;min-height: 360px;"></iframe>
+
+The default embed behavior is to autoplay muted, loop when the video ends, and to show all call-to-actions on the player. Here is an example of a default embed, like the one above:
 ```html
 <iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 ```
