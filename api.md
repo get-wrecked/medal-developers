@@ -14,9 +14,9 @@ You can generate an API key instantly without approval at [this link](https://de
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
 #### /v1/trending - Example Trending Clips request
-This example request produces the top 10 fortnite clips on Medal today.
+This example request produces the top fortnite clip on Medal today.
 ```
-curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=10" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
 #### /v1/trending - Parameters
