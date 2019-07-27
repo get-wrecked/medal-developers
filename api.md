@@ -279,6 +279,6 @@ If you want more customized access, you may request so by filling out [this form
 | Special Acesss | Default      | Description |
 | --------------- | ------------ | ----------- |
 | rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
-| Content Limits (`limit` and `offset`)          | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
+| Content Limits (`limit` and `offset`)          | `1000` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
 
 
