@@ -8,7 +8,12 @@ Want to embed your clips on your website? Are you a game developer who wants to 
 
 
 ## Generate an API Key
-You can generate an API key instantly without approval at [this link](https://developers.medal.tv/v1/generate_key). If you want more customized access, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
+
+
+**Generate a key at [this link](https://developers.medal.tv/v1/generate_key)**
+
+
+If you want more customized access, you may request so by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeLxbs1UchRGT6Nb6WYD_0gO7821SbRrAnDYjqVOXNrPBrJ4g/viewform
 )
 
 | Special Acesss | Default      | Description |
