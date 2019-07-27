@@ -20,6 +20,11 @@ If you want more customized access, such as to raw file URLs for your tournament
 ## /v1/trending - Trending Clips By Game
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
+If you want to look for a specific game, you can use the search bar below:
+<iframe width='640' height='360' src='https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories' frameborder='0' allowfullscreen></iframe>
+
+
+
 #### /v1/trending - Example Trending Clips request
 This example request produces the top fortnite clip on Medal today.
 
