@@ -47,7 +47,7 @@ Will return
          "createdTimestamp":1563692235000,
          "directClipUrl":"https://medal.tv/clip/5042841/LV0xUt2QyowNBQXL",
          "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5042841/Z6XRiXu8BKwSrDYW?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5042841'></iframe>",
-         "credits":"Credits to Galkon (https://medal.tv/users/12597"
+         "credits":"Credits to Galkon (https://medal.tv/users/12597)"
       },
       {
          "rawFileUrl":"not_authorized",
@@ -59,7 +59,7 @@ Will return
          "createdTimestamp":1563668946000,
          "directClipUrl":"https://medal.tv/clip/5037877/W98gfTlhKN7bw2DG",
          "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/5037877/sFfcDeWAI9n0B8Yy?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>",
-         "credits":"Credits to Galkon (https://medal.tv/users/12597"
+         "credits":"Credits to Galkon (https://medal.tv/users/12597)"
       }
    ]
 }
