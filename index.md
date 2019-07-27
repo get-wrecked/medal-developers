@@ -25,13 +25,13 @@ If you are looking to control video playback behavior or add a **Get this on Ste
 
 ### Default Embed Behavior
 The default embed behavior is to autoplay muted, loop when the video ends, and to show all call-to-actions on the player. Here is an example of a default embed:
-```
+```html
 <iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 ```
 
 ### Control Playback Behavior
 You can append query parameters to the `src` url in the iframe code to control playback behavior. For example:
-```
+```html
 <iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o?autoplay=0&muted=0&loop=0" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 ```
 The above code _would not_ autoplay, it _would_ have sound by default, and it _would not_ loop playback.
@@ -48,7 +48,7 @@ Here is a breakdown of the query parameters for controlling playback behavior:
 <iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpjHcSsho?autoplay=0&steamappid=252950" frameborder="0" allow="autoplay" allowfullscreen style="width: 100%;height:468px;min-height: 360px;"></iframe>
 
 You can enable the **Get this on Steam** button by passing in a `steamappid` query parameter with your Steam game's app ID. For example, this would display a button that links out to Rocket League on Steam, like in the image above:
-```
+```html
 <iframe width="640" height="360" src="https://medal.tv/clip/4954893/vpkPnOp0o?steamappid=252950" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 ```
 Then every time someone copies the embed code from this embed or the share URL, it would also include your Steam app ID so that when they share it, the **Get this on Steam** button persists.
