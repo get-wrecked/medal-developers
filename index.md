@@ -7,10 +7,10 @@ Table of Contents
   * [Browse Clips](#browse-clips)
   * [Copy Embed Code](#copy-embed-code)
   * [Advanced Embed Options](#advanced-embed-options)
-        * [Default Embed Behavior](#default-embed-behavior)
-        * [Control Playback Behavior](#control-playback-behavior)
-        * [Enable "Get this on Steam"](#enable-get-this-on-steam)
-        * [Hide Donate Call-To-Action](#hide-donate-call-to-action)
+     * [Default Embed Behavior](#default-embed-behavior)
+     * [Control Playback Behavior](#control-playback-behavior)
+     * [Enable "Get this on Steam"](#enable-get-this-on-steam)
+     * [Hide Donate Call-To-Action](#hide-donate-call-to-action)
 
 ## Browse Clips
 You can browse the latest and greatest clips over at [medal.tv](https://medal.tv). If you don't see your game on there, feel free to [contact us on Discord](https://medal.tv/discord).
