@@ -62,7 +62,6 @@ Which renders
 <iframe width='640' height='360' src='https://medal.tv/clip/5037877/Z13fByKFf7c39DyC?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>
 
 #### parameters
-#### /v1/trending - Parameters
 
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
