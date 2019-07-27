@@ -57,14 +57,11 @@ Did you organize a tournament where everybody submitted Medal clips with a hasht
 #### /v1/search - Example hashtag search
 This produces all the results of the #flamingo Medal competition
 ```
-curl "https://developers.medal.tv/v1/search?text=%23flamingo" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/search?text=%23flamingo&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
-#### /v1/search - Example highly-customized search
-This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
-```
-curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
-```
+Will return
+
 
 ```json
 {
@@ -81,6 +78,13 @@ curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&
    ]
 }
 ```
+
+#### /v1/search - Example highly-customized search
+This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
+```
+curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
 
 #### /v1/search - Parameters
 
