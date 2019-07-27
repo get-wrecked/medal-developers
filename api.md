@@ -66,6 +66,22 @@ This example request produces a `get this on steam`-enabled flip reset that auto
 curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
+```json
+{
+   "contentObjects":[
+      {
+         "rawFileUrl":"not_authorized",
+         "contentTitle":"#Flamingo #FLAMINGO #flamingo love u flamingo  roblox username bobdoopiscol ",
+         "contentViews":359,
+         "contentLikes":6,
+         "categoryId":76,
+         "directClipUrl":"https://medal.tv/clip/4706138/wVTGxyLk6MlIuUDu",
+         "embedIframeUrl":"<iframe width='640' height='360' src='https://medal.tv/clip/4706138/91Siz6s5zfNDpL8I?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>"
+      }
+   ]
+}
+```
+
 #### /v1/search - Parameters
 
 | Query Parameter | Default      | Description |
