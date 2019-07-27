@@ -26,19 +26,19 @@ curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=1" -X GET -H "
 | limit           | `10` | Limit how many videos the trending request returns |
 | offset          | `0` | Specify how much you want to offset the trending results by |
 
-## /v1/search - Search Clips on Medal by Hashtags
+## /v1/search - Search Clips on Medal 
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). 
-
-#### /v1/search - Example request
-This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
-```
-curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
-```
 
 #### /v1/search - Example hashtag search
 This produces all the results of the #flamingo Medal competition
 ```
 curl "https://developers.medal.tv/v1/search?text=%23flamingo" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
+#### /v1/search - Example highly-customized search
+This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
+```
+curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
 #### /v1/search - Parameters
