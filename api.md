@@ -2,6 +2,7 @@
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
   * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
+  * [Latest User Clips ](#v1latest_clips---latest-clips-from-a-user) (/v1/trending)
   * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
   * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
   * [Categories (Games)](#v1categories---games-list) (/v1/categories)
@@ -60,6 +61,17 @@ Which renders
 
 <iframe width='640' height='360' src='https://medal.tv/clip/5037877/Z13fByKFf7c39DyC?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5037877'></iframe>
 
+#### parameters
+#### /v1/trending - Parameters
+
+| Query Parameter | Default      | Description |
+| --------------- | ------------ | ----------- |
+| userId         | `none` | The user ID to search for. You can find your user ID by searching your profile on medal.tv and clicking on your profile. It'll be medal.tv/users/`userId`  |
+| categoryId            | `none` | Filter by game. Not sure what `categoryId` to look for? Just search for your game [here](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories)  |
+| limit         | `10` | How many objects to return. By default you have access to 1000 objects per query. |
+| offset         | `0` | How many objects to skip. `limit` + `offset` can not exceed 1000 by default. |
+
+
 # /v1/trending - Trending Clips By Game
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
@@ -92,7 +104,7 @@ Which renders this:
 
 <iframe width='640' height='360' src='https://medal.tv/clip/4954089/GabuV1ET3hIHZFh3?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4954089'></iframe>
 
-#### /v1/trending - Parameters
+#### parameters
 
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
@@ -132,7 +144,7 @@ Will return
 Which renders this:
 <iframe width='640' height='360' src='https://medal.tv/clip/4706138/91Siz6s5zfNDpL8I?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>
  
-#### /v1/search - Example highly-customized search
+#### example custom search
 This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
 ```
 curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100&limit=1" -X GET -H "API-Key: YOUR_API_KEY"
@@ -161,7 +173,7 @@ Which renders this:
 <iframe width='640' height='360' src='https://medal.tv/clip/3471744/2t1BOdBl3EqNplo3?loop=1&autoplay=1&cta=0&steamappid=252950' frameborder='0' allow='autoplay' allowfullscreen class='rlclip' id='contentId-3471744'></iframe>
 
 
-#### /v1/search - Parameters
+#### parameters
 
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
