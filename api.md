@@ -10,7 +10,7 @@ You can generate an API key instantly without approval at [this link](https://de
 | rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
 | Content Limits (`limit` and `offset`)          | `10` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
 
-## /v1/trending - Trending Clips 
+## /v1/trending - Trending Clips By Game
 Are you a game developer, or developing a game-related site and want to show clips of the game? You can use this API!
 
 #### /v1/trending - Example Trending Clips request
@@ -26,19 +26,25 @@ curl "https://developers.medal.tv/v1/trending?categoryId=62&limit=10" -X GET -H 
 | limit           | `10` | Limit how many videos the trending request returns |
 | offset          | `0` | Specify how much you want to offset the trending results by |
 
-## /v1/search - Search Clips
+## /v1/search - Search Clips on Medal by Hashtags
 Did you organize a tournament where everybody submitted Medal clips with a hashtag? You can use the Search API to search for hashtags on Medal [medal.tv](https://medal.tv). 
 
 #### /v1/search - Example request
 This example request produces a `get this on steam`-enabled flip reset that autoplays, loops, has a custom class of "rlclip" 
 ```
-curl "https://developers.medal.tv/v1/search?text=flip reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
+curl "https://developers.medal.tv/v1/search?text=flip%20reset&steamappid=252950&autoplay=1&loop=1&cta=0&customStyleClass=rlclip&offset=100" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
+#### /v1/search - Example hashtag search
+This produces all the results of the #flamingo Medal competition
+```
+curl "https://developers.medal.tv/v1/search?text=%23flamingo" -X GET -H "API-Key: YOUR_API_KEY"
 ```
 
 #### /v1/search - Parameters
 | Query Parameter | Default      | Description |
 | --------------- | ------------ | ----------- |
-| text            | `none` | Customize this field to your needs |
+| text            | `none` | Customize this field to your needs. Make sure to use URI encoding if your search term contains hashtags or spaces (%20 for spaces, %23 for hashtags) |
 | limit           | `10` | Limit how many videos the search returns |
 | offset          | `0` | Specify how much you want to offset the search by |
 
