@@ -20,7 +20,7 @@ Every response object contains a `credits` field. Please make sure to use this w
 
 In order to make requests, you need to add the API Key in a `Authorization` header. 
 
-## Generate an API Key for public use
+## Public-Use API Keys
 
 If you are building a frontend-only application, such as our office feed, you'll want to generate an API key for public use. You are fine to expose these to users, as their rate limits will be on a per-IP basis.  
 
@@ -29,7 +29,7 @@ If you are building a frontend-only application, such as our office feed, you'll
 Public use API keys can not be granted special privileges.
 
 
-## Generate an API Key for private use
+## Private-Use API Keys
 
 Keys for private use can be whitelisted for special privileges. You typically deploy these in backend applications, and make sure your users don't see them. The rate limits for these keys are on a per-key basis, which means you can not deploy them in front-end applications
 
