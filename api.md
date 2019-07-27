@@ -4,6 +4,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Generate API Key](#generate-an-api-key) (/v1/generate_key)
   * [Trending Clips ](#v1trending---trending-clips-by-game) (/v1/trending)
   * [Search Clips](#v1search---search-clips-on-medal) (/v1/search)
+  * [Categories (Games)](#categories) (/v1/categories)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
   * [Special Access](#special-access-options)
 
@@ -152,7 +153,15 @@ Every content objects has the fields found below. These will allow you to custom
 Which renders this:
 <iframe width='640' height='360' src='https://medal.tv/clip/4900670/3XTFZkZ5nkXN4tME' frameborder='0' allow='autoplay' allowfullscreen></iframe>
 
-### Customize your response on every endpoint
+
+## /v1/categories
+Returns a full list of all the categories on Medal. However, we recommend you use [this link](https://jsoneditoronline.org/?url=https%3A%2F%2Fapi-v2.medal.tv%2Fcategories) to search for a game if you'd like to find a categoryId
+
+```bash
+curl "https://developers.medal.tv/v1/categories" -X GET -H "API-Key: YOUR_API_KEY"
+```
+
+## Customize your response on every endpoint
 Add the following parameters if you want to customize your responses for using custom links or iframes per our [iframe documentation](https://docs.medal.tv)
 
 #### Example customized response
