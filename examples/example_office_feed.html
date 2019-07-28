@@ -74,6 +74,8 @@
 
     const urlParams = new URLSearchParams(window.location.search);
     const categoryId = urlParams.get('categoryId') || 62;
+    const trendingRefreshRate = urlParams.get('trendingRefreshRate') || 15000;
+    const latestRefreshRate = urlParams.get('latestRefreshRate') || 15000;
 
 
     // map to avoid duplicate content from being shown. If a conflict is detected, we'll render another object.
@@ -83,7 +85,7 @@
     // keep going down trending feed on top one.
     let trendingOffset = 2; // start with 2.
 
-    const PUBLIC_API_KEY = 'YOUR_API_KEY';
+    const PUBLIC_API_KEY = 'pub_6amR5ZEL8V6MB9IY3lomzeyFyLqrhQw2';
 
     function populate(json, el) {
 
@@ -165,7 +167,7 @@
                 .then(function (myJson) {
                     this.addTo(myJson, "latest");
                 });
-        }, 15000) // check latest every 15 seconds. If there is no newer content, go to 1 older
+        }, refreshRate) // check latest every 15 seconds. If there is no newer content, go to 1 older
 
     }
 
@@ -188,7 +190,7 @@
                 .then(function (myJson) {
                     this.addTo(myJson, "trending");
                 });
-        }, 15000) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
+        }, refreshRate) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
 
     }
 
