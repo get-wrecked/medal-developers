@@ -12,6 +12,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   
 # Examples
   * [Example functions to get top and newest clips by game names](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_functions.js) 
+  * [Super simple real-time feed](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_office_feed.html) 
 
 # Credits
 Every response object contains a `credits` field. Please make sure to use this wherever you serve the content, and link back to their user profile. 
