@@ -1,0 +1,204 @@
+<html>
+
+
+<head>
+
+    <title>Office Feed Example</title>
+
+    <style>
+        h1 {
+            color: white;
+        }
+
+        .feed-clip {
+            display: flex;
+            justify-content: center;
+            height: 315px;
+            padding: 20px;
+            width: 560px;
+        }
+
+        .feed-clip iframe {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        body {
+            background: #212121;
+
+        }
+
+        .title {
+            font-size;: 19,
+        }
+
+        .clip-row {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            height: 50%;
+            width: 100%;
+        }
+
+        .page-container {
+            padding: 100px;
+        }
+
+        .page-container a {
+            color: white;
+            font-size: 1.2em;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="clip-row" id="trending"></div>
+<div class="clip-row" id="latest"></div>
+
+<script>
+
+
+
+    // map to avoid duplicate content from being shown. If a conflict is detected, we'll render another object.
+    let existingCache = {};
+
+
+    // keep going down trending feed on top one.
+    let trendingOffset = 2; // start with 2.
+
+    const PUBLIC_API_KEY = 'pub_6amR5ZEL8V6MB9IY3lomzeyFyLqrhQw2';
+
+    function populate(json, el) {
+
+        const {contentObjects} = json;
+
+        for (const clip of contentObjects) {
+            if(!valid(clip)) {
+                continue;
+            }
+            const clipEl = document.createElement("div");
+            clipEl.className = "feed-clip";
+            clipEl.innerHTML = clip.embedIframeCode;
+            document.getElementById(el).insertBefore(clipEl, document.getElementById(el).childNodes[0]);
+            existingCache[clip.directClipUrl] = true;
+        }
+
+    }
+
+    function addTo(json, el) {
+
+        const {contentObjects} = json;
+
+        for (const clip of contentObjects) {
+            if(!valid(clip)) {
+                continue;
+            }
+            if(existingCache[clip.contentId] === undefined) {
+                const clipEl = document.createElement("div");
+                clipEl.className = "feed-clip";
+                clipEl.innerHTML = clip.embedIframeCode;
+                document.getElementById(el).insertBefore(clipEl, document.getElementById(el).childNodes[0]);
+                document.getElementById(el).removeChild(document.getElementById(el).childNodes[3])
+            } else {
+
+                // get a new one with offset + previous offset
+                if(el === 'trending') {
+
+                    trendingOffset += 1; // increase offset by 1 to keep going down trending feed
+
+
+                    fetch(`https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1&offset=${trendingOffset}`, {
+                        headers: {
+                            'Authorization': PUBLIC_API_KEY
+                        }
+                    })
+                        .then(function (response) {
+                            console.log(response);
+                            return response.json();
+                        })
+                        .then(function (myJson) {
+                            this.addTo(myJson, "trending");
+                        });
+                }
+            }
+            existingCache[clip.contentId] = true;
+        }
+
+    }
+
+
+    function checkForLatest() {
+
+        setInterval(function () {
+            fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1', {
+                headers: {
+                    'Authorization': PUBLIC_API_KEY
+                }
+            })
+                .then(function (response) {
+                    console.log(response);
+                    return response.json();
+                })
+                .then(function (myJson) {
+                    this.addTo(myJson, "latest");
+                });
+        }, 15000) // check latest every 15 seconds. If there is no newer content, go to 1 older
+
+    }
+
+    function valid(clip) {
+        console.log(clip);
+        return clip.videoLengthSeconds > 1;
+    }
+    function checkForTrending() {
+
+        setInterval(function () {
+            fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1', {
+                headers: {
+                    'Authorization': PUBLIC_API_KEY
+                }
+            })
+                .then(function (response) {
+                    console.log(response);
+                    return response.json();
+                })
+                .then(function (myJson) {
+                    this.addTo(myJson, "trending");
+                });
+        }, 15000) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
+
+    }
+
+    fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&limit=2&autoplay=1', {
+        headers: {
+            'Authorization': PUBLIC_API_KEY
+        }
+    })
+        .then(function (response) {
+            console.log(response);
+            return response.json();
+        })
+        .then(function (myJson) {
+            this.populate(myJson, "latest");
+            this.checkForLatest();
+        });
+
+
+    fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=2&autoplay=1', {
+        headers: {
+            'Authorization': PUBLIC_API_KEY
+        }
+    })
+        .then(function (response) {
+            console.log(response);
+            return response.json();
+        })
+        .then(function (myJson) {
+            this.populate(myJson, "trending");
+            this.checkForTrending();
+        });
+
+
+</script>
+</body>
+</html>
