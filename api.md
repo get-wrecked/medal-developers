@@ -12,10 +12,8 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   
 # Examples
   * [Example functions to get top and newest clips by game names](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_functions.js) 
-  * [Super simple real-time feed](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_office_feed.html) 
-
-# Credits
-Every response object contains a `credits` field. Please make sure to use this wherever you serve the content, and link back to their user profile. 
+  * [Super simple real-time feed](https://docs.medal.tv/examples/example_office_feed.html?categoryId=62) 
+     * [Source Code](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_office_feed.html)
 
 # Generate an API Key
 
@@ -316,4 +314,6 @@ If you want more customized access, you may request so by filling out [this form
 | rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
 | Content Limits (`limit` and `offset`)          | `1000` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
 
+# Credits
+Every response object contains a `credits` field. If you do not use the embedded player, please make sure to use this wherever you serve the content, and link back to their Medal user profile. 
 
