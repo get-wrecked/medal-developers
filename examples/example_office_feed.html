@@ -167,7 +167,7 @@
                 .then(function (myJson) {
                     this.addTo(myJson, "latest");
                 });
-        }, refreshRate) // check latest every 15 seconds. If there is no newer content, go to 1 older
+        }, latestRefreshRate) // check latest every 15 seconds. If there is no newer content, go to 1 older
 
     }
 
@@ -190,7 +190,7 @@
                 .then(function (myJson) {
                     this.addTo(myJson, "trending");
                 });
-        }, refreshRate) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
+        }, trendingRefreshRate) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
 
     }
 
