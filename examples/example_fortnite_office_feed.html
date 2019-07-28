@@ -66,7 +66,7 @@
     // keep going down trending feed on top one.
     let trendingOffset = 2; // start with 2.
 
-    const PUBLIC_API_KEY = 'pub_6amR5ZEL8V6MB9IY3lomzeyFyLqrhQw2'; // this key is public, no need to worry. See docs.medal.tv/api
+    const PUBLIC_API_KEY = 'pub_6amR5ZEL8V6MB9IY3lomzeyFyLqrhQw2';
 
     function populate(json, el) {
 
@@ -107,7 +107,7 @@
                     trendingOffset += 1; // increase offset by 1 to keep going down trending feed
 
 
-                    fetch(`https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1&offset=${trendingOffset}`, {
+                    fetch(`https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1&muted=1&offset=${trendingOffset}`, {
                         headers: {
                             'Authorization': PUBLIC_API_KEY
                         }
@@ -130,7 +130,7 @@
     function checkForLatest() {
 
         setInterval(function () {
-            fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1', {
+            fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&limit=1&muted=1&autoplay=1', {
                 headers: {
                     'Authorization': PUBLIC_API_KEY
                 }
@@ -153,7 +153,7 @@
     function checkForTrending() {
 
         setInterval(function () {
-            fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1', {
+            fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&muted=1&limit=1&autoplay=1', {
                 headers: {
                     'Authorization': PUBLIC_API_KEY
                 }
@@ -169,7 +169,7 @@
 
     }
 
-    fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&limit=2&autoplay=1', {
+    fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&muted=1&limit=2&autoplay=1', {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
@@ -184,7 +184,7 @@
         });
 
 
-    fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=2&autoplay=1', {
+    fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&muted=1&limit=2&autoplay=1', {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
