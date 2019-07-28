@@ -15,7 +15,7 @@ function getCategoriesAndRunExamples() {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'API-Key': API_KEY
+            'Authorization': API_KEY
         }
     };
     getJSON(options, function(statusCode, result) {
@@ -38,7 +38,7 @@ function getTopClipsForSpecificGame(amount, game) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'API-Key': API_KEY
+            'Authorization': API_KEY
         }
     };
 
@@ -58,7 +58,7 @@ function getLatestClipsForSpecificGame(amount, game) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'API-Key': API_KEY
+            'Authorization': API_KEY
         }
     };
 
