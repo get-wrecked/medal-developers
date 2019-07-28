@@ -73,7 +73,12 @@
 
 
     const urlParams = new URLSearchParams(window.location.search);
-    const categoryId = urlParams.get('categoryId') || 62;
+    let categoryId = urlParams.get('categoryId') || 62;
+    let liveDangerously = urlParams.get('liveDangerously');
+
+    if(liveDangerously === '1') {
+        categoryId = ''; // live feed of everything
+    }
     const trendingRefreshRate = urlParams.get('trendingRefreshRate') || 15000;
     const latestRefreshRate = urlParams.get('latestRefreshRate') || 15000;
 
@@ -98,7 +103,7 @@
             const clipEl = document.createElement("div");
             clipEl.className = "feed-clip";
             clipEl.innerHTML = `<p align="left" class="description">${el === 'trending' ? ("<b>Trending: </b>"+clip.contentTitle) : (timeAgo(clip.createdTimestamp) + " - " + clip.contentTitle)} </p><br/>${clip.embedIframeCode}<br/>`;
-            document.getElementById(el).insertBefore(clipEl, document.getElementById(el).childNodes[0]);
+            document.getElementById(el).appendChild(clipEl); // appendChild for population due to it being 2 clips
             existingCache[clip.contentId] = true;
         }
 
