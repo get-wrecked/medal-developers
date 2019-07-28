@@ -287,7 +287,7 @@ Where `embedIframeCode` renders this:
 | cta           | `1` | Hide donation buttons or user-generated call-to-actions on the clip, most commonly used for safety reasons |
 | autoplay          | `0` | Specify whether whe iframes returned contain the autoplay tag |
 | loop          | `0` | Specify whether whe iframes returned loop content |
-| muted          | `0` | Specify whether whe iframes returned should auto-play sound |
+| muted          | `1` | Specify whether whe iframes returned should auto-play sound. By default it does not. |
 | width          | `640` | The height of the returned clip player |
 | height          | `360` | The width of the returned clip player |
 | customStyleClass          | `medal-clip contentId-$contentId` | Whether we should return a custom class identifier for your medal clip iframe. By default we add a class called `medal-clip` and an id called `contentId-$contentId`|
