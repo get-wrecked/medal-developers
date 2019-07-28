@@ -60,6 +60,7 @@ Will return
 {
    "contentObjects":[
       {
+         "contentId":"cid4954089",
          "rawFileUrl":"not_authorized",
          "contentTitle":"Testing fortnite w/keyboard, damn is hard lol",
          "contentViews":1836,
@@ -107,6 +108,7 @@ Will return
 {
    "contentObjects":[
       {
+         "contentId":"cid5042841",
          "rawFileUrl":"not_authorized",
          "contentTitle":"that winning team name...",
          "contentViews":47,
@@ -119,6 +121,7 @@ Will return
          "credits":"Credits to Galkon (https://medal.tv/users/12597)"
       },
       {
+         "contentId":"cid5037877",
          "rawFileUrl":"not_authorized",
          "contentTitle":"lmao so close",
          "contentViews":42,
@@ -169,6 +172,7 @@ Will return
 {
    "contentObjects":[
       {
+         "contentId":"cid4706138",
          "rawFileUrl":"not_authorized",
          "contentTitle":"#Flamingo #FLAMINGO #flamingo love u flamingo  roblox username bobdoopiscol ",
          "contentViews":367,
@@ -199,6 +203,7 @@ Will return
 {
    "contentObjects":[
       {
+         "contentId":"cid3471744",
          "rawFileUrl":"not_authorized",
          "contentTitle":"flip reset",
          "contentViews":20,
@@ -263,6 +268,7 @@ Will return
 {
    "contentObjects":[
       {
+         "contentId":"cid3471744",
          "rawFileUrl":"not_authorized",
          "contentTitle":"flip reset",
          "contentViews":20,
