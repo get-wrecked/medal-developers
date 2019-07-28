@@ -5,7 +5,21 @@
 
     <title>Office Feed Example</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Gudea:400,500,600,700|Rajdhani:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
     <style>
+
+        .description {
+            flex: 0.1;
+            height: 15px;
+            color: goldenrod;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .credits {
+            flex: 0.1;
+            height: 15px;
+        }
+
         h1 {
             color: white;
         }
@@ -13,9 +27,10 @@
         .feed-clip {
             display: flex;
             justify-content: center;
-            height: 315px;
+            height: 400px;
             padding: 20px;
             width: 560px;
+            flex-direction: column;
         }
 
         .feed-clip iframe {
@@ -37,7 +52,6 @@
             align-items: center;
             flex-direction: row;
             height: 50%;
-            width: 100%;
         }
 
         .page-container {
@@ -78,14 +92,16 @@
             }
             const clipEl = document.createElement("div");
             clipEl.className = "feed-clip";
-            clipEl.innerHTML = clip.embedIframeCode;
+            clipEl.innerHTML = `<p align="left" class="description">${el === 'trending' ? ("<b>Trending: </b>"+clip.contentTitle) : (timeAgo(clip.createdTimestamp) + " - " + clip.contentTitle)} </p><br/>${clip.embedIframeCode}<br/>`;
             document.getElementById(el).insertBefore(clipEl, document.getElementById(el).childNodes[0]);
-            existingCache[clip.directClipUrl] = true;
+            existingCache[clip.contentId] = true;
         }
 
     }
 
     function addTo(json, el) {
+
+        console.log(existingCache);
 
         const {contentObjects} = json;
 
@@ -96,9 +112,13 @@
             if(existingCache[clip.contentId] === undefined) {
                 const clipEl = document.createElement("div");
                 clipEl.className = "feed-clip";
-                clipEl.innerHTML = clip.embedIframeCode;
+                clipEl.innerHTML = `<p align="left" class="description">${el === 'trending' ? ("<b>Trending: </b>"+clip.contentTitle) : (timeAgo(clip.createdTimestamp) + " - " + clip.contentTitle)} </p><br/>${clip.embedIframeCode}<br/>`;
                 document.getElementById(el).insertBefore(clipEl, document.getElementById(el).childNodes[0]);
-                document.getElementById(el).removeChild(document.getElementById(el).childNodes[3])
+                try {
+                    document.getElementById(el).removeChild(document.getElementById(el).childNodes[3])
+                } catch(err) {C
+                    // swallow
+                }
             } else {
 
                 // get a new one with offset + previous offset
@@ -107,7 +127,7 @@
                     trendingOffset += 1; // increase offset by 1 to keep going down trending feed
 
 
-                    fetch(`https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&limit=1&autoplay=1&muted=1&offset=${trendingOffset}`, {
+                    fetch(`https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=400&width=560&limit=1&autoplay=1&muted=1&offset=${trendingOffset}`, {
                         headers: {
                             'Authorization': PUBLIC_API_KEY
                         }
@@ -130,7 +150,7 @@
     function checkForLatest() {
 
         setInterval(function () {
-            fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&limit=1&muted=1&autoplay=1', {
+            fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=400&width=560&limit=1&muted=1&autoplay=1', {
                 headers: {
                     'Authorization': PUBLIC_API_KEY
                 }
@@ -153,7 +173,7 @@
     function checkForTrending() {
 
         setInterval(function () {
-            fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&muted=1&limit=1&autoplay=1', {
+            fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=400&width=560&muted=1&limit=1&autoplay=1', {
                 headers: {
                     'Authorization': PUBLIC_API_KEY
                 }
@@ -169,7 +189,7 @@
 
     }
 
-    fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=315&width=560&muted=1&limit=2&autoplay=1', {
+    fetch('https://developers.medal.tv/v1/latest?categoryId=62&muted=1&height=400&width=560&muted=1&limit=2&autoplay=1', {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
@@ -184,7 +204,7 @@
         });
 
 
-    fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=315&width=560&muted=1&limit=2&autoplay=1', {
+    fetch('https://developers.medal.tv/v1/trending?categoryId=62&muted=1&height=400&width=560&muted=1&limit=2&autoplay=1', {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
@@ -197,6 +217,24 @@
             this.populate(myJson, "trending");
             this.checkForTrending();
         });
+
+
+    const NOW = new Date()
+    const times = [["second", 1], ["minute", 60], ["hour", 3600], ["day", 86400], ["week", 604800], ["month", 2592000], ["year", 31536000]]
+
+    function timeAgo(date) {
+        var diff = Math.round((NOW - date) / 1000)
+        for (var t = 0; t < times.length; t++) {
+            if (diff < times[t][1]) {
+                if (t == 0) {
+                    return "Just now"
+                } else {
+                    diff = Math.round(diff / times[t - 1][1])
+                    return diff + " " + times[t - 1][0] + (diff == 1?" ago":"s ago")
+                }
+            }
+        }
+    }
 
 
 </script>
