@@ -8,89 +8,197 @@
     <link href="https://fonts.googleapis.com/css?family=Gudea:400,500,600,700|Rajdhani:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
     <style>
 
-        .description {
-            flex: 0.1;
-            height: 15px;
-            color: goldenrod;
-            font-family: 'Rajdhani', sans-serif;
-        }
-
-        .credits {
-            flex: 0.1;
-            height: 15px;
-        }
-
-        h1 {
-            color: white;
-        }
-
-        .feed-clip {
-            display: flex;
-            justify-content: center;
-            height: 400px;
-            padding: 20px;
-            width: 560px;
-            flex-direction: column;
-        }
-
-        .feed-clip iframe {
-            overflow: hidden;
-            border-radius: 20px;
-        }
-
         body {
-            background: #212121;
-
+            background:#0e1014;
+            margin:0;
+            overflow-x:hidden;
+        }
+        
+        body,
+        .content,
+        .content ul{
+            height:100%;
+            margin:unset;
+        }
+        
+        .content ul {
+            display:flex;
+            flex-direction:column;
+            justify-content:space-evenly;
+            font-weight:600;
+            height:100%;
+            width:100%;
+            padding:unset;
+            padding-left:20px;
+        }
+        
+        .content ul li {
+            text-decoration:unset;
+            list-style:none;
+            color:white;
+            padding:10px;
+        }
+        
+        .content ul li.title{
+            padding:10px 16px;
+            background:#292b2f;
+            border-radius:3px;
+            font-family:'Rajdhani', sans-serif;
+            text-transform:uppercase;
+            font-size:calc(1.2vw + .6vh);
+        }
+        
+        .content ul li.clips{
+            max-width:100%;
+            display:flex;
+            padding:0;
+        }
+        
+        .content ul li.clips .container{
+            display:flex;
+        }
+        
+        .content ul li.clips .clip{
+            height:36.45vh;
+            width:33vw;
+            background:black;
+            border-radius:6px;
+            margin-right:20px;
+            position:relative;
+            transition:1s cubic-bezier(.25, .5, .25, 1.25);
+            overflow:hidden;
+        }
+        
+        .content ul li.clips .clip.jumpIn{
+            animation:slideInFromLeft 2000ms linear both;
+            margin-right:-33vw;
+            transition:0s;
+        }
+        .content ul li.clips .clip.removeMargin{
+            margin-right:20px;
+            transition:1s cubic-bezier(.25, .5, .25, 1.25);
+        }
+        
+        .content ul li.clips .clip.inactve{
+            transition:1s;
+            opacity:0;
+        }
+        
+        .content ul li.clips .clip iframe{
+            position:absolute;
+            height:100%;
+            width:100%;
+            top:0;
+            left:0;
+        }
+        
+        .content ul li.clips .clip .description{
+            position:absolute;
+            z-index:10;
+            font-size:calc(1vw + .6vh);
+            background:rgba(0,0,0,0.7);
+            bottom:0;
+            left:0;
+            right:0;
+            padding:8px 16px;
+            color:rgba(255,255,255,0.8);
+            font-weight:400;
+            font-family:'Gudea', sans-serif;
+            pointer-events:none;
+            transition:.2s;
+        }
+        
+        .content ul li.clips .clip:hover .description{
+            opacity:0;
+        }
+        
+        .content ul li.clips .clip .description b{
+            color:rgba(255,255,255,1);
+            font-weight:1000;
+            margin-right:4px;
+            padding:0 8px;
+            background:#292b2f;
+            border-radius:6px;
+        }
+        
+        @keyframes slideInFromLeft { 
+            0% { transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -600, 0, 0, 1); }
+            3.3% { transform: matrix3d(0.653, 0, 0, 0, 0, 0.696, 0, 0, 0, 0, 1, 0, -469.196, 0, 0, 1); }
+            3.4% { transform: matrix3d(0.658, 0, 0, 0, 0, 0.703, 0, 0, 0, 0, 1, 0, -465.089, 0, 0, 1); }
+            4.7% { transform: matrix3d(0.725, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, -410.411, 0, 0, 1); }
+            6.61% { transform: matrix3d(0.82, 0, 0, 0, 0, 0.933, 0, 0, 0, 0, 1, 0, -328.296, 0, 0, 1); }
+            6.81% { transform: matrix3d(0.83, 0, 0, 0, 0, 0.946, 0, 0, 0, 0, 1, 0, -319.7, 0, 0, 1); }
+            9.41% { transform: matrix3d(0.942, 0, 0, 0, 0, 1.084, 0, 0, 0, 0, 1, 0, -213.851, 0, 0, 1); }
+            9.91% { transform: matrix3d(0.96, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, -195.385, 0, 0, 1); }
+            10.21% { transform: matrix3d(0.971, 0, 0, 0, 0, 1.113, 0, 0, 0, 0, 1, 0, -184.678, 0, 0, 1); }
+            13.21% { transform: matrix3d(1.054, 0, 0, 0, 0, 1.165, 0, 0, 0, 0, 1, 0, -94.828, 0, 0, 1); }
+            13.61% { transform: matrix3d(1.062, 0, 0, 0, 0, 1.166, 0, 0, 0, 0, 1, 0, -85.31, 0, 0, 1); }
+            14.11% { transform: matrix3d(1.07, 0, 0, 0, 0, 1.165, 0, 0, 0, 0, 1, 0, -74.215, 0, 0, 1); }
+            17.52% { transform: matrix3d(1.104, 0, 0, 0, 0, 1.12, 0, 0, 0, 0, 1, 0, -20.311, 0, 0, 1); }
+            18.72% { transform: matrix3d(1.106, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, -8.868, 0, 0, 1); }
+            19.82% { transform: matrix3d(1.105, 0, 0, 0, 0, 1.068, 0, 0, 0, 0, 1, 0, -1.064, 0, 0, 1); }
+            21.32% { transform: matrix3d(1.098, 0, 0, 0, 0, 1.035, 0, 0, 0, 0, 1, 0, 6.228, 0, 0, 1); }
+            24.32% { transform: matrix3d(1.075, 0, 0, 0, 0, 0.98, 0, 0, 0, 0, 1, 0, 12.696, 0, 0, 1); }
+            25.23% { transform: matrix3d(1.067, 0, 0, 0, 0, 0.969, 0, 0, 0, 0, 1, 0, 13.242, 0, 0, 1); }
+            26.33% { transform: matrix3d(1.057, 0, 0, 0, 0, 0.958, 0, 0, 0, 0, 1, 0, 13.358, 0, 0, 1); }
+            29.03% { transform: matrix3d(1.031, 0, 0, 0, 0, 0.948, 0, 0, 0, 0, 1, 0, 12.046, 0, 0, 1); }
+            29.93% { transform: matrix3d(1.024, 0, 0, 0, 0, 0.949, 0, 0, 0, 0, 1, 0, 11.332, 0, 0, 1); }
+            35.54% { transform: matrix3d(0.99, 0, 0, 0, 0, 0.981, 0, 0, 0, 0, 1, 0, 6.497, 0, 0, 1); }
+            36.74% { transform: matrix3d(0.986, 0, 0, 0, 0, 0.989, 0, 0, 0, 0, 1, 0, 5.602, 0, 0, 1); }
+            41.04% { transform: matrix3d(0.98, 0, 0, 0, 0, 1.011, 0, 0, 0, 0, 1, 0, 3.078, 0, 0, 1); }
+            44.44% { transform: matrix3d(0.983, 0, 0, 0, 0, 1.016, 0, 0, 0, 0, 1, 0, 1.777, 0, 0, 1); }
+            52.15% { transform: matrix3d(0.996, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0.363, 0, 0, 1); }
+            59.86% { transform: matrix3d(1.003, 0, 0, 0, 0, 0.995, 0, 0, 0, 0, 1, 0, 0.002, 0, 0, 1); }
+            63.26% { transform: matrix3d(1.004, 0, 0, 0, 0, 0.996, 0, 0, 0, 0, 1, 0, -0.032, 0, 0, 1); }
+            66.37% { transform: matrix3d(1.003, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, -0.039, 0, 0, 1); }
+            75.28% { transform: matrix3d(1.001, 0, 0, 0, 0, 1.002, 0, 0, 0, 0, 1, 0, -0.021, 0, 0, 1); }
+            85.49% { transform: matrix3d(0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.005, 0, 0, 1); }
+            90.69% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.002, 0, 0, 1); }
+            100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
         }
 
-        .title {
-            font-size;: 19,
-        }
 
-        .clip-row {
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            height: 50%;
-        }
-
-        .page-container {
-            padding: 100px;
-        }
-
-        .page-container a {
-            color: white;
-            font-size: 1.2em;
-            margin: 0 20px;
-        }
     </style>
 </head>
 <body>
-<div class="clip-row" id="trending"></div>
-<div class="clip-row" id="latest"></div>
-
+    <div class="content">
+        <ul>
+            <li class="title">Trending Clips</li>
+            <li class="clips">
+                <div class="container" id="trending">
+                    <div class="clip"></div>
+                </div>
+            </li>
+            <li class="title">New Clips</li>
+            <li class="clips">
+                <div class="container" id="latest">
+                    <div class="clip"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
 <script>
-
+    
 
     const urlParams = new URLSearchParams(window.location.search);
-    let categoryId = urlParams.get('categoryId') || 62;
-    let liveDangerously = urlParams.get('liveDangerously');
-
-    if(liveDangerously === '1') {
-        categoryId = ''; // live feed of everything
-    }
-    const trendingRefreshRate = urlParams.get('trendingRefreshRate') || 15000;
-    const latestRefreshRate = urlParams.get('latestRefreshRate') || 15000;
+    const categoryId = urlParams.get('categoryId') || 62;
 
 
     // map to avoid duplicate content from being shown. If a conflict is detected, we'll render another object.
     let existingCache = {};
 
-
     // keep going down trending feed on top one.
     let trendingOffset = 2; // start with 2.
 
-    const PUBLIC_API_KEY = 'pub_6amR5ZEL8V6MB9IY3lomzeyFyLqrhQw2';
+    const PUBLIC_API_KEY = 'YOUR_API_KEY';
+    
+    function createClipDiv(trending, clip = {}) {
+        const description = trending ? clip.contentTitle : (timeAgo(clip.createdTimestamp) + " - " + clip.contentTitle);
+        const clipEl = document.createElement("div");
+        clipEl.className = "clip";
+        clipEl.innerHTML = `<div class="description">${description}</div><div class="clip-frame">${clip.embedIframeCode}</div>`;
+        return clipEl;
+    }
 
     function populate(json, el) {
 
@@ -100,33 +208,33 @@
             if(!valid(clip)) {
                 continue;
             }
-            const clipEl = document.createElement("div");
-            clipEl.className = "feed-clip";
-            clipEl.innerHTML = `<p align="left" class="description">${el === 'trending' ? ("<b>Trending: </b>"+clip.contentTitle) : (timeAgo(clip.createdTimestamp) + " - " + clip.contentTitle)} </p><br/>${clip.embedIframeCode}<br/>`;
-            document.getElementById(el).appendChild(clipEl); // appendChild for population due to it being 2 clips
+            const clipEl = createClipDiv(el === "trending", clip);
+            document.getElementById(el).insertBefore(clipEl, document.getElementById(el).childNodes[0]);
             existingCache[clip.contentId] = true;
         }
 
     }
-
+    
     function addTo(json, el) {
-
-        console.log(existingCache);
 
         const {contentObjects} = json;
 
         for (const clip of contentObjects) {
-            if(!valid(clip)) {
+            if (!valid(clip)) {
                 continue;
             }
-            if(existingCache[clip.contentId] === undefined) {
-                const clipEl = document.createElement("div");
-                clipEl.className = "feed-clip";
-                clipEl.innerHTML = `<p align="left" class="description">${el === 'trending' ? ("<b>Trending: </b>"+clip.contentTitle) : (timeAgo(clip.createdTimestamp) + " - " + clip.contentTitle)} </p><br/>${clip.embedIframeCode}<br/>`;
-                document.getElementById(el).insertBefore(clipEl, document.getElementById(el).childNodes[0]);
+            if (existingCache[clip.contentId] === undefined) {
+                const firstClip = createClipDiv(el === "trending", clip);
+                const secondClip = document.getElementById(el).childNodes[0];
+                document.getElementById(el).insertBefore(firstClip, secondClip);
+                firstClip.classList.add("jumpIn");
+                setTimeout(() => firstClip.classList.add("removeMargin"), 100);
+                setTimeout(() => firstClip.classList.remove("jumpIn"), 2000);
                 try {
-                    document.getElementById(el).removeChild(document.getElementById(el).childNodes[3])
-                } catch(err) {C
+                    const lastClip = document.getElementById(el).childNodes[3];
+                    lastClip.classList.add("inactve");
+                    setTimeout(() => document.getElementById(el).removeChild(lastClip), 2000);
+                } catch(err) {
                     // swallow
                 }
             } else {
@@ -166,18 +274,16 @@
                 }
             })
                 .then(function (response) {
-                    console.log(response);
                     return response.json();
                 })
                 .then(function (myJson) {
                     this.addTo(myJson, "latest");
                 });
-        }, latestRefreshRate) // check latest every 15 seconds. If there is no newer content, go to 1 older
+        }, 15000) // check latest every 15 seconds. If there is no newer content, go to 1 older
 
     }
 
     function valid(clip) {
-        console.log(clip);
         return clip.videoLengthSeconds > 1;
     }
     function checkForTrending() {
@@ -195,11 +301,11 @@
                 .then(function (myJson) {
                     this.addTo(myJson, "trending");
                 });
-        }, trendingRefreshRate) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
+        }, 15000) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
 
     }
 
-    fetch(`https://developers.medal.tv/v1/latest?categoryId=${categoryId}&muted=1&height=400&width=560&muted=1&limit=2&autoplay=1`, {
+    fetch(`https://developers.medal.tv/v1/latest?categoryId=${categoryId}&muted=1&height=400&width=560&muted=1&limit=3&autoplay=1`, {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
@@ -214,13 +320,12 @@
         });
 
 
-    fetch(`https://developers.medal.tv/v1/trending?categoryId=${categoryId}&muted=1&height=400&width=560&muted=1&limit=2&autoplay=1`, {
+    fetch(`https://developers.medal.tv/v1/trending?categoryId=${categoryId}&muted=1&height=400&width=560&muted=1&limit=3&autoplay=1`, {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
     })
         .then(function (response) {
-            console.log(response);
             return response.json();
         })
         .then(function (myJson) {
@@ -245,7 +350,6 @@
             }
         }
     }
-
 
 </script>
 </body>
