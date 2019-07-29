@@ -181,7 +181,14 @@
     
 
     const urlParams = new URLSearchParams(window.location.search);
-    const categoryId = urlParams.get('categoryId') || 62;
+    
+    let categoryId = urlParams.get('categoryId') || 62;	    const categoryId = urlParams.get('categoryId') || 62;
+    let liveDangerously = urlParams.get('liveDangerously');	
+     if(liveDangerously === '1') {	
+        categoryId = ''; // live feed of everything	
+    }	
+    const trendingRefreshRate = urlParams.get('trendingRefreshRate') || 15000;	
+    const latestRefreshRate = urlParams.get('latestRefreshRate') || 15000;
 
 
     // map to avoid duplicate content from being shown. If a conflict is detected, we'll render another object.
@@ -279,7 +286,7 @@
                 .then(function (myJson) {
                     this.addTo(myJson, "latest");
                 });
-        }, 15000) // check latest every 15 seconds. If there is no newer content, go to 1 older
+        }, latestRefreshRate) // check latest every 15 seconds. If there is no newer content, go to 1 older
 
     }
 
@@ -301,7 +308,7 @@
                 .then(function (myJson) {
                     this.addTo(myJson, "trending");
                 });
-        }, 15000) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
+        }, trendingRefreshRate) // check trending every 15 seconds. If there is no hotter content, go to 1 less hot
 
     }
 
