@@ -182,7 +182,7 @@
 
     const urlParams = new URLSearchParams(window.location.search);
     
-    let categoryId = urlParams.get('categoryId') || 62;	    const categoryId = urlParams.get('categoryId') || 62;
+    let categoryId = urlParams.get('categoryId') || 62;
     let liveDangerously = urlParams.get('liveDangerously');	
      if(liveDangerously === '1') {	
         categoryId = ''; // live feed of everything	
