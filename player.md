@@ -1,3 +1,5 @@
+[⬅️Back to Docs Home](/)
+  
 # Medal Embedded Player
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
