@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Office Feed Example</title>
+    <title>Hashtag Watch Example</title>
 
     <link href="https://fonts.googleapis.com/css?family=Gudea:400,500,600,700|Rajdhani:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
     <style>
@@ -180,15 +180,26 @@
 <script>
 
 
+
+
+    
     const urlParams = new URLSearchParams(window.location.search);
 
-    let categoryId = urlParams.get('categoryId') || 62;
-    let liveDangerously = urlParams.get('liveDangerously');
-    let text = encodeURI(urlParams.get('text'));
-    document.getElementById("viewall").href = "https://medal.tv/search?q="+text;
-    if(liveDangerously === '1') {
-        categoryId = ''; // live feed of everything
+    let text = urlParams.get('text');
+
+    if(!text || text == "") {
+         text = (prompt("Enter the topic you'd like to monitor", "")).replace("#","%23"); /// traditional url encoding doesn't work here
+
+        if (text == null || text == "") {
+            text = "example"
+        }
+    } else {
+        text = text.replace("#","%23"); // traditional url encoding doesnt support hashtags
     }
+
+
+    document.getElementById("viewall").href = "https://medal.tv/search?q="+text;
+
     const existingRefreshRate = urlParams.get('existingRefreshRate') || 15000;
     const latestRefreshRate = urlParams.get('latestRefreshRate') || 15000;
 
@@ -261,7 +272,7 @@
                     existingOffset += 1; // increase offset by 1 to keep going down existing feed
 
 
-                    fetch(`https://developers.medal.tv/v1/search?categoryId=${categoryId}&muted=1&height=400&width=560&limit=1&autoplay=1&muted=1&offset=${existingOffset}&text=${text}`, {
+                    fetch(`https://developers.medal.tv/v1/search?muted=1&height=400&width=560&limit=1&autoplay=1&muted=1&offset=${existingOffset}&text=${text}`, {
                         headers: {
                             'Authorization': PUBLIC_API_KEY
                         }
@@ -288,7 +299,7 @@
     function checkForLatest() {
 
         setInterval(function () {
-            fetch(`https://developers.medal.tv/v1/search?categoryId=${categoryId}&muted=1&height=400&width=560&limit=1&muted=1&autoplay=1&text=${text}`, {
+            fetch(`https://developers.medal.tv/v1/search?muted=1&height=400&width=560&limit=1&muted=1&autoplay=1&text=${text}`, {
                 headers: {
                     'Authorization': PUBLIC_API_KEY
                 }
@@ -315,7 +326,7 @@
     function checkForExisting() {
 
         setInterval(function () {
-            fetch(`https://developers.medal.tv/v1/search?categoryId=${categoryId}&muted=1&height=400&width=560&muted=1&limit=1&autoplay=1&text=${text}`, {
+            fetch(`https://developers.medal.tv/v1/search?muted=1&height=400&width=560&muted=1&limit=1&autoplay=1&text=${text}`, {
                 headers: {
                     'Authorization': PUBLIC_API_KEY
                 }
@@ -335,7 +346,7 @@
     /**
      * Initial population of the latest clips
      */
-    fetch(`https://developers.medal.tv/v1/search?categoryId=${categoryId}&muted=1&height=400&width=560&muted=1&limit=3&o&autoplay=1&text=${text}`, {
+    fetch(`https://developers.medal.tv/v1/search?muted=1&height=400&width=560&muted=1&limit=3&o&autoplay=1&text=${text}`, {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
@@ -353,7 +364,7 @@
     /**
      * Initial population of existing clips.
      */
-    fetch(`https://developers.medal.tv/v1/search?categoryId=${categoryId}&muted=1&height=400&width=560&muted=1&offset=3&limit=3&autoplay=1&text=${text}`, {
+    fetch(`https://developers.medal.tv/v1/search?muted=1&height=400&width=560&muted=1&offset=3&limit=3&autoplay=1&text=${text}`, {
         headers: {
             'Authorization': PUBLIC_API_KEY
         }
