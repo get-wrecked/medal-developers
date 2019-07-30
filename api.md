@@ -16,8 +16,8 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Example functions to get top and newest clips by game names](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_functions.js) 
   * [Real-time Office Feed](https://docs.medal.tv/examples/example_office_feed.html?categoryId=62) 
      * [Source Code](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_office_feed.html)
-  * [Real-time Hashtag Feed](https://docs.medal.tv/examples/hashtag_watch_example.html) 
-     * [Source Code](https://github.com/get-wrecked/medal-developers/blob/master/examples/hashtag_watch_example.html)
+  * [Real-time Hashtag Feed](https://docs.medal.tv/examples/example_hashtag_watch.html) 
+     * [Source Code](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_hashtag_watch.html)
 
 # Generate an API Key
 
