@@ -176,15 +176,15 @@ Will return
       {
          "contentId":"cid4706138",
          "rawFileUrl":"not_authorized",
-         "contentTitle":"#Flamingo #FLAMINGO #flamingo love u flamingo  roblox username bobdoopiscol ",
+         "contentTitle":"#Flamingo what the",
          "contentViews":367,
          "contentLikes":6,
          "categoryId":76,
          "videoLengthSeconds":15,
          "createdTimestamp":1561834937000,
-         "directClipUrl":"https://medal.tv/clip/4706138/sOT1gOwEOR7AfKqu",
-         "embedIframeCode":"<iframe width='640' height='360' src='https://medal.tv/clip/4706138/SbUsIwbU7yO9eUws?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-4706138'></iframe>",
-         "credits":"Credits to obesebutcute2 (https://medal.tv/users/1666318)"
+         "directClipUrl":"https://medal.tv/clip/5223338/sOT1gOwEOR7AfKqu",
+         "embedIframeCode":"<iframe width='640' height='360' src='https://medal.tv/clip/5223338/SbUsIwbU7yO9eUws?loop=1&autoplay=1&cta=1' frameborder='0' allow='autoplay' allowfullscreen class='medal-clip' id='contentId-5223338'></iframe>",
+         "credits":"Credits to laikrai (https://medal.tv/users/1908292)"
       }
    ]
 }
