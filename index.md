@@ -1,3 +1,5 @@
+[⬅️Back to Docs Home](/)
+  
 # Embedded Player Documentation
 
   * [Click here for documentation on the Embedded Player](/player)
