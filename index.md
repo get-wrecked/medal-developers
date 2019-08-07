@@ -1,4 +1,4 @@
-[⬅️Back to Docs Home](/)
+[⬅️Back to Medal Home](https://medal.tv)
   
 # Embedded Player Documentation
 
