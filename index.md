@@ -12,7 +12,7 @@ These projects are created by official Medal developers and maintained by the Me
 
 These projects are created by the community. You can particilate in these projects and maybe even use them yourself!
   
-## Embedded Player Documentation
+### Streamer Tools
 
   * [[video]](https://www.youtube.com/watch?v=q2mIDQ8BcW4) - [StreamLabs Medal Chat Overlay](https://github.com/camalot/chatbot-medaloverlay)
 
