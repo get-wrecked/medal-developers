@@ -4,7 +4,11 @@
 
 These projects are created by official Medal developers and maintained by the Medal team.
 
+### Video Player Configurations
+
   * [Embedded Video Player](/player)
+  
+### API
  
   * [Medal REST API](/api)
   
