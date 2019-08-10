@@ -3,14 +3,10 @@
 # Official Medal Projects
 
 These projects are created by official Medal developers and maintained by the Medal team.
-  
-## Embedded Player Documentation
 
-  * [Click here for documentation on the Embedded Player](/player)
-  
-## Medal REST API Documentation
+  * [Embedded Video Player](/player)
  
-  * [Click here for documentation on the Medal REST API](/api)
+  * [Medal REST API](/api)
   
 # Created by our community
 
