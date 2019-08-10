@@ -4,7 +4,7 @@
 
 These projects are created by official Medal developers and maintained by the Medal team.
 
-### Video Player Configurations
+### Video Player
 
   * [Embedded Video Player](/player)
   
