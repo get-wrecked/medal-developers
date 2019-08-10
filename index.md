@@ -18,8 +18,8 @@ These projects are created by the community. You can particilate in these projec
   
 ## Embedded Player Documentation
 
-  * [StreamLabs Medal Chat Overlay](https://github.com/camalot/chatbot-medaloverlay)
-  ** For a video about this project, go to https://www.youtube.com/watch?v=q2mIDQ8BcW4
+  * [video](https://www.youtube.com/watch?v=q2mIDQ8BcW4)[StreamLabs Medal Chat Overlay](https://github.com/camalot/chatbot-medaloverlay)
+
   
 
 
