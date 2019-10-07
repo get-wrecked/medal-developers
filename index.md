@@ -8,9 +8,13 @@ These projects are created by official Medal developers and maintained by the Me
 
   * [Embedded Video Player](/player)
   
-### API
+### Medal Clips/Users API
  
   * [Medal REST API](/api)
+  
+### Mobile GIF, Clips, Video & Media SDK (Coming to PC as well)
+ 
+  * [Medal REST API](https://megacool.co)
   
 # Created by our community
 
