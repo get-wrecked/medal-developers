@@ -14,7 +14,7 @@ These projects are created by official Medal developers and maintained by the Me
   
 ### Mobile GIF, Clips, Video & Media SDK (Coming to PC as well)
  
-  * [Medal REST API](https://megacool.co)
+  * [Megacool SDK](https://megacool.co)
   
 # Created by our community
 
