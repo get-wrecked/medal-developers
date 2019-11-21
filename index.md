@@ -12,6 +12,10 @@ These projects are created by official Medal developers and maintained by the Me
  
   * [Medal REST API](/api)
   
+### Medal Importer for Plays.tv and Twitch Clips
+ 
+  * [Medal Importer](https://medalsupport.zendesk.com/hc/en-us/articles/360039343453)
+  
 ### Mobile GIF, Clips, Video & Media SDK (Coming to PC as well)
  
   * [Megacool SDK](https://megacool.co)
