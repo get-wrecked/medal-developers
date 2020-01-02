@@ -10,6 +10,8 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Categories (Games)](#v1categories---games-list) (/v1/categories)
   * [Handling & Customizing Content Response](#reading-out-content-objects)
   * [Special Access](#special-access-options)
+  * [CORS](#cors)
+  * [Giving Proper Credit](#credit)
   
   
 # Examples
@@ -317,7 +319,17 @@ If you want more customized access, you may request so by filling out [this form
 | --------------- | ------------ | ----------- |
 | rawFileUrl            | `not_authorized` | Access to the raw video file for public clips, if you need to make a highlight reel of all clips submitted to your tournament, for example |
 | Content Limits (`limit` and `offset`)          | `1000` | You can have your content limit (limit + offset combined) increased if you need to retrieve information on a large event. By default you have access to 1000 objects per query. |
+ 
 
-# Credits
+## CORS
+
+We do support CORS. When sending CORS request, please make sure you add the following headers:
+
+| Header | Expected Value      | Description |
+| --------------- | ------------ | ----------- |
+| Content-Type            | `application/json` | We only support application/json, please make sure you have the header available in your request |
+| Authorization          | None | You must enter your API key for this to succeed  |
+
+# Credit
 Every response object contains a `credits` field. If you do not use the embedded player, please make sure to use this wherever you serve the content, and link back to their Medal user profile. 
 
