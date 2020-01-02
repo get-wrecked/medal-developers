@@ -328,7 +328,7 @@ We do support CORS. When sending CORS request, please make sure you add the foll
 | Header | Expected Value      | Description |
 | --------------- | ------------ | ----------- |
 | Content-Type            | `application/json` | We only support application/json, please make sure you have the header available in your request |
-| Authorization          | None | You must enter your API key for this to succeed  |
+| Authorization          | `YOUR_API_KEY` | You must enter your API key for this to succeed  |
 
 # Credit
 Every response object contains a `credits` field. If you do not use the embedded player, please make sure to use this wherever you serve the content, and link back to their Medal user profile. 
