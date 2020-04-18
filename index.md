@@ -30,7 +30,7 @@ These projects are created by the community. You can particilate in these projec
   
 ### Personal Clips Website
 
-  * [example](https://twitter.com/ModestTim/status/1250691785526931456) - [Personal Website with Clips](https://github.com/TimothyCole/tim.rip)
+  * [[example]](https://twitter.com/ModestTim/status/1250691785526931456) - [Personal Website with Clips](https://github.com/TimothyCole/tim.rip)
 
   
 
