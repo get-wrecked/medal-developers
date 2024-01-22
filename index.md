@@ -4,17 +4,18 @@
 
 These projects are created by official Medal developers and maintained by the Medal team.
 
-### Video Player
+### Official Games & Servers API
+ 
+  * [Medal REST API](/api)
+
+### Embedded Video Player Customization
 
   * [Embedded Video Player](/player)
   
-### Medal Clips/Users API
+### Official REST API 
  
   * [Medal REST API](/api)
-  
-### Chrome Extension: Medal Importer for Plays.tv and Twitch Clips
  
-  * [Medal Importer](https://medalsupport.zendesk.com/hc/en-us/articles/360039343453)
   
 ### Mobile GIF, Clips, Video & Media SDK (Coming to PC as well)
  
