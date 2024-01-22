@@ -50,7 +50,7 @@ This endpoint allows the submission of game context which includes details about
         "globalContextData": { //Invisible metadata used by medal for discovery
             "biome": "Plains",
             "weather": "Clear",
-    				"joinUrl": "https://altv.run/serverId1234"
+            "joinUrl": "https://altv.run/serverId1234"
         }
     }
     ```
