@@ -18,7 +18,7 @@ Please note that this API is designed to run locally and will be accessible thro
 ```
 
 <aside>
-⚠️ For all API requests, it's mandatory to include your public key in the **`publicKey`** header. This ensures that each request is properly authenticated and linked to your application.
+⚠️ For all API requests, it's mandatory to include your public key in the publicKey header. This ensures that each request is properly authenticated and linked to your application.
 
 </aside>
 
