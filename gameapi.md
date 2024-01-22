@@ -1,122 +1,121 @@
 
-# Medal Games & Servers API
+# Medal Games & Servers API Documentation
 
-### Base URL
+Welcome to the Medal Games & Servers API documentation. This guide provides comprehensive details to help you integrate your games with the Medal capture system, enhancing gameplay with triggered video captures and rich contextual information.
 
+---
+
+## Base URL
+
+**`http://localhost:12665`**
+
+*Note:* This API is intended for local use and can be accessed via the above base URL.
+
+## Authentication
+
+To authenticate your requests, include your public key in the header of each API call:
+
+```json
+"publicKey": "YOUR_PUBLIC_KEY"
 ```
-<http://localhost:12665>
-```
 
-Please note that this API is designed to run locally and will be accessible through the aforementioned base URL.
+**⚠️ Important:** Authentication with a valid public key is mandatory for all API requests.
 
-### Authentication
+---
+
+## Endpoints
+
+### 1. Submit Context
+
+This endpoint allows for the submission of game context, including details about the local player, the server, and relevant global context tags.
+
+- **Endpoint**: `/api/v1/context/submit`
+- **Method**: `POST`
+- **Header**: `publicKey: [valid public key]`
+- **Body**: JSON object containing server ID, player information, context tags, and context data.
+- **Response**: Success message (`200 OK`) or error details (e.g., `400 Bad Request`).
+
+**Example Request Body:**
 
 ```json
 {
-  "publicKey": "YOUR_PUBLIC_KEY"
+    "serverId": "mc.playdiamondcraft.gg",
+    "serverName": "DiamondCraft",
+    "localPlayer": {
+        "playerId": "playerSteve01",
+        "playerName": "SteveTheMiner"
+    },
+    "globalContextTags": {
+        "client": "clientname",
+        "mode": "survival",
+        "server": "diamondcraft"
+    },
+    "globalContextData": {
+        "biome": "Plains",
+        "weather": "Clear",
+        "joinUrl": "https://altv.run/serverId1234"
+    }
 }
 ```
 
-<aside>
-⚠️ For all API requests, it's mandatory to include your public key in the publicKey header. This ensures that each request is properly authenticated and linked to your application.
+**💡 Note:** `globalContextTags` appear as #hashtags on clips. `globalContextData` is used as invisible metadata.
 
-</aside>
+### 2. Invoke Game Event
 
-# Endpoints
+Trigger a game event to initiate clip capture or bookmarking with associated context tags.
 
-## Submit Context
+- **Endpoint**: `/api/v1/event/invoke`
+- **Method**: `POST`
+- **Header**: `publicKey: [valid public key]`
+- **Body**: JSON object containing event details, player information, context tags, and trigger actions.
+- **Response**: `GameEventResponse` object on success (`200 OK`) or error details.
 
-This endpoint allows the submission of game context which includes details about the local player, the server, and any relevant tags that describe the global context of the game. 
+**Example Request Body:**
 
-- **URL**: **`/api/v1/context/submit`**
-- **Method**: **`POST`**
-- **Header**: **`publicKey: [valid public key]`**
-- **Body** (Example):
-    
-    ```json
-    
-    {
-        "serverId": "mc.playdiamondcraft.gg", //unique identifier for the server
-        "serverName": "DiamondCraft", //display name for the server
-        "localPlayer": {
-            "playerId": "playerSteve01", //unique identifier for the player
-            "playerName": "SteveTheMiner" //display name for the player
-        },
-        "globalContextTags": { //Context tags will be automatically added as #hashtags
-            "client": "clientname",
-            "mode": "survival",
-    				"server": "diamondcraft"
-        },
-        "globalContextData": { //Invisible metadata used by medal for discovery
-            "biome": "Plains",
-            "weather": "Clear",
-            "joinUrl": "https://altv.run/serverId1234"
-        }
+```json
+{
+    "eventId": "evt_dragon_defeat01",
+    "eventName": "Ender Dragon Defeated",
+    "otherPlayers": [ 
+        { "playerId": "playerAlex02", "playerName": "AlexTheExplorer" }
+    ],
+    "contextTags": {
+        "location": "finalboss",
+        "boss": "enderdragon"
+    },
+    "triggerActions": ["SaveClip", "Screenshot"],
+    "clipOptions": {
+        "duration": 30
     }
-    ```
+}
+```
 
-    <aside>
-    💡 Note: globalContextTags are visible as #hashtags on clips, while globalContextData is invisible metadata. 
-    </aside>
-    
-- **Response**:
-    - Success (**`200 OK`**): A message confirming successful storage of the context.
-    - Error: An error message with details (e.g., **`400 Bad Request`** for invalid requests).
+**💡 Note:** `contextTags` will be visible as #hashtags on clips.
 
-## Invoke Game Event
+**Example Success Response:**
 
-Trigger a game event which will initiate a clip capture or bookmark with the attached context tags
+```json
+{
+  "success": true,
+  "eventName": "Ender Dragon Defeated",
+  "message": "Event received and processed.",
+  "actionsCompleted": ["SaveClip", "Screenshot"]
+}
+```
 
-- **URL**: **`/api/v1/event/invoke`**
-- **Method**: **`POST`**
-- **Header**: **`publicKey: [valid public key]`**
-- **Body** (Example):
-    
-    ```json
-    {
-        "eventId": "evt_dragon_defeat01",
-        "eventName": "Ender Dragon Defeated",
-        "otherPlayers": [ 
-            { "playerId": "playerAlex02", "playerName": "AlexTheExplorer" }
-        ],
-        "contextTags": {
-            "location": "finalboss",
-            "boss": "enderdragon"
-        },
-        "triggerActions": ["SaveClip", "Screenshot"], //Actions to trigger
-        "clipOptions": {
-            "duration": 30
-        }
-    
-    ```
-    
-    <aside>
-    💡 Note: contextTags will be visible as #hashtags on clips.
-    </aside>
-    
-- **Response**:
-    - Success (**`200 OK`**): A **`GameEventResponse`** object with details of the event processing. Example:
-        
-        ```json
-        {
-          "success": true,
-          "eventName": "Ender Dragon Defeated",
-          "message": "Event received and processed.",
-          "actionsCompleted": ["SaveClip", "Screenshot"] //Actions that were completed
-        }
-        ```
-        
-    - Error: An error message with HTTP status codes based on the error type.
+### Error Handling
 
-### **Error Handling**
+Errors are communicated through HTTP status codes. If you encounter a `400 Bad Request`, check your request format and headers. For a `500 Internal Server Error`, please contact support.
 
-Errors are communicated through HTTP status codes. For **`400 Bad Request`**, verify the request format and headers. For **`500 Internal Server Error`**, contact support.
+---
 
-## **Overview**
+## Overview
 
-Medal’s Game API allows game developers to integrate their games with the Medal capture system to trigger video clips and share contextual information during gameplay. This documentation will guide you through using the available API endpoints.
+The Medal Games API enables game developers to:
 
-- **Context**: Provides game state information like level or score, enhancing clips with meaningful details.
-- **Events**: Triggers video captures at key moments, capturing exciting or important gameplay.
-- **Monetize:** Earn revenue by prompting players to use your creator code when subscribing to Medal Premium.
-- **Discoverability**: Clips link back to the server or experience that they were recorded in, allowing interested viewers to jump right into the fun.
+- **Contextualize Gameplay**: Enhance clips with game state information like level or score.
+- **Capture Key Moments**: Trigger video captures during significant gameplay events.
+- **Monetize**: Encourage players to use your creator code for Medal Premium subscriptions.
+- **Boost Discoverability**: Link clips back to the game server or experience for easy access by viewers.
+
+This API is a powerful tool for enriching player experiences and increasing engagement with your game content.
