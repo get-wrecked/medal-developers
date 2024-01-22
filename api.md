@@ -11,6 +11,7 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Handling & Customizing Content Response](#reading-out-content-objects)
   * [Special Access](#special-access-options)
   * [CORS](#cors)
+  * [Game API Documentation](gameapi.md)
   * [Giving Proper Credit](#credit)
   
   
