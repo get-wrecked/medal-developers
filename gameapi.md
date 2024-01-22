@@ -22,10 +22,6 @@ Please note that this API is designed to run locally and will be accessible thro
 
 </aside>
 
-## **Overview**
-
-Medal’s Game API allows game developers to integrate their games with the Medal capture system to trigger video clips and share contextual information during gameplay. This documentation will guide you through using the available API endpoints.
-
 # Endpoints
 
 ## Submit Context
@@ -58,10 +54,9 @@ This endpoint allows the submission of game context which includes details about
         }
     }
     ```
-    
+
     <aside>
-    💡 **Note**: **`globalContextTags`** are visible as #hashtags on clips, while **`globalContextData`** is invisible metadata.
-    
+    💡 Note: globalContextTags are visible as #hashtags on clips, while globalContextData is invisible metadata. 
     </aside>
     
 - **Response**:
@@ -96,8 +91,7 @@ Trigger a game event which will initiate a clip capture or bookmark with the att
     ```
     
     <aside>
-    💡 **Note**: **`contextTags`** will be visible as #hashtags on clips.
-    
+    💡 Note: contextTags will be visible as #hashtags on clips.
     </aside>
     
 - **Response**:
@@ -118,7 +112,9 @@ Trigger a game event which will initiate a clip capture or bookmark with the att
 
 Errors are communicated through HTTP status codes. For **`400 Bad Request`**, verify the request format and headers. For **`500 Internal Server Error`**, contact support.
 
-# Benefits
+## **Overview**
+
+Medal’s Game API allows game developers to integrate their games with the Medal capture system to trigger video clips and share contextual information during gameplay. This documentation will guide you through using the available API endpoints.
 
 - **Context**: Provides game state information like level or score, enhancing clips with meaningful details.
 - **Events**: Triggers video captures at key moments, capturing exciting or important gameplay.
