@@ -1,5 +1,8 @@
 [⬅️Back to Docs Home](/)
 
+# Early Access (NEW)
+  * [Game API Documentation](gameapi.md)
+
 # Medal API
 Want to embed your clips on your website? Are you a game developer who wants to embed the coolest clips from your game? We got you covered.
 
@@ -12,9 +15,6 @@ Want to embed your clips on your website? Are you a game developer who wants to 
   * [Special Access](#special-access-options)
   * [CORS](#cors)
   * [Giving Proper Credit](#credit)
-  
-# Early Access (NEW)
-  * [Game API Documentation](gameapi.md)
   
 # Examples
   * [Example functions to get top and newest clips by game names](https://github.com/get-wrecked/medal-developers/blob/master/examples/example_functions.js) 
