@@ -33,6 +33,8 @@ This endpoint allows for the submission of game context, including details about
 - **Method**: `POST`
 - **Header**: `publicKey: [valid public key]`
 
+**GameContext Object**:
+
 | Property Name        | Description                               | Example Value               | Required |
 |----------------------|-------------------------------------------|-----------------------------|----------|
 | `serverId`           | Unique ID of the server                   | `"mc.playdiamondcraft.gg"`  | No      |
@@ -42,7 +44,7 @@ This endpoint allows for the submission of game context, including details about
 | `globalContextTags`  | Tags for global context as hashtags       | `{"client": "clientname", "mode": "survival", "server": "diamondcraft"}` | No |
 | `globalContextData`  | Additional metadata for global context    | `{"biome": "Plains", "weather": "Clear", "joinUrl": "https://altv.run/serverId1234"}` | No |
 
-**Example GameContext Body:**
+**Example GameContext:**
 
 ```json
 {
@@ -77,6 +79,8 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
 - **Method**: `POST`
 - **Header**: `publicKey: [valid public key]`
 
+**GameEvent Object**:
+
 | Property Name        | Description                               | Example Value               | Required |
 |----------------------|-------------------------------------------|-----------------------------|----------|
 | `eventId`            | Unique ID of the game event               | `"evt_dragon_defeat01"`     | Yes      |
@@ -86,7 +90,7 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
 | `triggerActions`     | Actions to be triggered by the event      | `["SaveClip", "Screenshot"]`| No      |
 | `clipOptions`        | Options for clip capture                  | `{"duration": 30}`          | No       |
 
-**Example GameEvent Body:**
+**Example GameEvent:**
 
 ```json
 {
@@ -130,21 +134,19 @@ This endpoint is used to set a creator code for a specific game or server. Upon 
 - **Header**: 
   - `publicKey: [valid public key]`
 
-#### Request Body
+**CreatorCode Object**:
 
 | Property Name   | Description                       | Example Value   | Required |
 |-----------------|-----------------------------------|-----------------|----------|
 | `creatorCode`   | The creator code to be set        | `"YourCreatorCode123"` | Yes      |
 
-##### Example Body
+##### Example CreatorCode
 
 ```json
 {
     "creatorCode": "YourCreatorCode123"
 }
 ```
-
-#### Success Response
 
 ##### Example Success Response
 
