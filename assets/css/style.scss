@@ -1,32 +1,29 @@
 ---
 ---
 
-$body-color: #282c34; /* One Dark Pro background color */
-$body-text-color: #abb2bf; /* Light gray text color for readability */
-$body-strong-color: #e5c07b; /* Strong color for emphasis */
-$body-link-color: #61afef; /* Vibrant blue for links */
-$section-headings-color: #e06c75; /* Soft red for headings */
-$header-bg-color: #282c34; /* Matching the body background color */
-$code-text-color: #98c379; /* Green color for code text */
-$code-bg-color: #282c34; /* Same as the body background for a seamless look */
-$table-header-bg-color: #3e4451; /* Slightly lighter for header contrast */
-$table-row-even-bg-color: #282c34; /* Same as the body background */
-$table-row-odd-bg-color: #3e4451; /* Slightly lighter for row contrast */
-$border-color: #3e4451; /* Border color for elements */
-$highlighter-rouge-bg-color: #282c34;
-$highlighter-rouge-border-color: #3e4451;
-$hr-border-color: #3e4451;
+$body-color: #1e1e1e; /* Dark grey background */
+$body-text-color: #e0e0e0; /* Soft white for general text */
+$body-strong-color: #ff6b6b; /* Soft red for strong emphasis */
+$body-link-color: #4dd0e1; /* Cyan for links */
+$section-headings-color: #ff6b6b; /* Soft red for section headings */
+$header-bg-color: #1e1e1e; /* Matching the body background color */
+$code-text-color: #eeffff; /* Very light blue for code text */
+$code-bg-color: #263238; /* Darker grey for code blocks */
+$table-header-bg-color: #455a64; /* Dark slate blue for table headers */
+$table-row-even-bg-color: #263238; /* Dark grey for even rows */
+$table-row-odd-bg-color: darken($table-row-even-bg-color, 5%); /* Slightly darker grey for odd rows */
+$border-color: #37474f; /* Dark slate for borders */
+$highlighter-rouge-bg-color: #263238; /* Dark grey for syntax highlighter */
+$highlighter-rouge-border-color: #546e7a; /* Grey-blue for syntax highlighter border */
+$hr-border-color: #546e7a; /* Grey-blue for horizontal rules */
 
 @import "{{ site.theme }}";
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: $body-text-color;
   background-color: $body-color;
+  color: $body-text-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
 
 b, strong {
@@ -80,8 +77,50 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: lighten($body-link-color, 10%);
     text-decoration: underline;
+  }
+}
+
+/* Headings Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: $section-headings-color;
+}
+
+/* Code Blocks Styling */
+pre, code {
+  background-color: $code-bg-color;
+  color: $code-text-color;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $table-row-even-bg-color;
+  margin-bottom: 20px;
+
+  th {
+    background-color: $table-header-bg-color;
+    color: $body-text-color;
+    padding: 10px;
+    text-align: left;
+  }
+
+  td {
+    border: 1px solid $border-color;
+    padding: 10px;
+  }
+
+  tr:nth-child(even) {
+    background-color: $table-row-even-bg-color;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $table-row-odd-bg-color;
   }
 }
 
