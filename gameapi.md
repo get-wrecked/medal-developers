@@ -25,17 +25,24 @@ To authenticate your requests, include your public key in the header of each API
 
 ## Endpoints
 
-### 1. Submit Context
+### Submit Context
 
 This endpoint allows for the submission of game context, including details about the local player, the server, and relevant global context tags.
 
 - **Endpoint**: `/api/v1/context/submit`
 - **Method**: `POST`
 - **Header**: `publicKey: [valid public key]`
-- **Body**: JSON object containing server ID, player information, context tags, and context data.
-- **Response**: Success message (`200 OK`) or error details (e.g., `400 Bad Request`).
 
-**Example Request Body:**
+| Property Name        | Description                               | Example Value               | Required |
+|----------------------|-------------------------------------------|-----------------------------|----------|
+| `serverId`           | Unique ID of the server                   | `"mc.playdiamondcraft.gg"`  | No      |
+| `serverName`         | Name of the server                        | `"DiamondCraft"`            | No      |
+| `localPlayer`        | Object containing local player information| `{"playerId": "playerSteve01", "playerName": "SteveTheMiner"}` | No |
+| `customStatus`       | Custom activity status to set for the user | `Fighting the Ender Dragon` | No |
+| `globalContextTags`  | Tags for global context as hashtags       | `{"client": "clientname", "mode": "survival", "server": "diamondcraft"}` | No |
+| `globalContextData`  | Additional metadata for global context    | `{"biome": "Plains", "weather": "Clear", "joinUrl": "https://altv.run/serverId1234"}` | No |
+
+**Example GameContext Body:**
 
 ```json
 {
@@ -60,17 +67,26 @@ This endpoint allows for the submission of game context, including details about
 
 **💡 Note:** `globalContextTags` appear as #hashtags on clips. `globalContextData` is used as invisible metadata.
 
-### 2. Invoke Game Event
+---
+
+### Invoke Game Event
 
 Trigger a game event to initiate clip capture or bookmarking with associated context tags.
 
 - **Endpoint**: `/api/v1/event/invoke`
 - **Method**: `POST`
 - **Header**: `publicKey: [valid public key]`
-- **Body**: JSON object containing event details, player information, context tags, and trigger actions.
-- **Response**: `GameEventResponse` object on success (`200 OK`) or error details.
 
-**Example Request Body:**
+| Property Name        | Description                               | Example Value               | Required |
+|----------------------|-------------------------------------------|-----------------------------|----------|
+| `eventId`            | Unique ID of the game event               | `"evt_dragon_defeat01"`     | Yes      |
+| `eventName`          | Name of the game event                    | `"Ender Dragon Defeated"`   | Yes      |
+| `otherPlayers`       | Array of other player objects             | `[{"playerId": "playerAlex02", "playerName": "AlexTheExplorer"}]` | No       |
+| `contextTags`        | Tags for event context as hashtags        | `{"location": "finalboss", "boss": "enderdragon"}` | No |
+| `triggerActions`     | Actions to be triggered by the event      | `["SaveClip", "Screenshot"]`| No      |
+| `clipOptions`        | Options for clip capture                  | `{"duration": 30}`          | No       |
+
+**Example GameEvent Body:**
 
 ```json
 {
@@ -102,6 +118,45 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
   "actionsCompleted": ["SaveClip", "Screenshot"]
 }
 ```
+
+---
+
+### Set Creator Code
+
+This endpoint is used to set a creator code for a specific game or server. Upon successful setting of the creator code, it returns the associated Medal user ID.
+
+- **Endpoint**: `/api/v1/creatorcode/set`
+- **Method**: `POST`
+- **Header**: 
+  - `publicKey: [valid public key]`
+
+#### Request Body
+
+| Property Name   | Description                       | Example Value   | Required |
+|-----------------|-----------------------------------|-----------------|----------|
+| `creatorCode`   | The creator code to be set        | `"YourCreatorCode123"` | Yes      |
+
+##### Example Body
+
+```json
+{
+    "creatorCode": "YourCreatorCode123"
+}
+```
+
+#### Success Response
+
+##### Example Success Response
+
+```json
+{
+    "success": true,
+    "message": "Requested creator code update for medal user YourCreatorCode123",
+    "medalUserId": "medalUserIdExample"
+}
+```
+
+---
 
 ### Error Handling
 
