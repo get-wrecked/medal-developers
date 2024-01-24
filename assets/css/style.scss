@@ -1,21 +1,21 @@
 ---
 ---
 
-$body-color: #333539;
-$body-text-color: hsla(0,0%,100%,.85); /* Increased contrast for text */
-$body-strong-color: hsla(0,0%,100%,.95); /* Stronger color for bold text */
-$body-link-color: #4F8CC9; /* A more readable link color for dark mode */
-$section-headings-color: #FFFFFF; /* Bright color for headings */
-$header-bg-color: #202125;
-$code-text-color: #C5C8C6; /* Lighter color for code text */
-$code-bg-color: #1E1E1E; /* Darker background for code blocks */
-$table-header-bg-color: #1e2021;
-$table-row-even-bg-color: #282a2b;
-$table-row-odd-bg-color: #292d2f;
-$border-color: #3C4043; /* Slightly lighter border for contrast */
-$highlighter-rouge-bg-color: #1e2021;
-$highlighter-rouge-border-color: #161819;
-$hr-border-color: hsla(0,0%,100%,.55);
+$body-color: #282c34; /* One Dark Pro background color */
+$body-text-color: #abb2bf; /* Light gray text color for readability */
+$body-strong-color: #e5c07b; /* Strong color for emphasis */
+$body-link-color: #61afef; /* Vibrant blue for links */
+$section-headings-color: #e06c75; /* Soft red for headings */
+$header-bg-color: #282c34; /* Matching the body background color */
+$code-text-color: #98c379; /* Green color for code text */
+$code-bg-color: #282c34; /* Same as the body background for a seamless look */
+$table-header-bg-color: #3e4451; /* Slightly lighter for header contrast */
+$table-row-even-bg-color: #282c34; /* Same as the body background */
+$table-row-odd-bg-color: #3e4451; /* Slightly lighter for row contrast */
+$border-color: #3e4451; /* Border color for elements */
+$highlighter-rouge-bg-color: #282c34;
+$highlighter-rouge-border-color: #3e4451;
+$hr-border-color: #3e4451;
 
 @import "{{ site.theme }}";
 
@@ -80,7 +80,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: lighten($body-link-color, 10%); /* Lighten the color on hover for visibility */
+    color: lighten($body-link-color, 10%);
     text-decoration: underline;
   }
 }
