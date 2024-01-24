@@ -1,16 +1,16 @@
 ---
 ---
 
-$body-color: #1e1e1e; /* Dark grey background */
-$body-text-color: #e0e0e0; /* Soft white for general text */
+$body-color: #13131D; /* background */
+$body-text-color: #ADAAB1; /* general text */
 $body-strong-color: #FFB84B; /* Medal gold for strong emphasis */
 $body-link-color: #4dd0e1; /* Cyan for links */
 $section-headings-color: #FFB84B; /* Medal gold for section headings */
 $header-bg-color: #1e1e1e; /* Matching the body background color */
-$code-text-color: #eeffff; /* Very light blue for code text */
-$code-bg-color: #263238; /* Darker grey for code blocks */
+$code-text-color: #FFFFFF; /* Very light blue for code text */
+$code-bg-color: #303038; /* code blocks */
 $table-header-bg-color: #455a64; /* Dark slate blue for table headers */
-$table-row-even-bg-color: #263238; /* Dark grey for even rows */
+$table-row-even-bg-color: #737278; /* Dark grey for even rows */
 $table-row-odd-bg-color: darken($table-row-even-bg-color, 5%); /* Slightly darker grey for odd rows */
 $border-color: #37474f; /* Dark slate for borders */
 $highlighter-rouge-bg-color: #263238; /* Dark grey for syntax highlighter */
