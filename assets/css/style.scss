@@ -2,21 +2,21 @@
 ---
 
 $body-color: #333539;
-$body-text-color: hsla(0,0%,100%,.55);
-$body-strong-color: hsla(0,0%,100%,.75);
-$body-link-color: #ffbf51;
-$section-headings-color: #fff;
+$body-text-color: hsla(0,0%,100%,.85); /* Increased contrast for text */
+$body-strong-color: hsla(0,0%,100%,.95); /* Stronger color for bold text */
+$body-link-color: #4F8CC9; /* A more readable link color for dark mode */
+$section-headings-color: #FFFFFF; /* Bright color for headings */
 $header-bg-color: #202125;
-$code-text-color: #686d6f;
-$code-bg-color: #282a2b;
+$code-text-color: #C5C8C6; /* Lighter color for code text */
+$code-bg-color: #1E1E1E; /* Darker background for code blocks */
 $table-header-bg-color: #1e2021;
 $table-row-even-bg-color: #282a2b;
 $table-row-odd-bg-color: #292d2f;
-$border-color: #1b1c1d;
+$border-color: #3C4043; /* Slightly lighter border for contrast */
 $highlighter-rouge-bg-color: #1e2021;
 $highlighter-rouge-border-color: #161819;
 $hr-border-color: hsla(0,0%,100%,.55);
-  
+
 @import "{{ site.theme }}";
 
 body {
@@ -80,6 +80,7 @@ a {
   text-decoration: none;
 
   &:hover {
+    color: lighten($body-link-color, 10%); /* Lighten the color on hover for visibility */
     text-decoration: underline;
   }
 }
