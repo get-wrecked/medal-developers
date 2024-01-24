@@ -1,31 +1,32 @@
 ---
 ---
 
-$body-color: #2a2c2d; /* Dark background color */
-$body-text-color: #cfd2d6; /* Light grey text color for readability */
-$body-strong-color: #ffffff; /* Strong color for bold text, assuming white for clarity */
-$body-link-color: #4a90e2; /* Blue accent color for links */
-$section-headings-color: #ffffff; /* White color for section headings for clarity */
-$header-bg-color: #1c1e1f; /* Darker background for the header, similar to the sidebar */
-$code-text-color: #cfd2d6; /* Presuming code text will also be light grey for readability */
-$code-bg-color: #323537; /* Darker background for code blocks */
-$table-header-bg-color: #1c1e1f; /* Darker background for table headers */
-$table-row-even-bg-color: #2a2c2d; /* Dark background for even rows */
-$table-row-odd-bg-color: #2a2c2d; /* Same dark background for odd rows for consistency */
-$border-color: #414345; /* Border color for elements */
-$highlighter-rouge-bg-color: #323537; /* Background for syntax highlighter */
-$highlighter-rouge-border-color: #414345; /* Border color for syntax highlighter */
-$hr-border-color: #414345; /* Horizontal rule border color */
-
+$body-color: #333539;
+$body-text-color: hsla(0,0%,100%,.55);
+$body-strong-color: hsla(0,0%,100%,.75);
+$body-link-color: #ffbf51;
+$section-headings-color: #fff;
+$header-bg-color: #202125;
+$code-text-color: #686d6f;
+$code-bg-color: #282a2b;
+$table-header-bg-color: #1e2021;
+$table-row-even-bg-color: #282a2b;
+$table-row-odd-bg-color: #292d2f;
+$border-color: #1b1c1d;
+$highlighter-rouge-bg-color: #1e2021;
+$highlighter-rouge-border-color: #161819;
+$hr-border-color: hsla(0,0%,100%,.55);
+  
 @import "{{ site.theme }}";
 
 body {
-  background-color: $body-color;
-  color: $body-text-color;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $body-text-color;
+  background-color: $body-color;
 }
 
 b, strong {
@@ -80,47 +81,6 @@ a {
 
   &:hover {
     text-decoration: underline;
-    color: lighten($body-link-color, 20%);
-  }
-}
-
-/* Headings Styling */
-h1, h2, h3, h4, h5, h6 {
-  color: $section-headings-color;
-}
-
-
-/* Code Blocks Styling */
-pre, code {
-  background-color: $code-bg-color;
-  color: $code-text-color;
-  border: 1px solid $border-color;
-  border-radius: 4px;
-  padding: 10px;
-  overflow-x: auto;
-}
-
-/* Table Styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: $table-row-even-bg-color;
-
-  th {
-    background-color: $table-header-bg-color;
-    color: $body-text-color;
-  }
-
-  td {
-    border: 1px solid $border-color;
-  }
-
-  tr:nth-child(even) {
-    background-color: $table-row-even-bg-color;
-  }
-
-  tr:nth-child(odd) {
-    background-color: $table-row-odd-bg-color;
   }
 }
 
