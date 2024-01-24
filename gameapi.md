@@ -131,8 +131,7 @@ This endpoint is used to set a creator code for a specific game or server. Upon 
 
 - **Endpoint**: `/api/v1/creatorcode/set`
 - **Method**: `POST`
-- **Header**: 
-  - `publicKey: [valid public key]`
+- **Header**: `publicKey: [valid public key]`
 
 **CreatorCode Object**:
 
