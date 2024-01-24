@@ -1,21 +1,21 @@
 ---
 ---
 
-$body-color: #13131D; /* background */
-$body-text-color: #ADAAB1; /* general text */
-$body-strong-color: #FFB84B; /* Medal gold for strong emphasis */
-$body-link-color: #4dd0e1; /* Cyan for links */
-$section-headings-color: #FFB84B; /* Medal gold for section headings */
-$header-bg-color: #1e1e1e; /* Matching the body background color */
-$code-text-color: #FFFFFF; /* Very light blue for code text */
-$code-bg-color: #303038; /* code blocks */
-$table-header-bg-color: #455a64; /* Dark slate blue for table headers */
-$table-row-even-bg-color: #737278; /* Dark grey for even rows */
-$table-row-odd-bg-color: darken($table-row-even-bg-color, 5%); /* Slightly darker grey for odd rows */
-$border-color: #37474f; /* Dark slate for borders */
-$highlighter-rouge-bg-color: #263238; /* Dark grey for syntax highlighter */
-$highlighter-rouge-border-color: #546e7a; /* Grey-blue for syntax highlighter border */
-$hr-border-color: #546e7a; /* Grey-blue for horizontal rules */
+$body-color: #2a2c2d; /* Dark background color */
+$body-text-color: #cfd2d6; /* Light grey text color for readability */
+$body-strong-color: #ffffff; /* Strong color for bold text, assuming white for clarity */
+$body-link-color: #4a90e2; /* Blue accent color for links */
+$section-headings-color: #ffffff; /* White color for section headings for clarity */
+$header-bg-color: #1c1e1f; /* Darker background for the header, similar to the sidebar */
+$code-text-color: #cfd2d6; /* Presuming code text will also be light grey for readability */
+$code-bg-color: #323537; /* Darker background for code blocks */
+$table-header-bg-color: #1c1e1f; /* Darker background for table headers */
+$table-row-even-bg-color: #2a2c2d; /* Dark background for even rows */
+$table-row-odd-bg-color: #2a2c2d; /* Same dark background for odd rows for consistency */
+$border-color: #414345; /* Border color for elements */
+$highlighter-rouge-bg-color: #323537; /* Background for syntax highlighter */
+$highlighter-rouge-border-color: #414345; /* Border color for syntax highlighter */
+$hr-border-color: #414345; /* Horizontal rule border color */
 
 @import "{{ site.theme }}";
 
@@ -24,6 +24,8 @@ body {
   color: $body-text-color;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 b, strong {
@@ -78,6 +80,7 @@ a {
 
   &:hover {
     text-decoration: underline;
+    color: lighten($body-link-color, 20%);
   }
 }
 
@@ -85,6 +88,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   color: $section-headings-color;
 }
+
 
 /* Code Blocks Styling */
 pre, code {
@@ -101,18 +105,14 @@ table {
   width: 100%;
   border-collapse: collapse;
   background-color: $table-row-even-bg-color;
-  margin-bottom: 20px;
 
   th {
     background-color: $table-header-bg-color;
     color: $body-text-color;
-    padding: 10px;
-    text-align: left;
   }
 
   td {
     border: 1px solid $border-color;
-    padding: 10px;
   }
 
   tr:nth-child(even) {
