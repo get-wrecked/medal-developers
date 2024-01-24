@@ -4,10 +4,14 @@
 
 These projects are created by official Medal developers and maintained by the Medal team.
 
-### Official Games & Servers API
- 
-  * [Medal REST API](/api)
+### Official Games & Servers API 🆕
 
+The Medal Games & Servers API empowers server owners and game developers with tools to capture and share pivotal gameplay moments, enhancing player engagement and promoting server discoverability. It offers a unique avenue for monetization and community building.
+
+  * [Game API Documentation](gameapi.md)
+
+---
+ 
 ### Embedded Video Player Customization
 
   * [Embedded Video Player](/player)
