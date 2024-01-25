@@ -121,7 +121,7 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
 | eventName          | Name of the game event                    | `"Ender Dragon Defeated"`   | Yes      |
 | otherPlayers       | Array of other player objects             | `[{"playerId": "playerAlex02", "playerName": "AlexTheExplorer"}]` | No       |
 | contextTags        | Tags for event context as hashtags        | `{"location": "finalboss", "boss": "enderdragon"}` | No |
-| triggerActions     | Actions to be triggered by the event      | `["SaveClip", "Screenshot"]`| No      |
+| triggerActions     | Actions to be triggered by the event      | `["SaveClip", "SaveScreenshot"]`| No      |
 | clipOptions        | Options for clip capture                  | `{"duration": 30}`          | No       |
 
 **Example GameEvent:**
