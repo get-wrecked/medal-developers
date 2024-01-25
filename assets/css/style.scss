@@ -1,21 +1,21 @@
 ---
 ---
 
-$body-color: #0d1117; /* GitHub Dark background color */
-$body-text-color: #c9d1d9; /* GitHub Dark primary text color */
-$body-strong-color: #c9d1d9; /* GitHub Dark strong text color */
-$body-link-color: #58a6ff; /* GitHub Dark link color */
-$section-headings-color: #c9d1d9; /* GitHub Dark headings color */
-$header-bg-color: #161b22; /* GitHub Dark header background color */
-$code-text-color: #c9d1d9; /* GitHub Dark code text color */
-$code-bg-color: #161b22; /* GitHub Dark code background color */
-$table-header-bg-color: #161b22; /* GitHub Dark table header background color */
-$table-row-even-bg-color: #0d1117; /* GitHub Dark table row even background color */
-$table-row-odd-bg-color: #161b22; /* GitHub Dark table row odd background color */
-$border-color: #30363d; /* GitHub Dark border color */
-$highlighter-rouge-bg-color: #161b22; /* GitHub Dark syntax highlight background */
-$highlighter-rouge-border-color: #30363d; /* GitHub Dark syntax highlight border */
-$hr-border-color: #30363d; /* GitHub Dark horizontal rule color */
+$body-color: #0d1117; /* Dark background */
+$body-text-color: #c9d1d9; /* Light text */
+$body-strong-color: #c9d1d9;
+$body-link-color: #58a6ff; /* Blue links */
+$section-headings-color: #c9d1d9;
+$header-bg-color: #161b22;
+$code-text-color: #c9d1d9;
+$code-bg-color: #161b22;
+$table-header-bg-color: #161b22;
+$table-row-even-bg-color: #0d1117;
+$table-row-odd-bg-color: #161b22;
+$border-color: #30363d;
+$highlighter-rouge-bg-color: #161b22;
+$highlighter-rouge-border-color: #30363d;
+$hr-border-color: #30363d;
 
 @import "{{ site.theme }}";
 
@@ -34,26 +34,31 @@ b, strong {
 }
 
 .highlight {
-  background: transparent;
-  
-  .nt {
-    color: #fdcf71;
+  background: $highlighter-rouge-bg-color;
+
+  .na { /* JSON Property Names */
+    color: #9ecbff;
   }
-  
-  .na {
-    color: #dcdcdc;
+
+  .s, .mi, .mf { /* JSON Property Values */
+    color: #7ee787;
   }
-  
-  .s {
-    color: #b6d86f;
+
+  /* Other Syntax Highlighting */
+  .kw { /* Keywords */
+    color: #ff79c6;
   }
-  
-  .s2 {
-    color: #9b78aa;
+  .c { /* Comments */
+    color: #6272a4;
   }
-  
-  .mi {
-    color: #86a972;
+  .dt { /* Data Types */
+    color: #8be9fd;
+  }
+  .nf { /* Function Names */
+    color: #50fa7b;
+  }
+  .o { /* Operators */
+    color: #ffb86c;
   }
 }
 
