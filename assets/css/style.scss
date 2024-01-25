@@ -136,6 +136,17 @@ a {
   }
 }
 
+.site-header {
+  width: 100%;
+  text-align: center;
+}
+
+.site-header img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
 .page-header {
   color: $header-heading-color;
   text-align: center;
