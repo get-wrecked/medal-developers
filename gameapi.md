@@ -37,12 +37,12 @@ This endpoint allows for the submission of game context, including details about
 
 | Property Name        | Description                               | Example Value               | Required |
 |----------------------|-------------------------------------------|-----------------------------|----------|
-| `serverId`           | Unique ID of the server                   | `"mc.playdiamondcraft.gg"`  | No      |
-| `serverName`         | Name of the server                        | `"DiamondCraft"`            | No      |
-| `localPlayer`        | Object containing local player information| `{"playerId": "playerSteve01", "playerName": "SteveTheMiner"}` | No |
-| `customStatus`       | Custom activity status to set for the user | `Fighting the Ender Dragon` | No |
-| `globalContextTags`  | Tags for global context as hashtags       | `{"client": "clientname", "mode": "survival", "server": "diamondcraft"}` | No |
-| `globalContextData`  | Additional metadata for global context    | `{"biome": "Plains", "weather": "Clear", "joinUrl": "https://altv.run/serverId1234"}` | No |
+| serverId           | Unique ID of the server                   | `"mc.playdiamondcraft.gg"`  | No      |
+| serverName         | Name of the server                        | `"DiamondCraft"`            | No      |
+| localPlayer        | Object containing local player information| `{"playerId": "playerSteve01", "playerName": "SteveTheMiner"}` | No |
+| customStatus       | Custom activity status to set for the user | `Fighting the Ender Dragon` | No |
+| globalContextTags  | Tags for global context as hashtags       | `{"client": "clientname", "mode": "survival", "server": "diamondcraft"}` | No |
+| globalContextData  | Additional metadata for global context    | `{"biome": "Plains", "weather": "Clear", "joinUrl": "https://altv.run/serverId1234"}` | No |
 
 **Example GameContext:**
 
@@ -83,12 +83,12 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
 
 | Property Name        | Description                               | Example Value               | Required |
 |----------------------|-------------------------------------------|-----------------------------|----------|
-| `eventId`            | Unique ID of the game event               | `"evt_dragon_defeat01"`     | Yes      |
-| `eventName`          | Name of the game event                    | `"Ender Dragon Defeated"`   | Yes      |
-| `otherPlayers`       | Array of other player objects             | `[{"playerId": "playerAlex02", "playerName": "AlexTheExplorer"}]` | No       |
-| `contextTags`        | Tags for event context as hashtags        | `{"location": "finalboss", "boss": "enderdragon"}` | No |
-| `triggerActions`     | Actions to be triggered by the event      | `["SaveClip", "Screenshot"]`| No      |
-| `clipOptions`        | Options for clip capture                  | `{"duration": 30}`          | No       |
+| eventId            | Unique ID of the game event               | `"evt_dragon_defeat01"`     | Yes      |
+| eventName          | Name of the game event                    | `"Ender Dragon Defeated"`   | Yes      |
+| otherPlayers       | Array of other player objects             | `[{"playerId": "playerAlex02", "playerName": "AlexTheExplorer"}]` | No       |
+| contextTags        | Tags for event context as hashtags        | `{"location": "finalboss", "boss": "enderdragon"}` | No |
+| triggerActions     | Actions to be triggered by the event      | `["SaveClip", "Screenshot"]`| No      |
+| clipOptions        | Options for clip capture                  | `{"duration": 30}`          | No       |
 
 **Example GameEvent:**
 
@@ -137,7 +137,7 @@ This endpoint is used to set a creator code for a specific game or server. Upon 
 
 | Property Name   | Description                       | Example Value   | Required |
 |-----------------|-----------------------------------|-----------------|----------|
-| `creatorCode`   | The creator code to be set        | `"YourCreatorCode123"` | Yes      |
+| creatorCode   | The creator code to be set        | `"YourCreatorCode123"` | Yes      |
 
 ##### Example CreatorCode
 
