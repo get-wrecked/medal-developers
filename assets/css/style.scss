@@ -136,19 +136,6 @@ a {
   }
 }
 
-.site-header {
-  text-align: center; /* Centers the image if it's an inline or inline-block element */
-  width: 100%; /* Ensures the header spans the full width */
-  overflow: hidden; /* Optional: in case the image is larger than the container */
-}
-
-.site-header img {
-  width: 100%; /* Scales the image to the width of the container */
-  height: auto; /* Maintains the aspect ratio */
-  max-width: original-image-width; /* Optional: replace with the original width of the image */
-  margin: 0 auto; /* Additional centering for block-level images */
-}
-
 
 .page-header {
   color: $header-heading-color;
