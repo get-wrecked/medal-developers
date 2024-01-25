@@ -1,22 +1,22 @@
 ---
 ---
 
-$body-color: #333539;
-$body-text-color: hsla(0,0%,100%,.55);
-$body-strong-color: hsla(0,0%,100%,.75);
-$body-link-color: #ffbf51;
-$section-headings-color: #fff;
-$header-bg-color: #202125;
-$code-text-color: #686d6f;
-$code-bg-color: #282a2b;
-$table-header-bg-color: #1e2021;
-$table-row-even-bg-color: #282a2b;
-$table-row-odd-bg-color: #292d2f;
-$border-color: #1b1c1d;
-$highlighter-rouge-bg-color: #1e2021;
-$highlighter-rouge-border-color: #161819;
-$hr-border-color: hsla(0,0%,100%,.55);
-  
+$body-color: #0d1117; /* GitHub Dark background color */
+$body-text-color: #c9d1d9; /* GitHub Dark primary text color */
+$body-strong-color: #c9d1d9; /* GitHub Dark strong text color */
+$body-link-color: #58a6ff; /* GitHub Dark link color */
+$section-headings-color: #c9d1d9; /* GitHub Dark headings color */
+$header-bg-color: #161b22; /* GitHub Dark header background color */
+$code-text-color: #c9d1d9; /* GitHub Dark code text color */
+$code-bg-color: #161b22; /* GitHub Dark code background color */
+$table-header-bg-color: #161b22; /* GitHub Dark table header background color */
+$table-row-even-bg-color: #0d1117; /* GitHub Dark table row even background color */
+$table-row-odd-bg-color: #161b22; /* GitHub Dark table row odd background color */
+$border-color: #30363d; /* GitHub Dark border color */
+$highlighter-rouge-bg-color: #161b22; /* GitHub Dark syntax highlight background */
+$highlighter-rouge-border-color: #30363d; /* GitHub Dark syntax highlight border */
+$hr-border-color: #30363d; /* GitHub Dark horizontal rule color */
+
 @import "{{ site.theme }}";
 
 body {
