@@ -33,20 +33,15 @@ b, strong {
   color: $body-strong-color;
 }
 
-/* GitHub Dark Theme Colors for JSON */
-span.nl {
-  color: #9ecbff; 
-}
-
-span.s2 {
-  color: #7ee787; 
-}
-
 .highlight {
   background: transparent;
   
   .nt {
     color: #fdcf71;
+  }
+
+  .nl {
+    color: #9ecbff;
   }
   
   .na {
@@ -58,11 +53,15 @@ span.s2 {
   }
   
   .s2 {
-    color: #9b78aa;
+    color: #7ee787;
   }
   
   .mi {
-    color: #86a972;
+    color: #d19a66;
+  }
+
+  .kc {
+    color: #c678dd;
   }
 }
 
