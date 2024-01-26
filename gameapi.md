@@ -137,7 +137,7 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
         "location": "finalboss",
         "boss": "enderdragon"
     },
-    "triggerActions": ["SaveClip", "Screenshot"],
+    "triggerActions": ["SaveClip", "SaveScreenshot"],
     "clipOptions": {
         "duration": 30
     }
@@ -153,7 +153,7 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
   "success": true,
   "eventName": "Ender Dragon Defeated",
   "message": "Event received and processed.",
-  "actionsCompleted": ["SaveClip", "Screenshot"]
+  "actionsCompleted": ["SaveClip", "SaveScreenshot"]
 }
 ```
 
