@@ -21,7 +21,7 @@ To authenticate your requests, include your public key in the header of each API
 
 **⚠️ Important:** Authentication with a valid public key is mandatory for all API requests.
 
-Don't have a key yet? Apply for one [here](https://medal.typeform.com/to/STomVfTO).
+Don't have a key yet? Generate one [here](https://thirdpartyregister.pages.dev/).
 
 ---
 
