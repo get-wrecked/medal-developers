@@ -27,40 +27,6 @@ Don't have a key yet? Apply for one [here](https://medal.typeform.com/to/STomVfT
 
 ## Endpoints
 
-### Set Creator Code
-
-This endpoint is used to set a creator code for a specific game or server. Upon successful setting of the creator code, it returns the associated Medal user ID.
-
-- **Endpoint**: `/api/v1/creatorcode/set`
-- **Method**: `POST`
-- **Header**: `publicKey: [valid public key]`
-
-**CreatorCode Object**:
-
-| Property Name   | Description                       | Example Value   | Required |
-|-----------------|-----------------------------------|-----------------|----------|
-| creatorCode   | The creator code to be set        | `"YourCreatorCode123"` | Yes      |
-
-##### Example CreatorCode
-
-```json
-{
-    "creatorCode": "YourCreatorCode123"
-}
-```
-
-##### Example Success Response
-
-```json
-{
-    "success": true,
-    "message": "Requested creator code update for medal user YourCreatorCode123",
-    "medalUserId": "medalUserIdExample"
-}
-```
-
----
-
 ### Submit Context
 
 This endpoint allows for the submission of game context, including details about the local player, the server, and relevant global context tags.
@@ -164,6 +130,40 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
 ### Error Handling
 
 Errors are communicated through HTTP status codes. If you encounter a `400 Bad Request`, check your request format and headers. For a `500 Internal Server Error`, please contact support.
+
+---
+
+### Set Creator Code
+
+This endpoint is used to set a creator code for a specific game or server. Upon successful setting of the creator code, it returns the associated Medal user ID.
+
+- **Endpoint**: `/api/v1/creatorcode/set`
+- **Method**: `POST`
+- **Header**: `publicKey: [valid public key]`
+
+**CreatorCode Object**:
+
+| Property Name   | Description                       | Example Value   | Required |
+|-----------------|-----------------------------------|-----------------|----------|
+| creatorCode   | The creator code to be set        | `"YourCreatorCode123"` | Yes      |
+
+##### Example CreatorCode
+
+```json
+{
+    "creatorCode": "YourCreatorCode123"
+}
+```
+
+##### Example Success Response
+
+```json
+{
+    "success": true,
+    "message": "Requested creator code update for medal user YourCreatorCode123",
+    "medalUserId": "medalUserIdExample"
+}
+```
 
 ---
 
