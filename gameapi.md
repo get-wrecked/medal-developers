@@ -107,11 +107,11 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
     },
     "triggerActions": ["SaveClip", "SaveScreenshot"],
     "clipOptions": {
-        "duration": 30
+        "duration": 30,
+        "alertType": "Disabled"
     }
 }
 ```
-
 **💡 Note:** `contextTags` will be visible as #hashtags on clips.
 
 **Example Success Response:**
@@ -124,7 +124,14 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
   "actionsCompleted": ["SaveClip", "SaveScreenshot"]
 }
 ```
+The optional `alertType` field accepts the following enum values:
 
+| Value       | Description                             |
+|-------------|-----------------------------------------|
+| `Default`   | Default alert behavior                  |
+| `Disabled`  | Disable alerts for this event           |
+| `SoundOnly` | Plays a clip sound if enabled, but no overlay                      |
+| `OverlayOnly` | Displays an overlay if enabled, but no clip sound                      |
 ---
 
 ### Error Handling
