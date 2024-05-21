@@ -180,7 +180,6 @@ The Medal Games API enables game developers to:
 
 - **Contextualize Gameplay**: Enhance clips with game state information like level or score.
 - **Capture Key Moments**: Trigger video captures during significant gameplay events.
-- **Monetize**: Encourage players to use your creator code for Medal Premium subscriptions.
 - **Boost Discoverability**: Link clips back to the game server or experience for easy access by viewers.
 
 This API is a powerful tool for enriching player experiences and increasing engagement with your game content.
