@@ -39,32 +39,32 @@ This endpoint allows for the submission of game context, including details about
 
 | Property Name        | Description                               | Example Value               | Required |
 |----------------------|-------------------------------------------|-----------------------------|----------|
-| serverId           | Unique ID of the server                   | `"mc.playdiamondcraft.gg"`  | No      |
-| serverName         | Name of the server                        | `"DiamondCraft"`            | No      |
-| localPlayer        | Object containing local player information| `{"playerId": "playerSteve01", "playerName": "SteveTheMiner"}` | No |
-| customStatus       | Custom activity status to set for the user | `Fighting the Ender Dragon` | No |
-| globalContextTags  | Tags for global context as hashtags       | `{"client": "clientname", "mode": "survival", "server": "diamondcraft"}` | No |
-| globalContextData  | Additional metadata for global context    | `{"biome": "Plains", "weather": "Clear", "joinUrl": "https://altv.run/serverId1234"}` | No |
+| serverId           | Unique ID of the server                   | `"n446av"`  | No      |
+| serverName         | Name of the server                        | `"SpaceTurtles RolePlay"`            | No      |
+| localPlayer        | Object containing local player information| `{"playerId": "trevorP12345", "playerName": "Trevor Philips"}` | No |
+| customStatus       | Custom activity status to set for the user | `Skydiving from Mount Chiliad` | No |
+| globalContextTags  | Tags for global context as hashtags       | `{"client": "fivem", "mode": "survival", "server": "strp"}` | No |
+| globalContextData  | Additional metadata for global context    | `{"biome": "Plains", "weather": "Clear", "joinUrl": "https://cfx.re/join/n446av"}` | No |
 
 **Example GameContext:**
 
 ```json
 {
-    "serverId": "mc.playdiamondcraft.gg",
-    "serverName": "DiamondCraft",
+    "serverId": "n446av",
+    "serverName": "SpaceTurtles RolePlay",
     "localPlayer": {
-        "playerId": "playerSteve01",
-        "playerName": "SteveTheMiner"
+        "playerId": "trevorP12345",
+        "playerName": "Trevor Philips"
     },
     "globalContextTags": {
-        "client": "clientname",
+        "client": "fivem",
         "mode": "survival",
-        "server": "diamondcraft"
+        "server": "strp"
     },
     "globalContextData": {
         "biome": "Plains",
         "weather": "Clear",
-        "joinUrl": "https://altv.run/serverId1234"
+        "joinUrl": "https://cfx.re/join/n446av"
     }
 }
 ```
