@@ -140,37 +140,24 @@ Errors are communicated through HTTP status codes. If you encounter a `400 Bad R
 
 ---
 
-### Set Creator Code
+## Possible Errors
 
-This endpoint is used to set a creator code for a specific game or server. Upon successful setting of the creator code, it returns the associated Medal user ID.
+| Endpoint | Error Code | HTTP Status | Description |
+|----------|------------|-------------|-------------|
+| /event | INVALID_MODEL | 400 | The request body does not match the expected model structure. |
+| /event | INVALID_EVENT | 400 | The provided game event details are invalid. |
+| /event | MISSING_PUBLIC_KEY | 400 | The publicKey header is missing from the request. |
+| /event | INVALID_APP_DATA | 400 | Failed to retrieve app data associated with the provided public key. |
+| /event | INACTIVE_GAME | 200 | The event was received but not processed because the categoryId does not match the active game. |
+| /event | DISABLED_EVENT | 200 | The event was received but not processed because it is disabled in the user's ICYMI settings. |
+| /event | INTERNAL_ERROR | 500 | An unexpected error occurred while processing the request. |
 
-- **Endpoint**: `/api/v1/creatorcode/set`
-- **Method**: `POST`
-- **Header**: `publicKey: [valid public key]`
-
-**CreatorCode Object**:
-
-| Property Name   | Description                       | Example Value   | Required |
-|-----------------|-----------------------------------|-----------------|----------|
-| creatorCode   | The creator code to be set        | `"YourCreatorCode123"` | Yes      |
-
-##### Example CreatorCode
-
-```json
-{
-    "creatorCode": "YourCreatorCode123"
-}
-```
-
-##### Example Success Response
-
-```json
-{
-    "success": true,
-    "message": "Requested creator code update for medal user YourCreatorCode123",
-    "medalUserId": "medalUserIdExample"
-}
-```
+| Endpoint | Error Code | HTTP Status | Description |
+|----------|------------|-------------|-------------|
+| /context | INVALID_MODEL | 400 | The request body does not match the expected model structure. |
+| /context | MISSING_PUBLIC_KEY | 400 | The publicKey header is missing from the request. |
+| /context | INVALID_APP_DATA | 400 | Failed to retrieve app data associated with the provided public key. |
+| /context | INTERNAL_ERROR | 500 | An unexpected error occurred while processing the request.
 
 ---
 
@@ -183,3 +170,4 @@ The Medal Games API enables game developers to:
 - **Boost Discoverability**: Link clips back to the game server or experience for easy access by viewers.
 
 This API is a powerful tool for enriching player experiences and increasing engagement with your game content.
+
