@@ -215,7 +215,13 @@
         const description = existing ? clip.contentTitle : (timeAgo(clip.createdTimestamp) + " - " + clip.contentTitle);
         const clipEl = document.createElement("div");
         clipEl.className = "clip";
-        clipEl.innerHTML = `<div class="description">${description}</div><div class="clip-frame">${clip.embedIframeCode}</div>`;
+        const descriptionEl = document.createElement("div");
+        descriptionEl.innerText = description;
+        clipEl.appendChild(descriptionEl);
+        const embedEl = document.createElement("div");
+        embedEl.className = "clip-frame";
+        embedEl.innerHTML = clip.embedIframeCode;
+        clipEl.appendChild(embedEl);
         return clipEl;
     }
 
