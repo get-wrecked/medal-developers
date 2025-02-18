@@ -1,4 +1,3 @@
-
 # Medal Games & Servers API Documentation
 
 Welcome to the Medal Games & Servers API documentation. This guide provides comprehensive details to help you integrate your games with the Medal capture system, enhancing gameplay with triggered video captures and rich contextual information.
@@ -90,7 +89,7 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
 | otherPlayers       | Array of other player objects             | `[{"playerId": "playerAlex02", "playerName": "AlexTheExplorer"}]` | No       |
 | contextTags        | Tags for event context as hashtags        | `{"location": "finalboss", "boss": "enderdragon"}` | No |
 | triggerActions     | Actions to be triggered by the event      | `["SaveClip", "SaveScreenshot"]`| No      |
-| clipOptions        | Options for clip capture                  | `{"duration": 30}`          | No       |
+| clipOptions        | Options for clip capture                  | `{"duration": 30, "captureDelayMs": 1000}`          | No       |
 
 **Example GameEvent:**
 
@@ -108,10 +107,22 @@ Trigger a game event to initiate clip capture or bookmarking with associated con
     "triggerActions": ["SaveClip", "SaveScreenshot"],
     "clipOptions": {
         "duration": 30,
+        "captureDelayMs": 1000,
         "alertType": "Disabled"
     }
 }
 ```
+
+The `clipOptions` object supports the following properties:
+
+| Property Name   | Type    | Description                                          | Default |
+|----------------|---------|------------------------------------------------------|---------|
+| duration       | number  | Duration of the clip in seconds                      | 15      |
+| captureDelayMs | number  | Amount of time (in milliseconds) to capture after the event is triggered | 0       |
+| alertType      | string  | Type of notification alert to show                   | "Default" |
+
+**💡 Note:** The `captureDelayMs` option delays when the clip saves, useful for including moments that happen after the triggering event.
+
 **💡 Note:** `contextTags` will be visible as #hashtags on clips.
 
 **Example Success Response:**
