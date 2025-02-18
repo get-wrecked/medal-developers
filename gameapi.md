@@ -118,7 +118,7 @@ The `clipOptions` object supports the following properties:
 | Property Name   | Type    | Description                                          | Default |
 |----------------|---------|------------------------------------------------------|---------|
 | duration       | number  | Duration of the clip in seconds                      | 15      |
-| captureDelayMs | number  | Amount of time to capture after the event is triggered | 0       |
+| captureDelayMs | number  | Amount of time (in milliseconds) to capture after the event is triggered | 0       |
 | alertType      | string  | Type of notification alert to show                   | "Default" |
 
 **💡 Note:** The `captureDelayMs` option delays when the clip saves, useful for including moments that happen after the triggering event.
