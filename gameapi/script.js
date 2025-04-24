@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Update all translations
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.dataset.i18n;
-            const translation = key.split('.').reduce((obj, i) => obj[i], translations[lang]);
-            if (translation) {
+            // Use a safer reduce that handles undefined properties
+            const translation = key.split('.').reduce((obj, i) => obj && typeof obj === 'object' ? obj[i] : undefined, translations[lang]);
+            if (translation !== undefined && typeof translation !== 'object') {
                 element.textContent = translation;
             }
         });
@@ -24,8 +25,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Update input placeholders
         document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
             const key = element.dataset.i18nPlaceholder;
-            const translation = key.split('.').reduce((obj, i) => obj[i], translations[lang]);
-            if (translation) {
+            // Use the same safer reduce method for placeholders
+            const translation = key.split('.').reduce((obj, i) => obj && typeof obj === 'object' ? obj[i] : undefined, translations[lang]);
+            if (translation !== undefined && typeof translation !== 'object') {
                 element.placeholder = translation;
             }
         });
