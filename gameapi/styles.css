@@ -1536,3 +1536,29 @@ pre[class*="language-"] {
 .mobile-backdrop.active {
     display: block;
 }
+
+.next-steps {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.next-steps p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.cta-button.primary {
+    background: var(--brand-color);
+    color: var(--bg-primary);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 4px 12px rgba(255, 175, 52, 0.2);
+}

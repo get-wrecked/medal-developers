@@ -57,7 +57,9 @@ const translations = {
             copyButton: "Copy",
             errorGeneric: "Failed to generate API key. Please try again.",
             copied: "Copied!",
-            validationUrlRequired: "Please enter a valid URL"
+            validationUrlRequired: "Please enter a valid URL",
+            nextSteps: "Ready to start sending events? Try out your new API key!",
+            sendFirstEvent: "Send Your First Event"
         },
         docs: {
             sendEvents: {
@@ -226,7 +228,9 @@ const translations = {
             copyButton: "Copiar",
             errorGeneric: "Error al generar la clave API. Por favor, inténtelo de nuevo.",
             copied: "¡Copiado!",
-            validationUrlRequired: "Por favor ingrese una URL válida"
+            validationUrlRequired: "Por favor ingrese una URL válida",
+            nextSteps: "¿Listo para empezar a enviar eventos? ¡Prueba tu nueva clave API!",
+            sendFirstEvent: "Enviar Su Primer Evento"
         },
         docs: {
             sendEvents: {
@@ -395,7 +399,9 @@ const translations = {
             copyButton: "복사",
             errorGeneric: "API 키 생성에 실패했습니다. 다시 시도해 주세요.",
             copied: "복사됨!",
-            validationUrlRequired: "유효한 URL을 입력해 주세요"
+            validationUrlRequired: "유효한 URL을 입력해 주세요",
+            nextSteps: "이벤트를 보내기 준비되셨나요? 새로운 API 키를 테스트해보세요!",
+            sendFirstEvent: "첫 번째 이벤트 보내기"
         },
         docs: {
             sendEvents: {
