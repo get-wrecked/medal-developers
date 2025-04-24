@@ -345,7 +345,7 @@ const translations = {
         nav: {
             gettingStarted: "시작하기",
             overview: "개요",
-            getPublicKey: "API Key 받기",
+            getPublicKey: "API Key 생성하기",
             endpoints: "엔드포인트",
             sendEvents: "이벤트 전송",
             sendContext: "컨텍스트 전송"
