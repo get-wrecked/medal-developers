@@ -673,15 +673,21 @@ pre[class*="language-"] {
 .endpoint-url {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0;
     font-size: 0.95rem;
     word-break: break-all;
 }
 
-.endpoint-url .base-url,
+.endpoint-url .base-url {
+    display: inline;
+    word-break: break-all;
+    color: var(--text-secondary);
+}
+
 .endpoint-url .path {
     display: inline;
     word-break: break-all;
+    color: var(--brand-color);
 }
 
 /* Custom scrollbar for code blocks */
