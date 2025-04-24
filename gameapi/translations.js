@@ -105,7 +105,7 @@ const translations = {
                         description: "Amount of time (in milliseconds) to capture after the event is triggered"
                     },
                     alertType: {
-                        description: "Type of notification alert to show"
+                        description: "Type of notification alert to show (Default, Disabled, SoundOnly, OverlayOnly)"
                     }
                 },
                 errorDescriptions: {
@@ -276,7 +276,7 @@ const translations = {
                         description: "Tiempo (en milisegundos) para capturar después de que se active el evento"
                     },
                     alertType: {
-                        description: "Tipo de alerta de notificación a mostrar"
+                        description: "Tipo de alerta de notificación a mostrar (Default, Disabled, SoundOnly, OverlayOnly)"
                     }
                 },
                 errorDescriptions: {
@@ -447,7 +447,7 @@ const translations = {
                         description: "이벤트가 트리거된 후 캡처할 시간(밀리초)"
                     },
                     alertType: {
-                        description: "표시할 알림 유형"
+                        description: "표시할 알림 유형 (Default, Disabled, SoundOnly, OverlayOnly)"
                     }
                 },
                 errorDescriptions: {
