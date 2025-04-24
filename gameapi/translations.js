@@ -70,7 +70,6 @@ const translations = {
                 parameters: "Request Body Parameters",
                 clipOptions: "Clip Options",
                 alertTypes: "Alert Types",
-                errors: "Possible Errors",
                 property: "Property",
                 type: "Type",
                 required: "Required",
@@ -130,7 +129,6 @@ const translations = {
                 headers: "REQUEST HEADERS",
                 requestBody: "REQUEST BODY",
                 parameters: "Request Body Parameters",
-                errors: "Possible Errors",
                 tableContent: {
                     serverId: {
                         description: "Unique ID of the server"
@@ -241,7 +239,6 @@ const translations = {
                 parameters: "Parámetros del Cuerpo de la Solicitud",
                 clipOptions: "Opciones de Clip",
                 alertTypes: "Tipos de Alerta",
-                errors: "Posibles Errores",
                 property: "Propiedad",
                 type: "Tipo",
                 required: "Requerido",
@@ -301,7 +298,6 @@ const translations = {
                 headers: "ENCABEZADOS HTTP",
                 requestBody: "CUERPO DE LA SOLICITUD",
                 parameters: "Parámetros del Cuerpo de la Solicitud",
-                errors: "Posibles Errores",
                 tableContent: {
                     serverId: {
                         description: "ID único del servidor"
@@ -412,7 +408,6 @@ const translations = {
                 parameters: "요청 본문 매개변수",
                 clipOptions: "클립 옵션",
                 alertTypes: "알림 유형",
-                errors: "가능한 오류",
                 property: "속성",
                 type: "유형",
                 required: "필수",
@@ -472,7 +467,6 @@ const translations = {
                 headers: "요청 헤더",
                 requestBody: "요청 본문",
                 parameters: "요청 본문 매개변수",
-                errors: "가능한 오류",
                 tableContent: {
                     serverId: {
                         description: "서버의 고유 ID"
