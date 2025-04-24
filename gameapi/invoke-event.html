@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medal Games & Servers API - Send Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="mobile-backdrop"></div>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="medal-logo.svg" alt="Medal Logo" class="logo-img">
+        </div>
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="en">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg" alt="English">
+                EN
+            </button>
+            <button class="lang-btn" data-lang="es">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Español">
+                ES
+            </button>
+            <button class="lang-btn" data-lang="kr">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/kr.svg" alt="한국어">
+                KR
+            </button>
+        </div>
+        <nav class="nav-tabs">
+            <div class="nav-group">
+                <h3 data-i18n="nav.gettingStarted">Getting Started</h3>
+                <a href="index.html" class="tab-button" id="introduction-link">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav.overview">Overview</span>
+                </a>
+                <a href="get-api-key.html" class="tab-button" id="get-api-key-link">
+                    <i class="fas fa-key"></i>
+                    <span data-i18n="nav.getPublicKey">Get Public Key</span>
+                </a>
+            </div>
+            
+            <div class="nav-group">
+                <h3 data-i18n="nav.endpoints">Endpoints</h3>
+                <a href="invoke-event.html" class="tab-button" id="invoke-event-link">
+                    <i class="fas fa-bolt"></i>
+                    <span data-i18n="nav.sendEvents">Send Events</span>
+                </a>
+                <a href="submit-context.html" class="tab-button" id="submit-context-link">
+                    <i class="fas fa-cube"></i>
+                    <span data-i18n="nav.sendContext">Send Context</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="content">
+        <h1 data-i18n="docs.sendEvents.title">Send Events</h1>
+        <div class="card">
+            <div class="endpoint">
+                <p data-i18n="docs.sendEvents.description">Trigger a game event to initiate clip capture or bookmarking with associated context tags.</p>
+                
+                <div class="endpoint-header">
+                    <span class="method-badge">POST</span>
+                    <span class="endpoint-url">
+                        <span class="base-url">http://localhost:12665</span>
+                        <span class="path">/api/v1/event/invoke</span>
+                    </span>
+                </div>
+
+                <div class="example-section">
+                    <h3><i class="fas fa-code"></i> Example Request</h3>
+                    
+                    <div class="request-blocks">
+                        <div class="request-section">
+                            <div class="request-section-header">
+                                <i class="fas fa-arrow-right-to-bracket"></i>
+                                <span data-i18n="docs.sendEvents.headers">HTTP HEADERS</span>
+                            </div>
+                            <div class="request-section-content">
+                                <div class="header-items">
+                                    <div class="header-item">
+                                        <span class="header-name" data-i18n="docs.common.contentType">Content-Type</span>
+                                        <span class="header-value" data-i18n="docs.common.headers.contentType">application/json</span>
+                                    </div>
+                                    <div class="header-item">
+                                        <span class="header-name" data-i18n="docs.common.publicKey">publicKey</span>
+                                        <span class="header-value" data-i18n="docs.common.headers.publicKey">YOUR_PUBLIC_KEY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="request-section">
+                            <div class="request-section-header">
+                                <i class="fas fa-code"></i>
+                                <span data-i18n="docs.sendEvents.requestBody">REQUEST BODY</span>
+                            </div>
+                            <div class="request-section-content">
+                                <div class="code-block">
+                                    <pre><code class="language-json">{
+    "eventId": "evt_dragon_defeat01",
+    "eventName": "Ender Dragon Defeated",
+    "otherPlayers": [
+        {
+            "playerId": "playerAlex02",
+            "playerName": "AlexTheExplorer"
+        }
+    ],
+    "contextTags": {
+        "location": "finalboss",
+        "boss": "enderdragon"
+    },
+    "triggerActions": ["SaveClip", "SaveScreenshot"],
+    "clipOptions": {
+        "duration": 30,
+        "captureDelayMs": 1000,
+        "alertType": "Disabled"
+    }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <div class="documentation-section">
+                        <div class="doc-section">
+                            <h3 data-i18n="docs.sendEvents.parameters">Request Body Parameters</h3>
+                            <table class="param-table">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="docs.sendEvents.property">Property</th>
+                                        <th data-i18n="docs.sendEvents.type">Type</th>
+                                        <th data-i18n="docs.sendEvents.required">Required</th>
+                                        <th data-i18n="docs.sendEvents.columnDescription">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>eventId</td>
+                                        <td>string</td>
+                                        <td>Yes</td>
+                                        <td data-i18n="docs.sendEvents.tableContent.eventId.description">Unique ID of the game event</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eventName</td>
+                                        <td>string</td>
+                                        <td>Yes</td>
+                                        <td data-i18n="docs.sendEvents.tableContent.eventName.description">Name of the game event</td>
+                                    </tr>
+                                    <tr>
+                                        <td>otherPlayers</td>
+                                        <td>array</td>
+                                        <td>No</td>
+                                        <td data-i18n="docs.sendEvents.tableContent.otherPlayers.description">Array of other player objects</td>
+                                    </tr>
+                                    <tr>
+                                        <td>contextTags</td>
+                                        <td>object</td>
+                                        <td>No</td>
+                                        <td data-i18n="docs.sendEvents.tableContent.contextTags.description">Tags for event context as hashtags</td>
+                                    </tr>
+                                    <tr>
+                                        <td>triggerActions</td>
+                                        <td>array</td>
+                                        <td>No</td>
+                                        <td data-i18n="docs.sendEvents.tableContent.triggerActions.description">Actions to be triggered by the event</td>
+                                    </tr>
+                                    <tr>
+                                        <td>clipOptions</td>
+                                        <td>object</td>
+                                        <td>No</td>
+                                        <td data-i18n="docs.sendEvents.tableContent.clipOptions.description">Options for clip capture</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doc-section">
+                    <h3 data-i18n="docs.sendEvents.clipOptions">Clip Options</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="docs.sendEvents.property">Property</th>
+                                <th data-i18n="docs.sendEvents.type">Type</th>
+                                <th data-i18n="docs.sendEvents.default">Default</th>
+                                <th data-i18n="docs.sendEvents.columnDescription">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>duration</td>
+                                <td>number</td>
+                                <td>15</td>
+                                <td data-i18n="docs.sendEvents.tableContent.duration.description">Duration of the clip in seconds</td>
+                            </tr>
+                            <tr>
+                                <td>captureDelayMs</td>
+                                <td>number</td>
+                                <td>0</td>
+                                <td data-i18n="docs.sendEvents.tableContent.captureDelayMs.description">Amount of time (in milliseconds) to capture after the event is triggered</td>
+                            </tr>
+                            <tr>
+                                <td>alertType</td>
+                                <td>string</td>
+                                <td>"Default"</td>
+                                <td data-i18n="docs.sendEvents.tableContent.alertType.description">Type of notification alert to show</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="doc-section">
+                    <h3 data-i18n="docs.sendEvents.alertTypes">Alert Types</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="docs.sendEvents.value">Value</th>
+                                <th data-i18n="docs.sendEvents.columnDescription">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Default</td>
+                                <td data-i18n="docs.sendEvents.alertTypes.Default">Default alert behavior</td>
+                            </tr>
+                            <tr>
+                                <td>Disabled</td>
+                                <td data-i18n="docs.sendEvents.alertTypes.Disabled">Disable alerts for this event</td>
+                            </tr>
+                            <tr>
+                                <td>SoundOnly</td>
+                                <td data-i18n="docs.sendEvents.alertTypes.SoundOnly">Plays a clip sound if enabled, but no overlay</td>
+                            </tr>
+                            <tr>
+                                <td>OverlayOnly</td>
+                                <td data-i18n="docs.sendEvents.alertTypes.OverlayOnly">Displays an overlay if enabled, but no clip sound</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="error-section">
+                    <h3 data-i18n="docs.sendEvents.errors">Possible Errors</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="docs.sendEvents.errorCode">Error Code</th>
+                                <th data-i18n="docs.sendEvents.httpStatus">HTTP Status</th>
+                                <th data-i18n="docs.sendEvents.columnDescription">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INVALID_MODEL</td>
+                                <td>400</td>
+                                <td data-i18n="docs.sendEvents.errorDescriptions.INVALID_MODEL">The request body does not match the expected model structure</td>
+                            </tr>
+                            <tr>
+                                <td>INVALID_EVENT</td>
+                                <td>400</td>
+                                <td data-i18n="docs.sendEvents.errorDescriptions.INVALID_EVENT">The provided game event details are invalid</td>
+                            </tr>
+                            <tr>
+                                <td>MISSING_PUBLIC_KEY</td>
+                                <td>400</td>
+                                <td data-i18n="docs.sendEvents.errorDescriptions.MISSING_PUBLIC_KEY">The publicKey header is missing from the request</td>
+                            </tr>
+                            <tr>
+                                <td>INVALID_APP_DATA</td>
+                                <td>400</td>
+                                <td data-i18n="docs.sendEvents.errorDescriptions.INVALID_APP_DATA">Failed to retrieve app data associated with the provided public key</td>
+                            </tr>
+                            <tr>
+                                <td>INACTIVE_GAME</td>
+                                <td>200</td>
+                                <td data-i18n="docs.sendEvents.errorDescriptions.INACTIVE_GAME">The event was received but not processed because the categoryId does not match the active game</td>
+                            </tr>
+                            <tr>
+                                <td>DISABLED_EVENT</td>
+                                <td>200</td>
+                                <td data-i18n="docs.sendEvents.errorDescriptions.DISABLED_EVENT">The event was received but not processed because it is disabled in the user's ICYMI settings</td>
+                            </tr>
+                            <tr>
+                                <td>INTERNAL_ERROR</td>
+                                <td>500</td>
+                                <td data-i18n="docs.sendEvents.errorDescriptions.INTERNAL_ERROR">An unexpected error occurred while processing the request</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        // Ensure Prism is loaded and available
+        if (typeof Prism !== 'undefined') {
+            Prism.manual = true;
+            Prism.highlightAll();
+        }
+    </script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

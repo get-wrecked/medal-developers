@@ -4,11 +4,11 @@
 
 These projects are created by official Medal developers and maintained by the Medal team.
 
-### Official Games & Servers API 🆕
+### Official Local Game API 🆕
 
-  * [Game API Documentation](gameapi.md)
+  * [Local Game API Documentation](/gameapi)
 
-The Medal Games & Servers API empowers server owners and game developers with tools to capture and share pivotal gameplay moments, enhancing player engagement and promoting server discoverability. It offers a unique avenue for monetization and community building.
+The Medal Local Game API empowers server owners and game developers with tools to capture and share pivotal gameplay moments, enhancing player engagement and promoting server discoverability. It offers a unique avenue for monetization and community building.
 
 ---
  

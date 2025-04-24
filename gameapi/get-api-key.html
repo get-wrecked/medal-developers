@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medal Games & Servers API - Get API Key</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="mobile-backdrop"></div>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="medal-logo.svg" alt="Medal Logo" class="logo-img">
+        </div>
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="en">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg" alt="English">
+                EN
+            </button>
+            <button class="lang-btn" data-lang="es">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Español">
+                ES
+            </button>
+            <button class="lang-btn" data-lang="kr">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/kr.svg" alt="한국어">
+                KR
+            </button>
+        </div>
+        <nav class="nav-tabs">
+            <div class="nav-group">
+                <h3 data-i18n="nav.gettingStarted">Getting Started</h3>
+                <a href="index.html" class="tab-button" id="introduction-link">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav.overview">Overview</span>
+                </a>
+                <a href="get-api-key.html" class="tab-button" id="get-api-key-link">
+                    <i class="fas fa-key"></i>
+                    <span data-i18n="nav.getPublicKey">Get Public Key</span>
+                </a>
+            </div>
+            
+            <div class="nav-group">
+                <h3 data-i18n="nav.endpoints">Endpoints</h3>
+                <a href="invoke-event.html" class="tab-button" id="invoke-event-link">
+                    <i class="fas fa-bolt"></i>
+                    <span data-i18n="nav.sendEvents">Send Events</span>
+                </a>
+                <a href="submit-context.html" class="tab-button" id="submit-context-link">
+                    <i class="fas fa-cube"></i>
+                    <span data-i18n="nav.sendContext">Send Context</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="content">
+        <h1 data-i18n="apiKey.title">Get Public Key</h1>
+        <div class="card">
+            <h2 data-i18n="apiKey.registerGame">Register Your Game</h2>
+            <p data-i18n="apiKey.selectGame">Select your game from the list below to get started.</p>
+            
+            <div class="game-selector">
+                <div class="select-wrapper">
+                    <select id="gameSelect" class="game-dropdown">
+                        <option value="" data-i18n="apiKey.searchPlaceholder">Select a game...</option>
+                    </select>
+                    <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="selectedGameInfo" class="game-info" style="display: none;">
+                <div class="game-header">
+                    <img id="gameImage" src="" alt="Game thumbnail" class="game-thumbnail">
+                    <div class="game-details">
+                        <h3 id="gameName"></h3>
+                        <div class="game-stats">
+                            <span><i class="fas fa-users"></i> <span id="followers"></span> <span data-i18n="apiKey.followers">followers</span></span>
+                            <span><i class="fas fa-video"></i> <span id="clips"></span> <span data-i18n="apiKey.clips">clips</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-action">
+                    <form class="registration-form" id="registrationForm" style="display: none;">
+                        <div class="form-group">
+                            <label for="appName" data-i18n="apiKey.appNameLabel">Application Name</label>
+                            <input type="text" id="appName" name="appName" required data-i18n-placeholder="apiKey.appNamePlaceholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="appUrl" data-i18n="apiKey.appUrlLabel">Application URL</label>
+                            <input type="url" id="appUrl" name="appUrl" required data-i18n-placeholder="apiKey.appUrlPlaceholder">
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <i class="fas fa-key"></i>
+                            <span data-i18n="apiKey.generateKey">Generate API Key</span>
+                        </button>
+                        <div class="error-message" id="errorMessage"></div>
+                    </form>
+
+                    <div class="api-key-container" id="apiKeyContainer" style="display: none;">
+                        <div class="api-key-header">
+                            <h3 data-i18n="apiKey.yourKeyTitle">Your API Key</h3>
+                            <button class="copy-key-btn" id="copyKeyBtn">
+                                <i class="fas fa-copy"></i>
+                                <span data-i18n="apiKey.copyButton">Copy</span>
+                            </button>
+                        </div>
+                        <div class="api-key-value">
+                            <code id="apiKeyValue"></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        // Ensure Prism is loaded and available
+        if (typeof Prism !== 'undefined') {
+            Prism.manual = true;
+            Prism.highlightAll();
+        }
+    </script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script src="get-api-key.js"></script>
+</body>
+</html> 

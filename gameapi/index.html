@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medal Games & Servers API</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="mobile-backdrop"></div>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="medal-logo.svg" alt="Medal Logo" class="logo-img">
+        </div>
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="en">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg" alt="English">
+                EN
+            </button>
+            <button class="lang-btn" data-lang="es">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Español">
+                ES
+            </button>
+            <button class="lang-btn" data-lang="kr">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/kr.svg" alt="한국어">
+                KR
+            </button>
+        </div>
+        <nav class="nav-tabs">
+            <div class="nav-group">
+                <h3 data-i18n="nav.gettingStarted">Getting Started</h3>
+                <a href="index.html" class="tab-button" id="introduction-link">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav.overview">Overview</span>
+                </a>
+                <a href="get-api-key.html" class="tab-button" id="get-api-key-link">
+                    <i class="fas fa-key"></i>
+                    <span data-i18n="nav.getPublicKey">Get Public Key</span>
+                </a>
+            </div>
+            
+            <div class="nav-group">
+                <h3 data-i18n="nav.endpoints">Endpoints</h3>
+                <a href="invoke-event.html" class="tab-button" id="invoke-event-link">
+                    <i class="fas fa-bolt"></i>
+                    <span data-i18n="nav.sendEvents">Send Events</span>
+                </a>
+                <a href="submit-context.html" class="tab-button" id="submit-context-link">
+                    <i class="fas fa-cube"></i>
+                    <span data-i18n="nav.sendContext">Send Context</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="content">
+        <h1 data-i18n="overview.title">Medal - Local Game API</h1>
+        <div class="card">
+            <h2 data-i18n="overview.getStarted">Get Started in 2 Steps</h2>
+            <div class="checklist-steps">
+                <div class="checklist-step" onclick="window.location.href='get-api-key.html'">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="overview.step1.title">Claim Your API Key</h3>
+                    <p data-i18n="overview.step1.description">Register your game and get your public API key to start integrating with Medal's auto-clipping features.</p>
+                    <span class="step-link">
+                        <span data-i18n="overview.step1.cta">Get Your Key</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+                <div class="checklist-step" onclick="window.location.href='invoke-event.html'">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="overview.step2.title">Send Game Events</h3>
+                    <p data-i18n="overview.step2.description">Start sending game events to trigger auto-clips when exciting moments happen in your game.</p>
+                    <span class="step-link">
+                        <span data-i18n="overview.step2.cta">View Events API</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 data-i18n="overview.whyIntegrate">Why integrate?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 data-i18n="overview.features.clips.title">Auto Clips = More Content</h3>
+                    <p data-i18n="overview.features.clips.description">Medal auto-captures key moments from your game, turning them into short, shareable clips. These clips become bite-sized ads for your experience, driving organic growth.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 data-i18n="overview.features.setup.title">Setup is Simple</h3>
+                    <p data-i18n="overview.features.setup.description">Send a quick capture call when something awesome happens — a win, a clutch moment, a funny fail, you name it.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="overview.features.reach.title">Reach Millions of Players</h3>
+                    <p data-i18n="overview.features.reach.description">Your clips live on a platform already used by <strong>millions of players</strong>. Plus, every clip links <strong>directly back to your game</strong>, bringing new players in.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 data-i18n="overview.features.content.title">Content is King</h3>
+                    <p data-i18n="overview.features.content.description">For young gamers, discovery happens through content. With auto-clipping, your game stays top of mind — and top of feed.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        // Ensure Prism is loaded and available
+        if (typeof Prism !== 'undefined') {
+            Prism.manual = true;
+            Prism.highlightAll();
+        }
+    </script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
