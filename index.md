@@ -1,4 +1,4 @@
-[⬅️Back to Medal Home](https://medal.tv)
+[⬅️ Back to Medal Home](https://medal.tv)
 
 # Official Medal Projects
 

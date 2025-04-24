@@ -390,7 +390,7 @@ const translations = {
             searchPlaceholder: "게임 검색...",
             followers: "팔로워",
             clips: "클립",
-            generateKey: "API 키 생성",
+            generateKey: "API Key 생성하기",
             appNameLabel: "앱 이름",
             appNamePlaceholder: "앱 이름을 입력하세요",
             appUrlLabel: "앱 URL",
