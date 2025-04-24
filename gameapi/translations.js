@@ -13,7 +13,7 @@ const translations = {
             getStarted: "Get Started in 2 Steps",
             step1: {
                 title: "Claim Your API Key",
-                description: "Register your game and get your public API key to start integrating with Medal's auto-clipping features.",
+                description: "Register your app and get your public API key to start integrating with Medal's auto-clipping features.",
                 cta: "Get Your Key"
             },
             step2: {
@@ -43,21 +43,21 @@ const translations = {
         },
         apiKey: {
             title: "Get Public Key",
-            registerGame: "Register Your Game",
-            selectGame: "Select a game from the list below to get started.",
+            registerGame: "Register Your App",
+            selectGame: "Select the game your app is built for to get started.",
             searchPlaceholder: "Search for a game...",
             followers: "followers",
             clips: "clips",
             generateKey: "Generate API Key",
             appNameLabel: "Application Name",
             appNamePlaceholder: "Enter your application name",
-            appUrlLabel: "Application URL",
-            appUrlPlaceholder: "https://your-app-url.com",
+            appUrlLabel: "Application Website",
+            appUrlPlaceholder: "https://your-app-website.com",
             yourKeyTitle: "Your API Key",
             copyButton: "Copy",
             errorGeneric: "Failed to generate API key. Please try again.",
             copied: "Copied!",
-            validationUrlRequired: "Please enter a valid URL",
+            validationUrlRequired: "Please enter a valid website URL",
             nextSteps: "Ready to start sending events? Try out your new API key!",
             sendFirstEvent: "Send Your First Event"
         },
@@ -184,7 +184,7 @@ const translations = {
             getStarted: "Comienza en 2 Pasos",
             step1: {
                 title: "Obtén tu Clave API",
-                description: "Registra tu juego y obtén tu clave API pública para comenzar a integrar las funciones de auto-clipping de Medal.",
+                description: "Registra tu aplicación y obtén tu clave API pública para comenzar a integrar las funciones de auto-clipping de Medal.",
                 cta: "Obtener Clave"
             },
             step2: {
@@ -214,21 +214,21 @@ const translations = {
         },
         apiKey: {
             title: "Obtener Clave Pública",
-            registerGame: "Registrar tu Juego",
-            selectGame: "Selecciona un juego de la lista para comenzar.",
+            registerGame: "Registrar tu Aplicación",
+            selectGame: "Selecciona el juego para el que está construida tu aplicación para comenzar.",
             searchPlaceholder: "Buscar un juego...",
             followers: "seguidores",
             clips: "clips",
             generateKey: "Generar Clave API",
             appNameLabel: "Nombre de la Aplicación",
             appNamePlaceholder: "Ingrese el nombre de su aplicación",
-            appUrlLabel: "URL de la Aplicación",
-            appUrlPlaceholder: "https://su-aplicacion.com",
+            appUrlLabel: "Sitio Web de la Aplicación",
+            appUrlPlaceholder: "https://sitio-web-de-su-aplicacion.com",
             yourKeyTitle: "Su Clave API",
             copyButton: "Copiar",
             errorGeneric: "Error al generar la clave API. Por favor, inténtelo de nuevo.",
             copied: "¡Copiado!",
-            validationUrlRequired: "Por favor ingrese una URL válida",
+            validationUrlRequired: "Por favor ingrese una URL de sitio web válida",
             nextSteps: "¿Listo para empezar a enviar eventos? ¡Prueba tu nueva clave API!",
             sendFirstEvent: "Enviar Su Primer Evento"
         },
@@ -355,7 +355,7 @@ const translations = {
             getStarted: "2단계로 시작하기",
             step1: {
                 title: "API 키 받기",
-                description: "게임을 등록하고 공개 API 키를 받아 Medal의 자동 클립 기능과 통합을 시작하세요.",
+                description: "앱을 등록하고 공개 API 키를 받아 Medal의 자동 클립 기능과 통합을 시작하세요.",
                 cta: "키 받기"
             },
             step2: {
@@ -385,21 +385,21 @@ const translations = {
         },
         apiKey: {
             title: "공개 키 받기",
-            registerGame: "게임 등록하기",
-            selectGame: "시작하려면 아래 목록에서 게임을 선택하세요.",
+            registerGame: "앱 등록하기",
+            selectGame: "앱이 개발된 게임을 선택하여 시작하세요.",
             searchPlaceholder: "게임 검색...",
             followers: "팔로워",
             clips: "클립",
             generateKey: "API 키 생성",
             appNameLabel: "앱 이름",
             appNamePlaceholder: "앱 이름을 입력하세요",
-            appUrlLabel: "앱 URL",
-            appUrlPlaceholder: "https://your-app-url.com",
+            appUrlLabel: "앱 웹사이트",
+            appUrlPlaceholder: "https://your-app-website.com",
             yourKeyTitle: "귀하의 API 키",
             copyButton: "복사",
             errorGeneric: "API 키 생성에 실패했습니다. 다시 시도해 주세요.",
             copied: "복사됨!",
-            validationUrlRequired: "유효한 URL을 입력해 주세요",
+            validationUrlRequired: "유효한 웹사이트 URL을 입력해 주세요",
             nextSteps: "이벤트를 보내기 준비되셨나요? 새로운 API 키를 테스트해보세요!",
             sendFirstEvent: "첫 번째 이벤트 보내기"
         },
