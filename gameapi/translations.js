@@ -345,7 +345,7 @@ const translations = {
         nav: {
             gettingStarted: "시작하기",
             overview: "개요",
-            getPublicKey: "API 키 받기",
+            getPublicKey: "API Key 받기",
             endpoints: "엔드포인트",
             sendEvents: "이벤트 전송",
             sendContext: "컨텍스트 전송"
@@ -354,9 +354,9 @@ const translations = {
             title: "Medal - 로컬 게임 API",
             getStarted: "2단계로 시작하기",
             step1: {
-                title: "API 키 받기",
-                description: "앱을 등록하고 공개 API 키를 받아 Medal의 자동 클립 기능과 통합을 시작하세요.",
-                cta: "키 받기"
+                title: "API Key 생성하기",
+                description: "앱을 등록하고 공개 API Key를 생성하여 Medal의 자동 클립 기능과 통합을 시작하세요.",
+                cta: "키 생성하기"
             },
             step2: {
                 title: "게임 이벤트 전송",
@@ -390,17 +390,17 @@ const translations = {
             searchPlaceholder: "게임 검색...",
             followers: "팔로워",
             clips: "클립",
-            generateKey: "API 키 생성하기",
+            generateKey: "API Key 생성하기",
             appNameLabel: "앱 이름",
             appNamePlaceholder: "앱 이름을 입력하세요",
             appUrlLabel: "앱 웹사이트",
             appUrlPlaceholder: "https://your-app-website.com",
-            yourKeyTitle: "귀하의 API 키",
+            yourKeyTitle: "귀하의 API Key",
             copyButton: "복사",
-            errorGeneric: "API 키 생성에 실패했습니다. 다시 시도해 주세요.",
+            errorGeneric: "API Key 생성에 실패했습니다. 다시 시도해 주세요.",
             copied: "복사됨!",
             validationUrlRequired: "유효한 웹사이트 URL을 입력해 주세요",
-            nextSteps: "이벤트를 보내기 준비되셨나요? 새로운 API 키를 테스트해보세요!",
+            nextSteps: "이벤트를 보내기 준비되셨나요? 새로운 API Key를 테스트해보세요!",
             sendFirstEvent: "첫 번째 이벤트 보내기"
         },
         docs: {
