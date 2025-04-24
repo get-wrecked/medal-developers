@@ -65,7 +65,7 @@ const translations = {
             sendEvents: {
                 title: "Send Events",
                 description: "Trigger a game event to initiate clip capture or bookmarking with associated context tags.",
-                headers: "HTTP HEADERS",
+                headers: "REQUEST HEADERS",
                 requestBody: "REQUEST BODY",
                 parameters: "Request Body Parameters",
                 clipOptions: "Clip Options",
@@ -127,7 +127,7 @@ const translations = {
             sendContext: {
                 title: "Send Context",
                 description: "Submit game context, including details about the local player, server, and relevant global context tags.",
-                headers: "HTTP HEADERS",
+                headers: "REQUEST HEADERS",
                 requestBody: "REQUEST BODY",
                 parameters: "Request Body Parameters",
                 errors: "Possible Errors",
@@ -407,7 +407,7 @@ const translations = {
             sendEvents: {
                 title: "이벤트 전송",
                 description: "관련 컨텍스트 태그와 함께 클립 캡처 또는 북마크를 시작하기 위한 게임 이벤트를 트리거합니다.",
-                headers: "HTTP 헤더",
+                headers: "요청 헤더",
                 requestBody: "요청 본문",
                 parameters: "요청 본문 매개변수",
                 clipOptions: "클립 옵션",
@@ -469,7 +469,7 @@ const translations = {
             sendContext: {
                 title: "컨텍스트 전송",
                 description: "로컬 플레이어, 서버 및 관련 글로벌 컨텍스트 태그를 포함한 게임 컨텍스트를 제출합니다.",
-                headers: "HTTP 헤더",
+                headers: "요청 헤더",
                 requestBody: "요청 본문",
                 parameters: "요청 본문 매개변수",
                 errors: "가능한 오류",
