@@ -1260,19 +1260,25 @@ pre[class*="language-"] {
     border-bottom: 1px solid var(--border-color);
     flex-wrap: nowrap;
     justify-content: flex-start;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .lang-btn {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.8rem;
+    gap: 0.25rem;
+    padding: 0.5rem;
     background: none;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.2s ease;
+    white-space: nowrap;
+    width: 65px;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .lang-btn img {
@@ -1514,10 +1520,16 @@ pre[class*="language-"] {
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.5rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0.75rem;
     }
 
     .lang-btn {
         padding: 0.5rem;
+        min-width: 60px;
+        font-size: 0.9rem;
     }
 }
 
