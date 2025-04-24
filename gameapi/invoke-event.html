@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This meta tag will be replaced by Cloudflare Workers with the actual country code -->
+    <meta name="cf-ipcountry" content="{{request.cf.country}}">
     <title>Medal Games & Servers API - Send Events</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -29,9 +31,9 @@
                 <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Español">
                 ES
             </button>
-            <button class="lang-btn" data-lang="kr">
+            <button class="lang-btn" data-lang="ko">
                 <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/kr.svg" alt="한국어">
-                KR
+                KO
             </button>
         </div>
         <nav class="nav-tabs">

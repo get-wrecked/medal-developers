@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Language switching logic
-    let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    // Check if user is from Korea using Cloudflare country header (via meta tag)
+    function isKoreanUser() {
+        const countryMetaTag = document.querySelector('meta[name="cf-ipcountry"]');
+        return countryMetaTag && countryMetaTag.getAttribute('content') === 'KR';
+    }
+    
+    // Language switching logic - check stored preference first, then check for Korean users
+    let currentLang = localStorage.getItem('preferredLanguage');
+    if (!currentLang) {
+        // If no stored preference, set Korean for Korean users, English for everyone else
+        currentLang = isKoreanUser() ? 'ko' : 'en';
+    }
+    
     const langButtons = document.querySelectorAll('.lang-btn');
 
     function updateLanguage(lang) {

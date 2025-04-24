@@ -337,7 +337,7 @@ const translations = {
             }
         }
     },
-    kr: {
+    ko: {
         nav: {
             gettingStarted: "시작하기",
             overview: "개요",
