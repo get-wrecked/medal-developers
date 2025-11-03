@@ -1,5 +1,5 @@
 :root {
-    --brand-color: #FFAF34;
+    --brand-color: #99DE04;
     --bg-primary: #111111;
     --bg-secondary: #1a1a1a;
     --bg-code: #000000;
@@ -98,12 +98,12 @@ body {
 }
 
 .tab-button:hover {
-    background-color: rgba(255, 175, 52, 0.1);
+    background-color: rgba(190, 248, 55, 0.1);
     color: var(--brand-color);
 }
 
 .tab-button.active {
-    background-color: rgba(255, 175, 52, 0.15);
+    background-color: rgba(190, 248, 55, 0.15);
     color: var(--brand-color);
 }
 
@@ -439,7 +439,7 @@ h2 {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background-color: rgba(255, 175, 52, 0.1);
+    background-color: rgba(190, 248, 55, 0.1);
     border-radius: 4px;
     margin: 1rem 0;
 }
@@ -464,7 +464,7 @@ pre[class*="language-"] {
 /* Hero section */
 .hero-card {
     background: var(--bg-secondary);
-    border: 1px solid rgba(255, 175, 52, 0.1);
+    border: 1px solid rgba(190, 248, 55, 0.1);
     padding: 3rem 2rem;
     text-align: center;
 }
@@ -554,7 +554,7 @@ pre[class*="language-"] {
 }
 
 .cta-button.secondary {
-    background: rgba(255, 175, 52, 0.1);
+    background: rgba(190, 248, 55, 0.1);
     color: var(--brand-color);
 }
 
@@ -940,12 +940,12 @@ pre[class*="language-"] {
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: rgba(255, 175, 52, 0.1);
+    background-color: rgba(190, 248, 55, 0.1);
     color: var(--brand-color);
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
-    background-color: rgba(255, 175, 52, 0.2);
+    background-color: rgba(190, 248, 55, 0.2);
     color: var(--brand-color);
     font-weight: 500;
 }
@@ -1098,7 +1098,7 @@ pre[class*="language-"] {
 .form-group input:focus {
     outline: none;
     border-color: var(--brand-color);
-    box-shadow: 0 0 0 2px rgba(255, 175, 52, 0.2);
+    box-shadow: 0 0 0 2px rgba(190, 248, 55, 0.2);
 }
 
 .form-group input::placeholder {
@@ -1189,7 +1189,7 @@ pre[class*="language-"] {
 .checklist-step:hover {
     border-color: var(--brand-color);
     transform: translateY(-2px);
-    background: rgba(255, 175, 52, 0.05);
+    background: rgba(190, 248, 55, 0.05);
 }
 
 .checklist-step:active {
@@ -1289,13 +1289,13 @@ pre[class*="language-"] {
 }
 
 .lang-btn:hover {
-    background: rgba(255, 175, 52, 0.1);
+    background: rgba(190, 248, 55, 0.1);
     border-color: var(--brand-color);
     color: var(--brand-color);
 }
 
 .lang-btn.active {
-    background: rgba(255, 175, 52, 0.15);
+    background: rgba(190, 248, 55, 0.15);
     border-color: var(--brand-color);
     color: var(--brand-color);
 }
@@ -1572,5 +1572,5 @@ pre[class*="language-"] {
 .cta-button.primary:hover {
     transform: translateY(-2px);
     filter: brightness(1.1);
-    box-shadow: 0 4px 12px rgba(255, 175, 52, 0.2);
+    box-shadow: 0 4px 12px rgba(190, 248, 55, 0.2);
 }
