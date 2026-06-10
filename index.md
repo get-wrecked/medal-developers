@@ -4,14 +4,6 @@
 
 These projects are created by official Medal developers and maintained by the Medal team.
 
-### Official Local Game API 🆕
-
-  * [Local Game API Documentation](/gameapi)
-
-The Medal Local Game API empowers server owners and game developers with tools to capture and share pivotal gameplay moments, enhancing player engagement and promoting server discoverability. It offers a unique avenue for monetization and community building.
-
----
- 
 ### Embedded Video Player Customization
 
   * [Embedded Video Player](/player)
