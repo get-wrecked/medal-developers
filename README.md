@@ -1,16 +1,5 @@
-# Documentation
+# medal-developers
 
+This site has been retired. All traffic to `docs.medal.tv` now redirects to [medal.tv](https://medal.tv).
 
-For embedded player documentation, head to https://docs.medal.tv/player
-
-For REST API documentation, head to https://docs.medal.tv/api
-
-# Examples
-
-Links to examples made with the Medal API and/or embedded player below:
-
-Example Functions: https://github.com/get-wrecked/medal-developers/blob/master/examples/example_functions.js
-
-`node examples/example_functions.js`
-
-
+See `index.html` and `404.html` for the redirect.
